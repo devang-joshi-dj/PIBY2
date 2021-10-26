@@ -4,13 +4,13 @@
   "icons": [
     {
       "src": "piby2-meta-logo.png",
-      "sizes": "8001x4501",
+      "sizes": "1080x1080",
       "type": "image/x-icon"
     },
     {
       "src": "piby2-logo.png",
       "type": "image/png",
-      "sizes": "8001x4501"
+      "sizes": "1920x550"
     }
   ],
   "start_url": ".",
