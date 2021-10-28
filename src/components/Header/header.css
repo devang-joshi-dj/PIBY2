@@ -1,3 +1,7 @@
+:root {
+    --social-media-transition-style: all 0.2s linear;
+}
+
 /* Header Start */
 
 header {
@@ -18,7 +22,7 @@ header {
 }
 
 .logo img {
-    width: 100%;
+    width: 75%;
 }
 
 /* Logo End */
@@ -37,7 +41,7 @@ header {
 }
 
 .menu-link ul li {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 
 .menu-link ul li a {
@@ -100,7 +104,7 @@ header {
 
 .facebook {
     color: var(--facebook);
-    transition: all 0.5s linear;
+    transition: var(--social-media-transition-style);
 }
 
 .facebook:hover {
@@ -110,7 +114,7 @@ header {
 
 .instagram {
     color: var(--instagram);
-    transition: all 0.5s linear;
+    transition: var(--social-media-transition-style);
 }
 
 .instagram:hover {
@@ -120,7 +124,7 @@ header {
 
 .linkedin {
     color: var(--linkedin);
-    transition: all 0.5s linear;
+    transition: var(--social-media-transition-style);
 }
 
 .linkedin:hover {
@@ -130,7 +134,7 @@ header {
 
 .github {
     color: var(--github);
-    transition: all 0.5s linear;
+    transition: var(--social-media-transition-style);
 }
 
 .github:hover {
@@ -170,8 +174,12 @@ header {
         height: 8rem;
         grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
     }
-    .logo, .logo img, .menu-link ul, .social-media ul {
-        height: 8rem;
+    .logo, .menu-link ul, .social-media ul {
+        height: 8rem
+    }
+    .logo img {
+        height: 6rem;
+        width: auto;
     }
 }
 
@@ -183,8 +191,11 @@ header {
     .menu-link {
         display: none;
     }
-    .logo, .logo img, .social-media ul {
+    .logo, .social-media ul {
         height: 7rem;
+    }
+    .logo img {
+        height: 5rem;
     }
     .mobile-menu-link {
         grid-column: 2/4;
@@ -240,8 +251,11 @@ header {
         height: 6rem;
         grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
     }
-    .logo, .logo img, .social-media ul {
+    .logo, .social-media ul {
         height: 6rem;
+    }
+    .logo img {
+        height: 5rem;
     }
     .social-media {
         height: 6rem;
