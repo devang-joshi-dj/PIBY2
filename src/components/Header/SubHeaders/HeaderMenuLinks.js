@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MenuLink = (props) => {
+const MenuLinks = (props) => {
     return (
         <>
             <div className={
@@ -47,4 +47,4 @@ const MenuLink = (props) => {
     );
 }
 
-export default MenuLink;
+export default MenuLinks;

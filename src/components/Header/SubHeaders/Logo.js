@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import imagesPath from '../config';
+import React from 'react';
+import imagesPath from '../../config';
 
 const Logo = () => {
     return (

@@ -1,0 +1,139 @@
+/* Footer Start */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background: var(--light-black);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: var(--white);
+}
+
+/* Footer Content Start */
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: var(--dark-white);
+}
+
+/* Footer Content End */
+
+/* Footer Social Media Start */
+
+.footer-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.footer-social-media li {
+    margin: 0 10px;
+}
+
+.footer-social-media a {
+    text-decoration: none;
+    color: var(--white);
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.footer-social-media a i {
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.footer-social-media a:hover i {
+    color: var(--sky-blue);
+}
+
+/* Footer Social Media End */
+
+/* Footer Bottom Start */
+
+.footer-bottom {
+    background: var(--black);
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+/* Footer Bottom Copyright Start */
+
+.footer-bottom p {
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom p a {
+    color: var(--sky-blue);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* Footer Bottom Copyright End */
+
+/* Footer Bottom Menu Links Start */
+
+.footer-menu-links {
+    float: right;
+}
+
+.footer-menu-links ul {
+    display: flex;
+}
+
+.footer-menu-links ul li {
+    padding-right: 10px;
+    display: block;
+}
+
+.footer-menu-links ul li a {
+    color: var(--dakr-white);
+    text-decoration: none;
+}
+
+.footer-menu-links ul li a:hover {
+    color: var(--sky-blue);
+}
+
+/* Footer Bottom Menu Links End */
+
+/* Footer Bottom End */
+
+/* Footer End */
+
+/* MEDIA QUERIES Start */
+
+@media (max-width:500px) {
+    .footer-menu-links ul {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+/* MEDIA QUERIES End */

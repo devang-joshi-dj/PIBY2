@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './header.css';
-import Logo from './Logo';
-import MenuLink from './MenuLink';
-import SocialMedia from './SocialMedia';
+import Logo from './SubHeaders/Logo';
+import MenuLinks from './SubHeaders/HeaderMenuLinks';
+import SocialMedia from './SubHeaders/HeaderSocialMedia';
 
 const Header = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -10,7 +10,7 @@ const Header = () => {
         <>
             <header>
                 <Logo />
-                <MenuLink
+                <MenuLinks
                     showMediaIcons={showMediaIcons}
                     setShowMediaIcons={setShowMediaIcons}
                 />
