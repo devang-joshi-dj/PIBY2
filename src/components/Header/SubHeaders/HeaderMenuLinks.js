@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MenuLinks = (props) => {
+const HeaderMenuLinks = (props) => {
     return (
         <>
             <div className={
@@ -9,42 +9,46 @@ const MenuLinks = (props) => {
                     "menu-link"
             }>
                 <ul>
-                    <li>
-                        <a
-                            href="#"
-                            onClick={() => props.setShowMediaIcons(!props.showMediaIcons)}
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            onClick={() => props.setShowMediaIcons(!props.showMediaIcons)}
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            onClick={() => props.setShowMediaIcons(!props.showMediaIcons)}
-                        >
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            onClick={() => props.setShowMediaIcons(!props.showMediaIcons)}
-                        >
-                            Contact
-                        </a>
-                    </li>
+                    <MenuLink
+                        href=""
+                        linkName="Home"
+                        setShowMediaIcons={props.setShowMediaIcons}
+                        showMediaIcons={props.showMediaIcons} />
+                    <MenuLink
+                        href=""
+                        linkName="About"
+                        setShowMediaIcons={props.setShowMediaIcons}
+                        showMediaIcons={props.showMediaIcons} />
+                    <MenuLink
+                        href=""
+                        linkName="Services"
+                        setShowMediaIcons={props.setShowMediaIcons}
+                        showMediaIcons={props.showMediaIcons} />
+                    <MenuLink
+                        href=""
+                        linkName="Contact"
+                        setShowMediaIcons={props.setShowMediaIcons}
+                        showMediaIcons={props.showMediaIcons} />
                 </ul>
             </div>
         </>
     );
 }
 
-export default MenuLinks;
+const MenuLink = (props) => {
+    console.log(props);
+    return (
+        <>
+            <li>
+                <a
+                    href={props.link}
+                    onClick={() => props.setShowMediaIcons(!props.showMediaIcons)}
+                >
+                    {props.linkName}
+                </a>
+            </li>
+        </>
+    );
+}
+
+export default HeaderMenuLinks;

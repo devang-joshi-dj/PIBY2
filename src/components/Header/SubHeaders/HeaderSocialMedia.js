@@ -7,49 +7,28 @@ import {
     FaGithubSquare
 } from 'react-icons/fa';
 
-const SocialMedia = (props) => {
+const HeaderSocialMedia = (props) => {
     return (
         <>
             <div className="social-media">
                 <ul className="social-media-desktop">
-                    <li>
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaFacebookSquare className="facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaInstagramSquare className="instagram" />
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaLinkedin className="linkedin" />
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithubSquare className="github" />
-                        </a>
-                    </li>
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaFacebookSquare className="facebook" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaInstagramSquare className="instagram" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaLinkedin className="linkedin" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaGithubSquare className="github" />}
+                    />
                 </ul>
-
 
                 <HamburgerMenu
                     showMediaIcons={props.showMediaIcons}
@@ -60,4 +39,20 @@ const SocialMedia = (props) => {
     );
 }
 
-export default SocialMedia;
+const SocialMedia = (props) => {
+    return (
+        <>
+            <li>
+                <a
+                    href={props.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {props.iconsWithClassName}
+                </a>
+            </li>
+        </>
+    );
+}
+
+export default HeaderSocialMedia;

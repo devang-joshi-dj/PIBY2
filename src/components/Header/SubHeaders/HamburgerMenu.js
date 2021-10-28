@@ -14,4 +14,4 @@ const HamburgerMenu = (props) => {
     );
 }
 
-export default HamburgerMenu
+export default HamburgerMenu;

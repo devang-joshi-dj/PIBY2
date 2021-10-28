@@ -48,6 +48,7 @@ header {
     padding: 5px;
     display: block;
     color: var(--black);
+    cursor: pointer;
     text-transform: capitalize;
     text-decoration: none;
     position: relative;
