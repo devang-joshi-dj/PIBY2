@@ -13,22 +13,26 @@ const HeaderMenuLinks = (props) => {
                         href=""
                         linkName="Home"
                         setShowMediaIcons={props.setShowMediaIcons}
-                        showMediaIcons={props.showMediaIcons} />
+                        showMediaIcons={props.showMediaIcons}
+                    />
                     <MenuLink
                         href=""
                         linkName="About"
                         setShowMediaIcons={props.setShowMediaIcons}
-                        showMediaIcons={props.showMediaIcons} />
+                        showMediaIcons={props.showMediaIcons}
+                    />
                     <MenuLink
                         href=""
                         linkName="Services"
                         setShowMediaIcons={props.setShowMediaIcons}
-                        showMediaIcons={props.showMediaIcons} />
+                        showMediaIcons={props.showMediaIcons}
+                    />
                     <MenuLink
                         href=""
                         linkName="Contact"
                         setShowMediaIcons={props.setShowMediaIcons}
-                        showMediaIcons={props.showMediaIcons} />
+                        showMediaIcons={props.showMediaIcons}
+                    />
                 </ul>
             </div>
         </>
@@ -36,7 +40,6 @@ const HeaderMenuLinks = (props) => {
 }
 
 const MenuLink = (props) => {
-    console.log(props);
     return (
         <>
             <li>

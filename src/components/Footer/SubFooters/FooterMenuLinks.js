@@ -5,12 +5,36 @@ const FooterMenuLinks = () => {
         <>
             <div class="footer-menu-links">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact</a></li>
+                    <MenuLink
+                        href=""
+                        linkName="Home"
+                    />
+                    <MenuLink
+                        href=""
+                        linkName="About"
+                    />
+                    <MenuLink
+                        href=""
+                        linkName="Services"
+                    />
+                    <MenuLink
+                        href=""
+                        linkName="Contact"
+                    />
                 </ul>
             </div>
+        </>
+    );
+}
+
+const MenuLink = (props) => {
+    return (
+        <>
+            <li>
+                <a href={props.link}>
+                    {props.linkName}
+                </a>
+            </li>
         </>
     );
 }

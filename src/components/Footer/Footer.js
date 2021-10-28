@@ -9,22 +9,15 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <FooterContent />
-                <FooterSocialMedia />
-                <FooterBottom />
+                <div className="footer-content">
+                    <FooterContent />
+                    <FooterSocialMedia />
+                </div>
+                <div class="footer-bottom">
+                    <CopyrightContent />
+                    <FooterMenuLinks />
+                </div>
             </footer>
-        </>
-    );
-}
-
-const FooterBottom = () => {
-    return (
-        <>
-
-            <div class="footer-bottom">
-                <CopyrightContent />
-                <FooterMenuLinks />
-            </div>
         </>
     );
 }
