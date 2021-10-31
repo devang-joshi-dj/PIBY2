@@ -1,8 +1,7 @@
 /* Footer Start */
 
 footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     background: var(--light-black);
     height: auto;
     width: 100%;

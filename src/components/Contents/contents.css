@@ -1,0 +1,59 @@
+.contents {
+    padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--navy-blue);
+}
+
+.searchBar {
+    padding: 5px 15px;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--white);
+    background: var(--navy-blue);
+    border: 0.2rem solid var(--white);
+    box-shadow: 0 0 .2rem var(--white), 0 0 .2rem var(--white), 0 0 2rem var(--crimson), 0 0 0.8rem var(--crimson), 0 0 2.8rem var(--crimson), inset 0 0 1.3rem var(--crimson);
+}
+
+.contents-list {
+    margin-top: 30px;
+    color: var(--white);
+}
+
+.contents-list ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.contents-list ul li.content {
+    list-style: none;
+}
+
+.contents-list ul li.content, .contents-list h1 {
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    background: var(--navy-blue);
+    border: 1.5px solid var(--sky-blue);
+    box-shadow: 0 0 .4rem var(--white);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.contents-list ul li.content:hover, .contents-list h1:hover {
+    box-shadow: 0 0 .2rem var(--white), 0 0 .2rem var(--white), 0 0 1rem var(--sky-blue);
+}
+
+.contents-list ul li.content .content-name {
+    color: var(--dark-white);
+}
