@@ -2,7 +2,6 @@ import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const HamburgerMenu = (props) => {
-    console.log(props);
     return (
         <>
             <div className="hamburger-menu">

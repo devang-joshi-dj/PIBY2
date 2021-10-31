@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiMail } from 'react-icons/fi';
+import { IoMdMailOpen } from 'react-icons/io';
 import {
     FaFacebookSquare,
     FaInstagramSquare,
@@ -10,28 +10,30 @@ import {
 const FooterSocialMedia = () => {
     return (
         <>
-            <ul className="footer-social-media">
-                <SocialMedia
-                    link="#"
-                    iconsWithClassName={<FiMail className="mail" />}
-                />
-                <SocialMedia
-                    link="#"
-                    iconsWithClassName={<FaFacebookSquare className="facebook" />}
-                />
-                <SocialMedia
-                    link="#"
-                    iconsWithClassName={<FaInstagramSquare className="instagram" />}
-                />
-                <SocialMedia
-                    link="#"
-                    iconsWithClassName={<FaLinkedin className="linkedin" />}
-                />
-                <SocialMedia
-                    link="#"
-                    iconsWithClassName={<FaGithubSquare className="github" />}
-                />
-            </ul>
+            <div className="footer-social-media">
+                <ul>
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<IoMdMailOpen className="mail" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaFacebookSquare className="facebook" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaInstagramSquare className="instagram" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaLinkedin className="linkedin" />}
+                    />
+                    <SocialMedia
+                        link="#"
+                        iconsWithClassName={<FaGithubSquare className="github" />}
+                    />
+                </ul>
+            </div>
         </>
     );
 }

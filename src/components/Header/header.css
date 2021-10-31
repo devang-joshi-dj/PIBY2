@@ -1,7 +1,3 @@
-:root {
-    --social-media-transition-style: all 0.2s linear;
-}
-
 /* Header Start */
 
 header {
@@ -101,46 +97,6 @@ header {
 
 .social-media ul li:first-child {
     grid-column: 2/3;
-}
-
-.facebook {
-    color: var(--facebook);
-    transition: var(--social-media-transition-style);
-}
-
-.facebook:hover {
-    color: var(--white);
-    background-color: var(--facebook);
-}
-
-.instagram {
-    color: var(--instagram);
-    transition: var(--social-media-transition-style);
-}
-
-.instagram:hover {
-    color: var(--white);
-    background-color: var(--facebook);
-}
-
-.linkedin {
-    color: var(--linkedin);
-    transition: var(--social-media-transition-style);
-}
-
-.linkedin:hover {
-    color: var(--white);
-    background-color: var(--facebook);
-}
-
-.github {
-    color: var(--github);
-    transition: var(--social-media-transition-style);
-}
-
-.github:hover {
-    color: var(--white);
-    background-color: var(--facebook);
 }
 
 /* Social Media End */

@@ -5,10 +5,12 @@
   --dark-white: #E1D9D1;
   --black: #000000;
   --light-black: #171717;
+  --mail: #FF9800;
   --facebook: #1877F2;
   --instagram: #E4405F;
   --linkedin: #0A66C2;
-  --github: #211F1F;
+  --github: #333333;
+  --social-media-transition-style: all 0.2s linear;
 }
 
 header, .footer-menu-links, .footer-bottom {
@@ -18,4 +20,54 @@ header, .footer-menu-links, .footer-bottom {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+.mail {
+  color: var(--mail);
+  transition: var(--social-media-transition-style);
+}
+
+.mail:hover {
+  color: var(--white);
+  background-color: var(--mail);
+}
+
+.facebook {
+  color: var(--facebook);
+  transition: var(--social-media-transition-style);
+}
+
+.facebook:hover {
+  color: var(--white);
+  background-color: var(--facebook);
+}
+
+.instagram {
+  color: var(--instagram);
+  transition: var(--social-media-transition-style);
+}
+
+.instagram:hover {
+  color: var(--white);
+  background-color: var(--facebook);
+}
+
+.linkedin {
+  color: var(--linkedin);
+  transition: var(--social-media-transition-style);
+}
+
+.linkedin:hover {
+  color: var(--white);
+  background-color: var(--facebook);
+}
+
+.github {
+  color: var(--github);
+  transition: var(--social-media-transition-style);
+}
+
+.github:hover {
+  color: var(--white);
+  background-color: var(--facebook);
 }
