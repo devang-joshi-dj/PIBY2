@@ -254,11 +254,14 @@ header {
 }
 
 @media (max-width: 180px) {
-    header {
+    header, .logo {
         height: 3rem;
     }
     .logo img {
         height: 2rem;
+    }
+    .social-media {
+        height: 30px;
     }
     .hamburger-menu {
         padding: 2px;

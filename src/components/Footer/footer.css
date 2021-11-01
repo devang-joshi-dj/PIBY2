@@ -187,4 +187,26 @@ footer {
     }
 }
 
+@media (max-width:170px) {
+    .footer-social-media ul {
+        font-size: 1.4rem;
+    }
+    .footer-social-media ul li {
+        margin: 0 1px;
+    }
+    .copyright-content p {
+        font-size: 1.4rem;
+    }
+    .footer-menu-links {
+        font-size: 1.2rem;
+    }
+    .footer-bottom {
+        padding: 10px 2px;
+    }
+    .footer-menu-links ul {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
 /* MEDIA QUERIES End */
