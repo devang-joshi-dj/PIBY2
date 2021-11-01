@@ -1,7 +1,9 @@
+/* Contents Start */
+
 .contents {
     padding-top: 30px;
     width: 100%;
-    height: calc(100vh - 10rem);
+    min-height: calc(100vh - 10rem);
     margin: auto;
     display: flex;
     align-items: center;
@@ -10,10 +12,13 @@
     background-color: var(--navy-blue);
 }
 
+/* Start Bar Start */
+
 .searchBar {
     padding: 5px 15px;
     width: 80%;
-    height: 40px;
+    height: 50px;
+    font-size: 2.5rem;
     border-radius: 10px;
     outline: none;
     color: var(--white);
@@ -22,8 +27,12 @@
     box-shadow: 0 0 .2rem var(--white), 0 0 .2rem var(--white), 0 0 2rem var(--crimson), 0 0 0.8rem var(--crimson), 0 0 2.8rem var(--crimson), inset 0 0 1.3rem var(--crimson);
 }
 
+/* Start Bar End */
+
+/* Contents List Start */
+
 .contents-list {
-    margin-top: 30px;
+    margin: 30px 10px;
     color: var(--white);
 }
 
@@ -37,6 +46,7 @@
 
 .contents-list ul li.content {
     list-style: none;
+    font-size: 2rem;
 }
 
 .contents-list ul li.content, .contents-list h1 {
@@ -58,14 +68,70 @@
     color: var(--dark-white);
 }
 
+/* Contents List End */
+
+/* Contents End */
+
+/* MEDIA QUERIES Start */
+
+@media (max-width: 1080px) {
+    .contents {
+        min-height: calc(100vh - 8rem);
+    }
+}
+
+@media (max-width: 998px) {
+    .contents {
+        min-height: calc(100vh - 7rem);
+    }
+}
+
+@media (max-width: 798px) {
+    .contents {
+        min-height: calc(100vh - 6rem);
+    }
+}
+
+@media (max-width:600px) {
+    .contents-list ul li.content {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:550px) {
+    .contents-list ul li.content {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:500px) {
+    .contents-list ul li.content {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width:450px) {
     .contents-list ul {
         grid-template-columns: repeat(2, auto);
     }
+    .contents-list ul li.content {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width:200px) {
+    .searchBar {
+        font-size: 1.5rem;
+    }
     .contents-list ul {
         grid-template-columns: repeat(1, auto);
     }
 }
+
+@media (max-width: 180px) {
+    .contents {
+        min-height: calc(100vh - 3rem);
+    }
+}
+
+/* MEDIA QUERIES End */

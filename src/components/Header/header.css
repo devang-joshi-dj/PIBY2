@@ -223,10 +223,6 @@ header {
 }
 
 @media (max-width: 520px) {
-    header {
-        height: 6rem;
-        grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
-    }
     .social-media {
         height: 6rem;
         display: flex;

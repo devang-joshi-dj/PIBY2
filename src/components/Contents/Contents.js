@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';
 import './contents.css';
+import SearchBar from './Sub-Contents/SearchBar';
+import ContentsList from './Sub-Contents/ContentsList';
 
-const USERS = [
+const CONTENTS = [
     { id: 1, name: 'Sets' },
     { id: 2, name: 'Matrices' },
     { id: 3, name: 'Mensuration' },
@@ -13,49 +14,41 @@ const USERS = [
 
 const Contents = () => {
     const [name, setName] = useState('');
-    const [foundUsers, setFoundUsers] = useState(USERS);
+    const [foundContents, setFoundContents] = useState(CONTENTS);
+    const searchBar = useRef(null);
+
+    useEffect(() => {
+        searchBar.current.focus();
+    }, [])
 
     const filter = (e) => {
         const keyword = e.target.value;
 
         if (keyword !== '') {
-            const results = USERS.filter((user) => {
-                return user.name.toLowerCase().startsWith(keyword.toLowerCase());
-                // Use the toLowerCase() method to make it case-insensitive
+            const results = CONTENTS.filter((user) => {
+                return user.name.toLowerCase().includes(keyword.toLowerCase());
             });
-            setFoundUsers(results);
+            setFoundContents(results);
         } else {
-            setFoundUsers(USERS);
-            // If the text field is empty, show all users
+            setFoundContents(CONTENTS);
         }
 
         setName(keyword);
     };
 
     return (
-        <div className="contents">
-            <input
-                type="search"
-                value={name}
-                onChange={filter}
-                className="searchBar"
-                placeholder="Search..."
-            />
-
-            <div className="contents-list">
-                <ul>
-                    {foundUsers && foundUsers.length > 0 ? (
-                        foundUsers.map((user) => (
-                            <li key={user.id} className="content">
-                                <span className="content-name">{user.name}</span>
-                            </li>
-                        ))
-                    ) : (
-                        <h1>No results found!</h1>
-                    )}
-                </ul>
+        <>
+            <div className="contents">
+                <SearchBar
+                    name={name}
+                    filter={filter}
+                    searchBar={searchBar}
+                />
+                <ContentsList
+                    foundContents={foundContents}
+                />
             </div>
-        </div>
+        </>
     );
 }
 
