@@ -159,6 +159,7 @@ header {
         grid-column: 2/4;
         position: relative;
         z-index: 99;
+        font-size: 2.5rem;
         background-color: white;
         height: 20rem;
         display: grid;
@@ -270,6 +271,13 @@ header {
     .social-media .hamburger-menu {
         display: block;
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 200px) {
+    .menu-link {
+        padding: 0 8px 8px 8px;
+        font-size: .5rem;
     }
 }
 
