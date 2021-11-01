@@ -21,10 +21,18 @@ footer {
 
 .footer-top p {
     max-width: 500px;
-    margin: 10px auto;
+    margin: 0;
     line-height: 28px;
     font-size: 14px;
     color: var(--dark-white);
+}
+
+.footer-top p span.key {
+    color: var(--crimson);
+}
+
+.footer-top p span.value {
+    color: var(--sky-blue);
 }
 
 /* Footer Content End */

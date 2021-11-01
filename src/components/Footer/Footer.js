@@ -13,7 +13,7 @@ const Footer = () => {
                     <FooterContent />
                     <FooterSocialMedia />
                 </div>
-                <div class="footer-bottom">
+                <div className="footer-bottom">
                     <CopyrightContent />
                     <FooterMenuLinks />
                 </div>

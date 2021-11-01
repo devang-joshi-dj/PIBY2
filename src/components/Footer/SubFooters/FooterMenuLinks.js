@@ -3,7 +3,7 @@ import React from 'react';
 const FooterMenuLinks = () => {
     return (
         <>
-            <div class="footer-menu-links">
+            <div className="footer-menu-links">
                 <ul>
                     <MenuLink
                         href=""
