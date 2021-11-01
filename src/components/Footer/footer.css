@@ -149,7 +149,7 @@ footer {
     }
 }
 
-@media (max-width:300px) {
+@media (max-width:310px) {
     .footer-bottom {
         padding: 15px;
     }
@@ -162,7 +162,7 @@ footer {
     }
 }
 
-@media (max-width:210px) {
+@media (max-width:220px) {
     .footer-content {
         padding: 0 5px;
     }

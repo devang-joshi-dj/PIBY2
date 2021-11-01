@@ -57,3 +57,15 @@
 .contents-list ul li.content .content-name {
     color: var(--dark-white);
 }
+
+@media (max-width:450px) {
+    .contents-list ul {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width:200px) {
+    .contents-list ul {
+        grid-template-columns: repeat(1, auto);
+    }
+}
