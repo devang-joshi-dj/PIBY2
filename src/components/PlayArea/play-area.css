@@ -1,4 +1,5 @@
 .play-area {
     min-height: 100vh;
     background-color: var(--sky-blue);
+    display: none;
 }

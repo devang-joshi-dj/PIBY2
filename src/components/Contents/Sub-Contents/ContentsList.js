@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 const ContentsList = (props) => {
+
+    const showPlayArea = () => {
+        const getPlayArea = document.querySelector('.play-area');
+        getPlayArea.style.display = 'block';
+    }
+
     return (
         <>
             <div className="contents-list">
@@ -9,6 +15,7 @@ const ContentsList = (props) => {
                     {props.foundContents && props.foundContents.length > 0 ? (
                         props.foundContents.map((user) => (
                             <Link
+                                onClick={showPlayArea}
                                 to="play-area"
                                 smooth={true}
                                 duration={1000}
