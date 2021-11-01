@@ -29,6 +29,7 @@ header {
 
 .menu-link {
     grid-column: 3/4;
+    z-index: 98;
 }
 
 .menu-link ul {
@@ -179,7 +180,7 @@ header {
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
     }
     .mobile-menu-link ul li, .mobile-menu-link ul li a {
         width: 100%;
