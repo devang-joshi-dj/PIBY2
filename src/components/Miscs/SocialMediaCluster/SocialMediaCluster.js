@@ -8,29 +8,45 @@ import {
     FaGithubSquare
 } from 'react-icons/fa';
 
+const socialMediaClusterList = [
+    {
+        index: '1',
+        link: 'mailto:devangjoshi11@gmail.com',
+        iconWithClassName: <IoMdMailOpen className="mail" />,
+    },
+    {
+        index: '2',
+        link: 'https://www.facebook.com/profile.php?id=100007049146869',
+        iconWithClassName: <FaFacebookSquare className="facebook" />,
+    },
+    {
+        index: '3',
+        link: 'https://www.instagram.com/devangjoshi007/',
+        iconWithClassName: <FaInstagramSquare className="instagram" />,
+    },
+    {
+        index: '4',
+        link: 'https://www.linkedin.com/in/devang-j-5084ab10b/',
+        iconWithClassName: <FaLinkedin className="linkedin" />,
+    },
+    {
+        index: '5',
+        link: 'https://github.com/devang-joshi-dj',
+        iconWithClassName: <FaGithubSquare className="github" />,
+    },
+];
+
 const SocialMediaCluster = () => {
     return (
         <>
-            <SocialMedia
-                link="mailto:devangjoshi11@gmail.com"
-                iconsWithClassName={<IoMdMailOpen className="mail" />}
-            />
-            <SocialMedia
-                link="https://www.facebook.com/profile.php?id=100007049146869"
-                iconsWithClassName={<FaFacebookSquare className="facebook" />}
-            />
-            <SocialMedia
-                link="https://www.instagram.com/devangjoshi007/"
-                iconsWithClassName={<FaInstagramSquare className="instagram" />}
-            />
-            <SocialMedia
-                link="https://www.linkedin.com/in/devang-j-5084ab10b/"
-                iconsWithClassName={<FaLinkedin className="linkedin" />}
-            />
-            <SocialMedia
-                link="https://github.com/devang-joshi-dj"
-                iconsWithClassName={<FaGithubSquare className="github" />}
-            />
+            {socialMediaClusterList.map(socialMedia => (
+                <SocialMedia
+                    key={socialMedia.index}
+                    link={socialMedia.link}
+                    iconsWithClassName={socialMedia.iconWithClassName}
+                />
+            ))}
+
         </>
     );
 }
