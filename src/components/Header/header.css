@@ -18,6 +18,7 @@ header {
 }
 
 .logo img {
+    cursor: pointer;
     width: 75%;
 }
 

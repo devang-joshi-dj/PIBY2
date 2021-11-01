@@ -73,20 +73,21 @@ footer {
     text-transform: capitalize;
 }
 
-.copyright-content p a {
+.copyright-content p span {
     color: var(--sky-blue);
+    cursor: pointer;
+    margin-left: 0.5rem;
     font-size: 16px;
     text-decoration: none;
     transition: all 0.5s;
 }
 
-.copyright-content p a:hover {
+.copyright-content p span:hover {
     color: var(--dark-white);
 }
 
 .copyright-content span {
     text-transform: uppercase;
-    opacity: .4;
     font-weight: 200;
 }
 

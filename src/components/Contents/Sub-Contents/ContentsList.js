@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const ContentsList = (props) => {
     return (
@@ -7,9 +8,15 @@ const ContentsList = (props) => {
                 <ul>
                     {props.foundContents && props.foundContents.length > 0 ? (
                         props.foundContents.map((user) => (
-                            <li key={user.id} className="content">
-                                <span className="content-name">{user.name}</span>
-                            </li>
+                            <Link
+                                to="play-area"
+                                smooth={true}
+                                duration={1000}
+                            >
+                                <li key={user.id} className="content">
+                                    <span className="content-name">{user.name}</span>
+                                </li>
+                            </Link>
                         ))
                     ) : (
                         <h1>No results found!</h1>
