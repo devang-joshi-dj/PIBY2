@@ -34,6 +34,7 @@ const Contents = () => {
     return (
         <>
             <div className="contents">
+                <h1>PIBY2</h1>
                 <SearchBar
                     name={name}
                     filter={filter}
