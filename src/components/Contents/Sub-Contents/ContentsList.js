@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import Slide from 'react-reveal/Slide';
 
 const ContentsList = (props) => {
 
@@ -22,28 +23,30 @@ const ContentsList = (props) => {
     return (
         <>
             <div className="contents-list">
-                <ul>
-                    {props.foundContents && props.foundContents.length > 0 ? (
-                        props.foundContents.map((content) => (
-                            <Link
-                                key={content.index}
-                                onClick={showPlayArea}
-                                to="play-area"
-                                smooth={true}
-                                duration={1000}
-                            >
-                                <li
-                                    className="content"
-                                    onClick={() => setActiveContent(content.index)}
+                <Slide left cascade>
+                    <ul>
+                        {props.foundContents && props.foundContents.length > 0 ? (
+                            props.foundContents.map((content) => (
+                                <Link
+                                    key={content.index}
+                                    onClick={showPlayArea}
+                                    to="play-area"
+                                    smooth={true}
+                                    duration={1000}
                                 >
-                                    <span className="content-name">{content.name}</span>
-                                </li>
-                            </Link>
-                        ))
-                    ) : (
-                        <h1>No results found!</h1>
-                    )}
-                </ul>
+                                    <li
+                                        className="content"
+                                        onClick={() => setActiveContent(content.index)}
+                                    >
+                                        <span className="content-name">{content.name}</span>
+                                    </li>
+                                </Link>
+                            ))
+                        ) : (
+                            <h1>No results found!</h1>
+                        )}
+                    </ul>
+                </Slide>
             </div>
         </>
     );

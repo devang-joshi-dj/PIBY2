@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+
 
 const SearchBar = (props) => {
+    const searchBar = useRef(null);
+
+    useEffect(() => {
+        searchBar.current.focus();
+    }, []);
+
     return (
         <>
             <input
                 type="search"
                 value={props.name}
+                searchBar={searchBar}
                 onChange={props.filter}
-                ref={props.searchBar}
+                ref={searchBar}
                 className="searchBar"
                 placeholder="Search..."
             />

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import './contents.css';
 import { CONTENTS } from './contents.json';
 import Heading from '../Miscs/Heading/Heading';
@@ -8,11 +8,6 @@ import ContentsList from './Sub-Contents/ContentsList';
 const Contents = () => {
     const [name, setName] = useState('');
     const [foundContents, setFoundContents] = useState(CONTENTS);
-    const searchBar = useRef(null);
-
-    useEffect(() => {
-        searchBar.current.focus();
-    }, [])
 
     const filter = (e) => {
         const keyword = e.target.value;
@@ -39,7 +34,6 @@ const Contents = () => {
                 <SearchBar
                     name={name}
                     filter={filter}
-                    searchBar={searchBar}
                 />
                 <ContentsList
                     foundContents={foundContents}
