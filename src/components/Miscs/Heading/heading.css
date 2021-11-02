@@ -1,0 +1,28 @@
+.heading {
+    font-size: 12rem;
+    color: var(--dark-white);
+}
+
+@media (max-width:450px) {
+    .heading {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width:300px) {
+    .heading {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width:210px) {
+    .heading {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:160px) {
+    .heading {
+        font-size: 5rem;
+    }
+}

@@ -6,9 +6,6 @@ const ContentsList = (props) => {
     const showPlayArea = () => {
         const getPlayArea = document.querySelector('.play-area');
         getPlayArea.style.display = 'block';
-        // var current = document.getElementsByClassName('active');
-        // current[0].className = current[0].className.replace(' active', '');
-        // this.className += ' active';
     }
 
 
@@ -24,19 +21,22 @@ const ContentsList = (props) => {
 
     return (
         <>
-            <div className='contents-list'>
+            <div className="contents-list">
                 <ul>
                     {props.foundContents && props.foundContents.length > 0 ? (
                         props.foundContents.map((content) => (
                             <Link
                                 key={content.index}
                                 onClick={showPlayArea}
-                                to='play-area'
+                                to="play-area"
                                 smooth={true}
                                 duration={1000}
                             >
-                                <li className='content' onClick={() => setActiveContent(content.index)}>
-                                    <span className='content-name'>{content.name}</span>
+                                <li
+                                    className="content"
+                                    onClick={() => setActiveContent(content.index)}
+                                >
+                                    <span className="content-name">{content.name}</span>
                                 </li>
                             </Link>
                         ))

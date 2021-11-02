@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './contents.css';
 import { CONTENTS } from './contents.json';
+import Heading from '../Miscs/Heading/Heading';
 import SearchBar from './Sub-Contents/SearchBar';
 import ContentsList from './Sub-Contents/ContentsList';
 
@@ -34,7 +35,7 @@ const Contents = () => {
     return (
         <>
             <div className="contents">
-                <h1>PIBY2</h1>
+                <Heading>PIBY2</Heading>
                 <SearchBar
                     name={name}
                     filter={filter}
