@@ -1,5 +1,4 @@
 import React from 'react';
-import Flip from 'react-reveal/Flip';
 
 const MenuLinkList = [
     {
@@ -47,9 +46,7 @@ const MenuLink = (props) => {
                     href={props.link}
                     onClick={() => props.setShowMediaIcons(!props.showMediaIcons)}
                 >
-                    <Flip left cascade>
-                        {props.linkName}
-                    </Flip>
+                    {props.linkName}
                 </a>
             </li>
         </>

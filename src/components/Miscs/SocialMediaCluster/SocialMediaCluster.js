@@ -7,7 +7,6 @@ import {
     FaLinkedin,
     FaGithubSquare
 } from 'react-icons/fa';
-import Flip from 'react-reveal/Flip';
 
 const socialMediaClusterList = [
     {
@@ -55,15 +54,13 @@ const SocialMedia = (props) => {
     return (
         <>
             <li>
-                <Flip right cascade>
-                    <a
-                        href={props.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {props.iconsWithClassName}
-                    </a>
-                </Flip>
+                <a
+                    href={props.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {props.iconsWithClassName}
+                </a>
             </li>
         </>
     );

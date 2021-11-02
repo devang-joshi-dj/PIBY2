@@ -14,7 +14,6 @@ const SearchBar = (props) => {
                 type="search"
                 value={props.name}
                 onChange={props.filter}
-                searchBar={searchBar}
                 ref={searchBar}
                 className="searchBar"
                 placeholder="Search..."
