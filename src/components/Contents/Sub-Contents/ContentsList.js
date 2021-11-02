@@ -13,11 +13,13 @@ const ContentsList = (props) => {
 
 
     const setActiveContent = (index) => {
-        const contentName = document.querySelectorAll('.content');
-        for (var i = 0; i < contentName.length; i++) {
-            contentName[i].className = contentName[i].className.replace(" activeContent", "");
+        const contentNameComponent = document.querySelectorAll('.content');
+        for (var i = 0; i < contentNameComponent.length; i++) {
+            contentNameComponent[i].className = contentNameComponent[i].className.replace(' activeContent', '');
         }
-        contentName[index - 1].className += ' activeContent';
+        const contentName = contentNameComponent[index - 1].childNodes[0].textContent;
+        document.title = `Pi/2 | ${contentName}`;
+        contentNameComponent[index - 1].className += ' activeContent';
     }
 
     return (
