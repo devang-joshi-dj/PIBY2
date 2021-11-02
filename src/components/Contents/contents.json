@@ -1,7 +1,7 @@
 {
     "CONTENTS": [
         {
-            "id": "1",
+            "index": "1",
             "name": "Sets",
             "tags": [
                 "sets",
@@ -17,35 +17,35 @@
             ]
         },
         {
-            "id": "2",
+            "index": "2",
             "name": "Matrices",
             "tags": [
                 "matrices"
             ]
         },
         {
-            "id": "3",
+            "index": "3",
             "name": "Mensuration",
             "tags": [
                 "mensuration"
             ]
         },
         {
-            "id": "4",
+            "index": "4",
             "name": "Probability",
             "tags": [
                 "probability"
             ]
         },
         {
-            "id": "5",
+            "index": "5",
             "name": "Functions",
             "tags": [
                 "functions"
             ]
         },
         {
-            "id": "6",
+            "index": "6",
             "name": "Permutations and Combinations",
             "tags": [
                 "permutations and combinations"
