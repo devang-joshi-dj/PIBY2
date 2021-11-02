@@ -13,8 +13,8 @@ const SearchBar = (props) => {
             <input
                 type="search"
                 value={props.name}
-                searchBar={searchBar}
                 onChange={props.filter}
+                searchBar={searchBar}
                 ref={searchBar}
                 className="searchBar"
                 placeholder="Search..."

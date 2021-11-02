@@ -6,7 +6,7 @@ const Heading = (props) => {
     return (
         <>
             <h1 className="heading">
-                <Flip left>
+                <Flip left cascade>
                     {props.children}
                 </Flip>
             </h1>

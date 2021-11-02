@@ -1,19 +1,19 @@
 import React from 'react';
 import imagesPath from '../../config';
 import { animateScroll as scroll } from 'react-scroll';
-import LightSpeed from 'react-reveal/LightSpeed';
+import Slide from 'react-reveal/Slide';
 
 const Logo = () => {
     return (
         <>
             <div className="logo">
-                <LightSpeed left>
+                <Slide left cascade>
                     <img
                         src={`${imagesPath}/logo.png`}
                         alt="PiBy2 Logo"
                         onClick={() => scroll.scrollToTop()}
                     />
-                </LightSpeed>
+                </Slide>
             </div>
         </>
     );

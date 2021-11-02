@@ -6,6 +6,7 @@ import HeaderSocialMedia from './SubHeaders/HeaderSocialMedia';
 
 const Header = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
+
     return (
         <>
             <header>

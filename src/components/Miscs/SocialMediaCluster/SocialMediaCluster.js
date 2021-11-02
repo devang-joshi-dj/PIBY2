@@ -7,7 +7,7 @@ import {
     FaLinkedin,
     FaGithubSquare
 } from 'react-icons/fa';
-import LightSpeed from 'react-reveal/LightSpeed';
+import Flip from 'react-reveal/Flip';
 
 const socialMediaClusterList = [
     {
@@ -40,15 +40,13 @@ const socialMediaClusterList = [
 const SocialMediaCluster = () => {
     return (
         <>
-            <LightSpeed right>
-                {socialMediaClusterList.map(socialMedia => (
-                    <SocialMedia
-                        key={socialMedia.index}
-                        link={socialMedia.link}
-                        iconsWithClassName={socialMedia.iconWithClassName}
-                    />
-                ))}
-            </LightSpeed>
+            {socialMediaClusterList.map(socialMedia => (
+                <SocialMedia
+                    key={socialMedia.index}
+                    link={socialMedia.link}
+                    iconsWithClassName={socialMedia.iconWithClassName}
+                />
+            ))}
         </>
     );
 }
@@ -57,13 +55,15 @@ const SocialMedia = (props) => {
     return (
         <>
             <li>
-                <a
-                    href={props.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {props.iconsWithClassName}
-                </a>
+                <Flip right cascade>
+                    <a
+                        href={props.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {props.iconsWithClassName}
+                    </a>
+                </Flip>
             </li>
         </>
     );
