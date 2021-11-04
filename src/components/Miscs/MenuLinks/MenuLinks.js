@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTrail, animated } from 'react-spring';
 
 const MenuLinkList = [
     {
@@ -24,16 +25,35 @@ const MenuLinkList = [
 ];
 
 const MenuLinks = (props) => {
+    const config = { mass: 10, tension: 2000, friction: 500, };
+    const slideFadeAnimation = useTrail(MenuLinkList.length, {
+        from: {
+            opacity: 0,
+            transform: "translate3d(0,-80px,0)",
+        },
+        to: {
+            opacity: 1,
+            transform: "translate3d(0,0px,0)",
+        },
+        config,
+    });
+
     return (
         <>
-            {MenuLinkList.map(link => (
-                <MenuLink
-                    key={link.index}
-                    href={link.link}
-                    linkName={link.linkName}
-                    {...props}
-                />
-            ))}
+            {slideFadeAnimation.map((spring, index) => {
+                return (
+                    <animated.div
+                        key={index}
+                        style={{ ...spring }}
+                    >
+                        <MenuLink
+                            href={MenuLinkList[index].link}
+                            linkName={MenuLinkList[index].linkName}
+                            {...props}
+                        />
+                    </animated.div>
+                );
+            })}
         </>
     );
 }

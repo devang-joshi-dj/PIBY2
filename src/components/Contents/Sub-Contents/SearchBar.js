@@ -3,8 +3,8 @@ import { useSpring, animated } from 'react-spring';
 
 const SearchBar = (props) => {
     const searchBar = useRef(null);
-    const config = { mass: 10, tension: 1500, friction: 500 };
-    const fadeAnimation = useSpring({
+    const config = { mass: 10, tension: 1500, friction: 500, };
+    const slideFadeAnimation = useSpring({
         from: {
             opacity: 0,
             transform: "translate(-100vh,0)"
@@ -13,7 +13,7 @@ const SearchBar = (props) => {
             opacity: 1,
             transform: "translate(0,0)"
         },
-        config
+        config,
     });
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const SearchBar = (props) => {
     return (
         <>
             <animated.input
-                style={fadeAnimation}
+                style={slideFadeAnimation}
                 type="search"
                 value={props.name}
                 onChange={props.filter}

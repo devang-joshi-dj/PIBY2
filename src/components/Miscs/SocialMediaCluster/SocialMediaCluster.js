@@ -7,6 +7,7 @@ import {
     FaLinkedin,
     FaGithubSquare
 } from 'react-icons/fa';
+import { useTrail, animated } from 'react-spring';
 
 const socialMediaClusterList = [
     {
@@ -37,15 +38,34 @@ const socialMediaClusterList = [
 ];
 
 const SocialMediaCluster = () => {
+    const config = { mass: 10, tension: 2000, friction: 500, };
+    const slideFadeAnimation = useTrail(socialMediaClusterList.length, {
+        from: {
+            opacity: 0,
+            transform: "translate3d(80px,0,0)",
+        },
+        to: {
+            opacity: 1,
+            transform: "translate3d(0,0px,0)",
+        },
+        config,
+    });
+
     return (
-        <>
-            {socialMediaClusterList.map(socialMedia => (
-                <SocialMedia
-                    key={socialMedia.index}
-                    link={socialMedia.link}
-                    iconsWithClassName={socialMedia.iconWithClassName}
-                />
-            ))}
+        <>{slideFadeAnimation.map((spring, index) => {
+            return (
+                <animated.div
+                    key={index}
+                    style={{ ...spring }}
+                >
+                    <SocialMedia
+                        key={socialMediaClusterList[index].index}
+                        link={socialMediaClusterList[index].link}
+                        iconsWithClassName={socialMediaClusterList[index].iconWithClassName}
+                    />
+                </animated.div>
+            );
+        })}
         </>
     );
 }

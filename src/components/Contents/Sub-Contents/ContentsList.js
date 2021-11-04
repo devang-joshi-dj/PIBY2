@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import { useTrail, animated } from 'react-spring';
 
 const ContentsList = (props) => {
 
@@ -19,32 +20,52 @@ const ContentsList = (props) => {
         contentNameComponent[index - 1].className += ' activeContent';
     }
 
+    const config = { mass: 10, tension: 1500, friction: 200, };
+    const slideFadeAnimation = useTrail(props.foundContents.length, {
+        from: {
+            opacity: 0,
+            transform: "translate(-100vh,0)",
+        },
+        to: {
+            opacity: 1,
+            transform: "translate(0,0)",
+        },
+        config,
+    });
+
     return (
         <>
             <div className="contents-list">
                 <ul>
                     {props.foundContents && props.foundContents.length > 0 ? (
-                        props.foundContents.map((content) => (
-                            <Link
-                                key={content.index}
-                                onClick={showPlayArea}
-                                to="play-area"
-                                smooth={true}
-                                duration={1000}
-                            >
-                                <li
-                                    className="content"
-                                    onClick={() => setActiveContent(content.index)}
+                        slideFadeAnimation.map((spring, index) => {
+                            return (
+                                <animated.div
+                                    key={index}
+                                    style={{ ...spring }}
                                 >
-                                    <span className="content-name">{content.name}</span>
-                                </li>
-                            </Link>
-                        ))
+                                    <Link
+                                        onClick={showPlayArea}
+                                        to="play-area"
+                                        smooth={true}
+                                        duration={1000}
+                                    >
+                                        <li
+                                            className="content"
+                                            onClick={() => setActiveContent(props.foundContents[index].index)}
+                                        >
+                                            <span className="content-name">{props.foundContents[index].name}</span>
+                                        </li>
+                                    </Link>
+                                </animated.div>
+                            )
+                        })
                     ) : (
                         <h1>No results found!</h1>
-                    )}
-                </ul>
-            </div>
+                    )
+                    }
+                </ul >
+            </div >
         </>
     );
 }
