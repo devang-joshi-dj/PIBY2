@@ -4,6 +4,12 @@ import { animateScroll as scroll } from 'react-scroll';
 import { useSpring, animated } from 'react-spring';
 
 const Logo = () => {
+
+    const hidePlayArea = () => {
+        const getPlayArea = document.querySelector('.play-area');
+        getPlayArea.style.display = 'none';
+    }
+
     const config = { mass: 10, tension: 2000, friction: 500, };
     const slideFadeAnimation = useSpring({
         from: {
@@ -25,7 +31,11 @@ const Logo = () => {
                 <img
                     src={`${imagesPath}/logo.png`}
                     alt="PiBy2 Logo"
-                    onClick={() => scroll.scrollToTop()}
+                    onClick={() => {
+                        hidePlayArea();
+                        scroll.scrollToTop();
+                        document.title = 'Pi/2';
+                    }}
                 />
             </animated.div>
         </>
