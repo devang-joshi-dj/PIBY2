@@ -1,3 +1,7 @@
+.play-area {
+    padding: 10px 10px;
+}
+
 .play-area, .sets, .matrices, .mensuration, .probability, .functions, .permutations-and-combinations {
     min-height: 100vh;
     background-color: var(--dark-blue);
