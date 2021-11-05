@@ -10,6 +10,7 @@ const Contents = () => {
     const [foundContents, setFoundContents] = useState(CONTENTS);
 
     const filter = (e) => {
+        // function for filtering Content List according the value in Search Bar
         const keyword = e.target.value;
 
         if (keyword !== '') {

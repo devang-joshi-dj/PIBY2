@@ -1,4 +1,5 @@
 import React from 'react';
+import { CONTENTS } from '.././contents.json';
 import { Link } from 'react-scroll';
 import { useTrail, animated } from 'react-spring';
 
@@ -9,15 +10,28 @@ const ContentsList = (props) => {
         getPlayArea.style.display = 'block';
     }
 
-
     const setActiveContent = (index) => {
         const contentNameComponent = document.querySelectorAll('.content');
         const contentName = contentNameComponent[index - 1].childNodes[0].textContent;
+
+        // setting the active class to the clicked button
         for (var i = 0; i < contentNameComponent.length; i++) {
             contentNameComponent[i].className = contentNameComponent[i].className.replace(' activeContent', '');
         }
-        document.title = `Pi/2 | ${contentName}`;
         contentNameComponent[index - 1].className += ' activeContent';
+
+        // setting title according to the button clicked
+        document.title = `Pi/2 | ${contentName}`;
+
+        // setting all play-area children style to display:none
+        CONTENTS.map((content) => {
+            const className = content.name.toLowerCase().trim().split(' ').join('-');
+            return document.querySelector(`.${className}`).style.display = 'none';
+        })
+
+        // setting desired play-area children style to display:block
+        const currentClassName = contentName.toLowerCase().trim().split(' ').join('-');
+        document.querySelector('.' + currentClassName).style.display = 'block';
     }
 
     const config = { mass: 10, tension: 1500, friction: 200, };
