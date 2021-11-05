@@ -27,7 +27,7 @@ const ContentsList = (props) => {
         CONTENTS.map((content) => {
             const className = content.name.toLowerCase().trim().split(' ').join('-');
             return document.querySelector(`.${className}`).style.display = 'none';
-        })
+        });
 
         // setting desired play-area children style to display:block
         const currentClassName = contentName.toLowerCase().trim().split(' ').join('-');

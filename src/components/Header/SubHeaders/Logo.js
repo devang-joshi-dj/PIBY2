@@ -1,15 +1,11 @@
 import React from 'react';
-import imagesPath from '../../config';
+import imagesPath from '../../Miscs/imagesPath';
+import setUnactiveContent from '../../Miscs/setUnactiveContent';
+import hidePlayArea from '../../Miscs/hidePlayArea';
 import { animateScroll as scroll } from 'react-scroll';
 import { useSpring, animated } from 'react-spring';
 
 const Logo = () => {
-
-    const hidePlayArea = () => {
-        const getPlayArea = document.querySelector('.play-area');
-        getPlayArea.style.display = 'none';
-    }
-
     const config = { mass: 10, tension: 2000, friction: 500, };
     const slideFadeAnimation = useSpring({
         from: {
@@ -22,6 +18,7 @@ const Logo = () => {
         },
         config,
     });
+
     return (
         <>
             <animated.div
@@ -32,6 +29,7 @@ const Logo = () => {
                     src={`${imagesPath}/logo.png`}
                     alt="PiBy2 Logo"
                     onClick={() => {
+                        setUnactiveContent();
                         hidePlayArea();
                         scroll.scrollToTop();
                         document.title = 'Pi/2';
