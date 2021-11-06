@@ -1,5 +1,5 @@
 import React from 'react';
-import { CONTENTS } from '.././contents.json';
+import hideContents from '../../Miscs/hideContents';
 import { Link } from 'react-scroll';
 import { useTrail, animated } from 'react-spring';
 
@@ -24,10 +24,7 @@ const ContentsList = (props) => {
         document.title = `Pi/2 | ${contentName}`;
 
         // setting all play-area children style to display:none
-        CONTENTS.map((content) => {
-            const className = content.name.toLowerCase().trim().split(' ').join('-');
-            return document.querySelector(`.${className}`).style.display = 'none';
-        });
+        hideContents();
 
         // setting desired play-area children style to display:block
         const currentClassName = contentName.toLowerCase().trim().split(' ').join('-');

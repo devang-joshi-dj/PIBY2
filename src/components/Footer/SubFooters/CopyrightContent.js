@@ -1,5 +1,6 @@
 import React from 'react';
 import setUnactiveContent from '../../Miscs/setUnactiveContent';
+import hideContents from '../../Miscs/hideContents';
 import hidePlayArea from '../../Miscs/hidePlayArea';
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -11,6 +12,7 @@ const CopyrightContent = () => {
                     Copyright &copy;2021
                     <span onClick={() => {
                         setUnactiveContent();
+                        hideContents();
                         hidePlayArea();
                         scroll.scrollToTop();
                         document.title = 'Pi/2';
