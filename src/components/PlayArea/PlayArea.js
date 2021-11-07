@@ -1,11 +1,11 @@
 import React from 'react';
 import './play-area.css';
-import Sets from './Sets/Sets';
-import Matrices from './Matrices/Matrices';
-import Mensuration from './Mensuration/Mensuration';
-import Probability from './Probability/Probability';
-import Functions from './Functions/Functions';
-import PermutationsAndCombinations from './PermutationsAndCombinations/PermutationsAndCombinations';
+import Sets from './SubPlayAreas/Sets/Sets';
+import Matrices from './SubPlayAreas/Matrices/Matrices';
+import Mensuration from './SubPlayAreas/Mensuration/Mensuration';
+import Probability from './SubPlayAreas/Probability/Probability';
+import Functions from './SubPlayAreas/Functions/Functions';
+import PermutationsAndCombinations from './SubPlayAreas/PermutationsAndCombinations/PermutationsAndCombinations';
 
 const PlayArea = () => {
     return (

@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './sets.css';
-import Heading from '../../Miscs/Heading/Heading';
+import Heading from '../../../Miscs/Heading/Heading';
 
 const Sets = () => {
     return (

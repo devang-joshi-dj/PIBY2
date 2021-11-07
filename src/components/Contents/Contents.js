@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './contents.css';
 import { CONTENTS } from './contents.json';
 import Heading from '../Miscs/Heading/Heading';
-import SearchBar from './Sub-Contents/SearchBar';
-import ContentsList from './Sub-Contents/ContentsList';
+import SearchBar from './SubContents/SearchBar';
+import ContentsList from './SubContents/ContentsList';
 
 const Contents = () => {
     const [name, setName] = useState('');
