@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import './mensuration.css';
 import Heading from '../../../Miscs/Heading/Heading';
 

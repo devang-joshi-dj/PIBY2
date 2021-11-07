@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import './probability.css';
 import Heading from '../../../Miscs/Heading/Heading';
 

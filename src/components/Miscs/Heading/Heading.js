@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import './heading.css';
 import { useSpring, animated } from 'react-spring';
 

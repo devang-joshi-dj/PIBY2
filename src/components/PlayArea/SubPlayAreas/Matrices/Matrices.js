@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import './matrices.css';
 import Heading from '../../../Miscs/Heading/Heading';
 

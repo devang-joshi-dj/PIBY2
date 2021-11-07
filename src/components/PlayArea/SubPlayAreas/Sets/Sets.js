@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import './sets.css';
 import Heading from '../../../Miscs/Heading/Heading';
 
