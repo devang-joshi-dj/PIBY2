@@ -32,7 +32,7 @@ const socialMediaClusterList = [
     },
     {
         index: '5',
-        link: 'https://github.com/devang-joshi-dj',
+        link: 'https://github.com/devang-joshi-dj/PIBY2',
         iconWithClassName: <FaGithubSquare className="github" />,
     },
 ];
