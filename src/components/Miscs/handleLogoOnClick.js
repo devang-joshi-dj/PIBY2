@@ -1,3 +1,5 @@
+import { animateScroll as scroll } from 'react-scroll';
+
 const setUnactiveContent = () => {
     // function for removing active class from all content names
     const contentNameComponent = document.querySelectorAll('.content');
@@ -6,4 +8,11 @@ const setUnactiveContent = () => {
     }
 }
 
-export default setUnactiveContent;
+const handleLogoOnClick = () => {
+    // function handling all functions to happen after clicking on logo
+    setUnactiveContent();
+    scroll.scrollToTop();
+    document.title = 'Pi/2';
+}
+
+export default handleLogoOnClick;

@@ -5,7 +5,6 @@ const ContentsList = (props) => {
 
     const handleContentChange = (contentName) => {
         props.setDisplaySubPlayArea(contentName);
-        props.setDisplayPlayArea(true);
 
         const contentNameComponent = document.querySelectorAll('.content');
         const mappedData = [...contentNameComponent].map((contentNameSubComponent) => {

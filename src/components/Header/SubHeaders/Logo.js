@@ -1,11 +1,8 @@
 import React from 'react';
-import setUnactiveContent from '../../Miscs/setUnactiveContent';
-import hideContents from '../../Miscs/hideContents';
-import hidePlayArea from '../../Miscs/hidePlayArea';
-import { animateScroll as scroll } from 'react-scroll';
+import handleLogoOnClick from '../../Miscs/handleLogoOnClick';
 import { useSpring, animated } from 'react-spring';
 
-const Logo = () => {
+const Logo = (props) => {
     const imagesPath = process.env.PUBLIC_URL + "/images/";
 
     const config = { mass: 10, tension: 2000, friction: 500, };
@@ -31,11 +28,8 @@ const Logo = () => {
                     src={`${imagesPath}/logo.png`}
                     alt="PiBy2 Logo"
                     onClick={() => {
-                        setUnactiveContent();
-                        hideContents();
-                        hidePlayArea();
-                        scroll.scrollToTop();
-                        document.title = 'Pi/2';
+                        handleLogoOnClick();
+                        props.setDisplaySubPlayArea(null);
                     }}
                 />
             </animated.div>

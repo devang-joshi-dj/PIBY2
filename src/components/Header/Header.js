@@ -4,13 +4,15 @@ import Logo from './SubHeaders/Logo';
 import HeaderMenuLinks from './SubHeaders/HeaderMenuLinks';
 import HeaderSocialMedia from './SubHeaders/HeaderSocialMedia';
 
-const Header = () => {
+const Header = (props) => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
 
     return (
         <>
             <header>
-                <Logo />
+                <Logo
+                    setDisplaySubPlayArea={props.setDisplaySubPlayArea}
+                />
                 <HeaderMenuLinks
                     showMediaIcons={showMediaIcons}
                     setShowMediaIcons={setShowMediaIcons}

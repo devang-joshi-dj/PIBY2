@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Contents from './Contents/Contents';
 import PlayArea from './PlayArea/PlayArea';
 
-const Main = () => {
-    const [displaySubPlayArea, setDisplaySubPlayArea] = useState(null);
-    const [displayPlayArea, setDisplayPlayArea] = useState(false);
+const Main = (props) => {
 
     const renderPlayArea = () => {
-        if (displayPlayArea) {
+        if (props.displaySubPlayArea != null) {
             return <PlayArea
-                displaySubPlayArea={displaySubPlayArea}
+                displaySubPlayArea={props.displaySubPlayArea}
             />
         } else return null
     }
@@ -18,8 +16,7 @@ const Main = () => {
         <>
             <div className="main">
                 <Contents
-                    setDisplaySubPlayArea={setDisplaySubPlayArea}
-                    setDisplayPlayArea={setDisplayPlayArea}
+                    setDisplaySubPlayArea={props.setDisplaySubPlayArea}
                 />
                 {renderPlayArea()}
             </div>

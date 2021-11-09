@@ -1,21 +1,15 @@
 import React from 'react';
-import setUnactiveContent from '../../Miscs/setUnactiveContent';
-import hideContents from '../../Miscs/hideContents';
-import hidePlayArea from '../../Miscs/hidePlayArea';
-import { animateScroll as scroll } from 'react-scroll';
+import handleLogoOnClick from '../../Miscs/handleLogoOnClick';
 
-const CopyrightContent = () => {
+const CopyrightContent = (props) => {
     return (
         <>
             <div className="copyright-content">
                 <p>
                     Copyright &copy;2021
                     <span onClick={() => {
-                        setUnactiveContent();
-                        hideContents();
-                        hidePlayArea();
-                        scroll.scrollToTop();
-                        document.title = 'Pi/2';
+                        handleLogoOnClick();
+                        props.setDisplaySubPlayArea(null);
                     }}>
                         PIBY2
                     </span>
