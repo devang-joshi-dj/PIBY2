@@ -11,7 +11,7 @@ import PermutationsAndCombinations from './SubPlayAreas/PermutationsAndCombinati
 const PlayArea = (props) => {
 
     const renderSubPlayArea = () => {
-        const Contents = [
+        const SubPlayAreas = [
             Sets,
             Matrices,
             Mensuration,
@@ -20,9 +20,9 @@ const PlayArea = (props) => {
             PermutationsAndCombinations,
         ];
 
-        return Contents.map((Content, index) => {
+        return SubPlayAreas.map((SubPlayArea, index) => {
             if (CONTENTS[index].name === props.displaySubPlayArea)
-                return <Content key={index} />;
+                return <SubPlayArea key={index} />;
             return null;
         });
     }
