@@ -7,7 +7,7 @@ const Difference = (props) => {
                 Difference
             </div>
         </>
-    )
+    );
 }
 
 export default Difference;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './matrices.css';
-import Heading from '../../../Miscs/Heading/Heading';
+import Heading from '../../../../Miscs/Heading/Heading';
 
 const Matrices = () => {
     return (

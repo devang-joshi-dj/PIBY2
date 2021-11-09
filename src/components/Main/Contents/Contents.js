@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './contents.css';
 import { CONTENTS } from './contents.json';
-import Heading from '../Miscs/Heading/Heading';
+import Heading from '../../Miscs/Heading/Heading';
 import SearchBar from './SubContents/SearchBar';
 import ContentsList from './SubContents/ContentsList';
 
-const Contents = () => {
+const Contents = (props) => {
     const [name, setName] = useState('');
     const [foundContents, setFoundContents] = useState(CONTENTS);
 
@@ -38,6 +38,7 @@ const Contents = () => {
                 />
                 <ContentsList
                     foundContents={foundContents}
+                    {...props}
                 />
             </div>
         </>

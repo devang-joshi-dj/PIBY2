@@ -28,7 +28,7 @@ const SetsPlayArea = () => {
                 />
             </div>
         </>
-    )
+    );
 }
 
 export default SetsPlayArea;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './functions.css';
-import Heading from '../../../Miscs/Heading/Heading';
+import Heading from '../../../../Miscs/Heading/Heading';
 
 const Functions = () => {
     return (

@@ -7,7 +7,7 @@ const CartesianProduct = (props) => {
                 CartesianProduct
             </div>
         </>
-    )
+    );
 }
 
 export default CartesianProduct;

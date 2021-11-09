@@ -7,7 +7,7 @@ const Union = (props) => {
                 Union
             </div>
         </>
-    )
+    );
 }
 
 export default Union;

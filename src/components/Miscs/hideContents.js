@@ -1,4 +1,4 @@
-import { CONTENTS } from '../../components/Contents/contents.json';
+import { CONTENTS } from '../../components/Main/Contents/contents.json';
 
 const hideContents = () => {
     // function for setting all play-area children style to display:none

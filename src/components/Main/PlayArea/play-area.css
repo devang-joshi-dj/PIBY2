@@ -5,5 +5,4 @@
 .play-area, .sets, .matrices, .mensuration, .probability, .functions, .permutations-and-combinations {
     min-height: 100vh;
     background-color: var(--dark-blue);
-    display: none;
 }

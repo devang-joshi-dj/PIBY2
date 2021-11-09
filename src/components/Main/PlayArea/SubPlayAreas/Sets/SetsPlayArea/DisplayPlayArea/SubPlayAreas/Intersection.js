@@ -7,7 +7,7 @@ const Intersection = (props) => {
                 Intersection
             </div>
         </>
-    )
+    );
 }
 
 export default Intersection;

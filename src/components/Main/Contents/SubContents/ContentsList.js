@@ -1,34 +1,32 @@
 import React from 'react';
-import hideContents from '../../Miscs/hideContents';
-import { Link } from 'react-scroll';
 import { useTrail, animated } from 'react-spring';
 
 const ContentsList = (props) => {
 
-    const showPlayArea = () => {
-        const getPlayArea = document.querySelector('.play-area');
-        getPlayArea.style.display = 'block';
-    }
+    const handleContentChange = (contentName) => {
+        props.setDisplaySubPlayArea(contentName);
+        props.setDisplayPlayArea(true);
 
-    const setActiveContent = (index) => {
         const contentNameComponent = document.querySelectorAll('.content');
-        const contentName = contentNameComponent[index - 1].childNodes[0].textContent;
+        const mappedData = [...contentNameComponent].map((contentNameSubComponent) => {
+            const textContent = contentNameSubComponent.childNodes[0].textContent;
+            if (textContent === contentName)
+                return textContent;
+            return null;
+        });
+
+        const index = mappedData.indexOf(contentName);
+        const contentNameTextContent = contentNameComponent[index].childNodes[0].textContent;
 
         // setting the active class to the clicked button
         for (var i = 0; i < contentNameComponent.length; i++) {
             contentNameComponent[i].className = contentNameComponent[i].className.replace(' activeContent', '');
+            if (i === index)
+                contentNameComponent[i].className += ' activeContent';
         }
-        contentNameComponent[index - 1].className += ' activeContent';
 
         // setting title according to the button clicked
-        document.title = `Pi/2 | ${contentName}`;
-
-        // setting all play-area children style to display:none
-        hideContents();
-
-        // setting desired play-area children style to display:block
-        const currentClassName = contentName.toLowerCase().trim().split(' ').join('-');
-        document.querySelector('.' + currentClassName).style.display = 'block';
+        document.title = `${contentNameTextContent} | Pi/2`;
     }
 
     const config = { mass: 10, tension: 1500, friction: 200, };
@@ -55,19 +53,12 @@ const ContentsList = (props) => {
                                     key={index}
                                     style={{ ...spring }}
                                 >
-                                    <Link
-                                        onClick={showPlayArea}
-                                        to="play-area"
-                                        smooth={true}
-                                        duration={1000}
+                                    <li
+                                        className="content"
+                                        onClick={() => handleContentChange(props.foundContents[index].name)}
                                     >
-                                        <li
-                                            className="content"
-                                            onClick={() => setActiveContent(props.foundContents[index].index)}
-                                        >
-                                            <span className="content-name">{props.foundContents[index].name}</span>
-                                        </li>
-                                    </Link>
+                                        <span className="content-name">{props.foundContents[index].name}</span>
+                                    </li>
                                 </animated.div>
                             )
                         })

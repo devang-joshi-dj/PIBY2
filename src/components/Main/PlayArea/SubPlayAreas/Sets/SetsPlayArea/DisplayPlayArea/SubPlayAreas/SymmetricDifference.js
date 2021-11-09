@@ -7,7 +7,7 @@ const SymmetricDifference = (props) => {
                 SymmetricDifference
             </div>
         </>
-    )
+    );
 }
 
 export default SymmetricDifference;

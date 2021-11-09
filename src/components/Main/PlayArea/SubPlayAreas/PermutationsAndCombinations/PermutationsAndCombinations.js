@@ -1,6 +1,6 @@
 import React from 'react';
 import './permutations-and-combinations.css';
-import Heading from '../../../Miscs/Heading/Heading';
+import Heading from '../../../../Miscs/Heading/Heading';
 
 const PermutationsAndCombinations = () => {
     return (

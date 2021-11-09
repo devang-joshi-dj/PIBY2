@@ -3,7 +3,7 @@ import './heading.css';
 import { useSpring, animated } from 'react-spring';
 
 const Heading = (props) => {
-    const config = { duration: 2000 };
+    const config = { duration: 1000 };
     const fadeAnimation = useSpring({
         from: {
             opacity: 0,

@@ -28,7 +28,7 @@ const DisplayPlayArea = (props) => {
         <>
             {switchRender(props.selectedValue)}
         </>
-    )
+    );
 }
 
 export default DisplayPlayArea;
