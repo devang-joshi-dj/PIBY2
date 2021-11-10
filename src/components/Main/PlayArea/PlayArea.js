@@ -29,7 +29,10 @@ const PlayArea = (props) => {
 
     return (
         <>
-            <div className="play-area">
+            <div
+                className="play-area"
+                ref={props.playAreaRef}
+            >
                 {renderSubPlayArea()}
             </div>
         </>
