@@ -5,12 +5,11 @@ import PlayArea from './PlayArea/PlayArea';
 const Main = (props) => {
 
     const renderPlayArea = () => {
-        if (props.displaySubPlayArea != null) {
+        if (props.displaySubPlayArea != null)
             return <PlayArea
                 playAreaRef={props.playAreaRef}
-                displaySubPlayArea={props.displaySubPlayArea}
-            />
-        } else return null
+                displaySubPlayArea={props.displaySubPlayArea} />
+        else return null;
     }
 
     return (

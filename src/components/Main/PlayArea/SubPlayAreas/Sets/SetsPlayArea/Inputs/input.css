@@ -1,0 +1,7 @@
+.input-set {
+    font-size: 1.1rem;
+    color: var(--white);
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}

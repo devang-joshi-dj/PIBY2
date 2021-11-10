@@ -1,19 +1,25 @@
 import React, { useState } from "react";
+import './input.css';
 
 const Input = (props) => {
-    const [value, setValue] = useState("");
+    const [inputValue, setInputValue] = useState("");
+
+    const handleChange = (e) => {
+        setInputValue(e.target.value);
+        props.setValue(e.target.value);
+    }
 
     return (
         <>
-            <div>
+            <div className="input">
                 <label htmlFor={props.children}>
                     {props.children}
                 </label>
                 <input
                     id={props.children}
                     type="text"
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
+                    value={inputValue}
+                    onChange={handleChange}
                 />
             </div>
         </>

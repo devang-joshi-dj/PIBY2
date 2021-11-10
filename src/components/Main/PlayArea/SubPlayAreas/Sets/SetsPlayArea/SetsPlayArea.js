@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Select from '../../Assets/Select';
+import Select from '../../Assets/Select/Select';
 import Intersection from './SubSets/Intersection';
 import Union from './SubSets/Union';
 import Difference from './SubSets/Difference';

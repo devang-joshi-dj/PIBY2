@@ -6,3 +6,10 @@
     min-height: 100vh;
     background-color: var(--dark-blue);
 }
+
+.info {
+    font-weight: lighter;
+    margin-top: 10px;
+    color: var(--white);
+    font-size: 1.2rem;
+}
