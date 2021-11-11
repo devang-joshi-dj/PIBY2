@@ -8,7 +8,7 @@ const Sets = () => {
     const [firstInputValue, setFirstInputValue] = useState("");
     const [secondInputValue, setSecondInputValue] = useState("");
     const [firstFinalSetArray, setFirstFinalSetArray] = useState("");
-    const [secondFinalSetArray, setsecondFinalSetArray] = useState("");
+    const [secondFinalSetArray, setSecondFinalSetArray] = useState("");
 
     return (
         <>
@@ -20,7 +20,7 @@ const Sets = () => {
                     secondInputValue={secondInputValue}
                     setSecondInputValue={setSecondInputValue}
                     setFirstFinalSetArray={setFirstFinalSetArray}
-                    setsecondFinalSetArray={setsecondFinalSetArray}
+                    setSecondFinalSetArray={setSecondFinalSetArray}
                 />
                 <SetsPlayArea
                     firstFinalSetArray={firstFinalSetArray}

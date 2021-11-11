@@ -3,6 +3,7 @@ import './input.css';
 import Input from '../../../Assets/Input/Input';
 
 const Inputs = (props) => {
+    const { firstInputValue, setFirstInputValue, secondInputValue, setSecondInputValue, setFirstFinalSetArray, setSecondFinalSetArray } = props;
     const [firstPrintArray, setFirstPrintArray] = useState("");
     const [secondPrintArray, setSecondPrintArray] = useState("");
 
@@ -14,16 +15,16 @@ const Inputs = (props) => {
     }
 
     useEffect(() => {
-        const trimmedArray = trimArray(props.firstInputValue);
-        props.setFirstFinalSetArray(trimmedArray);
+        const trimmedArray = trimArray(firstInputValue);
+        setFirstFinalSetArray(trimmedArray);
         setFirstPrintArray(`{${trimmedArray.join(', ')}}`);
-    }, [props.firstInputValue]);
+    }, [firstInputValue, setFirstFinalSetArray]);
 
     useEffect(() => {
-        const trimmedArray = trimArray(props.secondInputValue);
-        props.setsecondFinalSetArray(trimmedArray);
+        const trimmedArray = trimArray(secondInputValue);
+        setSecondFinalSetArray(trimmedArray);
         setSecondPrintArray(`{${trimmedArray.join(', ')}}`);
-    }, [props.secondInputValue]);
+    }, [secondInputValue, setSecondFinalSetArray]);
 
     const FirstInputSet = () => {
         return (
@@ -36,7 +37,7 @@ const Inputs = (props) => {
     }
 
     const renderFirstInputSet = () => {
-        if (props.firstInputValue)
+        if (firstInputValue)
             return <FirstInputSet />
         else
             return null;
@@ -53,7 +54,7 @@ const Inputs = (props) => {
     }
 
     const renderSecondInputSet = () => {
-        if (props.secondInputValue)
+        if (secondInputValue)
             return <SecondInputSet />
         else
             return null;
@@ -63,11 +64,11 @@ const Inputs = (props) => {
         <>
             <div className="inputs">
                 <div className="info">Individually Input Your Sets With Comma Separated Elements Without Any Curly Or Square Brackets</div>
-                <Input setValue={props.setFirstInputValue}>
+                <Input setValue={setFirstInputValue}>
                     A:
                 </Input>
                 {renderFirstInputSet()}
-                <Input setValue={props.setSecondInputValue}>
+                <Input setValue={setSecondInputValue}>
                     B:
                 </Input>
                 {renderSecondInputSet()}
