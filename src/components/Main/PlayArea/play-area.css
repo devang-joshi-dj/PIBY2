@@ -7,9 +7,44 @@
     background-color: var(--dark-blue);
 }
 
+h2 {
+    color: var(--white);
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
 .info {
     font-weight: lighter;
     margin-top: 10px;
     color: var(--white);
     font-size: 1.2rem;
+}
+
+.input label, .label {
+    color: var(--white);
+    font-size: 2rem;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.result {
+    font-weight: lighter;
+    color: var(--white);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (max-width:260px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:180px) {
+    h2 {
+        font-size: 2.2rem;
+    }
 }

@@ -10,7 +10,7 @@ const SetsPlayArea = (props) => {
 
     return (
         <>
-            <div className={`select ${props.id}`}>
+            <div className={`select`}>
                 <label htmlFor="select">Select The Desired Operation:</label>
                 <Select
                     id="select"

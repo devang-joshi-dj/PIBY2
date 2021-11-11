@@ -6,12 +6,12 @@ import Difference from './SubSets/Difference';
 import CartesianProduct from './SubSets/CartesianProduct';
 import SymmetricDifference from './SubSets/SymmetricDifference';
 
-const SetsPlayArea = () => {
+const SetsPlayArea = (props) => {
     const [selectedOperation, setSelectedOperation] = useState();
 
     const operations = [
-        { value: 'Intersection', label: 'Intersection' },
         { value: 'Union', label: 'Union' },
+        { value: 'Intersection', label: 'Intersection' },
         { value: 'Difference', label: 'Difference' },
         { value: 'CartesianProduct', label: 'Cartesian Product' },
         { value: 'SymmetricDifference', label: 'Symmetric Difference' },
@@ -19,8 +19,8 @@ const SetsPlayArea = () => {
 
     const renderSubSets = () => {
         const SubSets = [
-            Intersection,
             Union,
+            Intersection,
             Difference,
             CartesianProduct,
             SymmetricDifference,
@@ -28,7 +28,7 @@ const SetsPlayArea = () => {
 
         return SubSets.map((SubSet, index) => {
             if (operations[index].value === selectedOperation)
-                return <SubSet key={index} />;
+                return <SubSet key={index} {...props} />;
             return null;
         });
     }
