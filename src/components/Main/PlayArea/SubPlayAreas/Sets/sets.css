@@ -4,3 +4,8 @@
     justify-content: flex-start;
     flex-direction: column;
 }
+
+.difference-symbol, .intersection-symbol, .phi-symbol, .product-symbol, .symmetric-difference-symbol, .union-symbol {
+    display: inline-block;
+    margin: 0 1px;
+}

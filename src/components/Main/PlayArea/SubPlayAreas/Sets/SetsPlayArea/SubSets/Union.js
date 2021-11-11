@@ -1,4 +1,6 @@
 import React from 'react';
+import PhiSymbol from './Symbols/PhiSymbol';
+import UnionSymbol from './Symbols/UnionSymbol';
 
 const Union = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
@@ -15,7 +17,7 @@ const Union = (props) => {
                     {`{${unionSet.join(', ')}}`}
                 </>;
             else
-                printSet = <>&#8709;</>;
+                printSet = <><PhiSymbol /></>;
 
             return printSet;
         }
@@ -23,7 +25,11 @@ const Union = (props) => {
         return (
             <>
                 <div className="result">
-                    <div className="label">A&#8899;B:</div>
+                    <div className="label">
+                        A
+                        <UnionSymbol />
+                        B:
+                    </div>
                     {printUnionSet()}
                 </div>
             </>

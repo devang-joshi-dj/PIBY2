@@ -1,4 +1,6 @@
 import React from 'react';
+import PhiSymbol from './Symbols/PhiSymbol';
+import ProductSymbol from './Symbols/ProductSymbol';
 
 const CartesianProduct = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
@@ -23,7 +25,7 @@ const CartesianProduct = (props) => {
                 </>;
             }
             else
-                printSet = <>&#8709;</>;
+                printSet = <><PhiSymbol /></>;
 
             return printSet;
         }
@@ -31,7 +33,11 @@ const CartesianProduct = (props) => {
         return (
             <>
                 <div className="result">
-                    <div className="label">AXB:</div>
+                    <div className="label">
+                        A
+                        <ProductSymbol />
+                        B:
+                    </div>
                     {printCartesianProduct()}
                 </div>
             </>

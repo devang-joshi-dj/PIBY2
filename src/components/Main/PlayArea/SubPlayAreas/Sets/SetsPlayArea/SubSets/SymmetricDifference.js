@@ -1,4 +1,6 @@
 import React from 'react';
+import PhiSymbol from './Symbols/PhiSymbol';
+import SymmetricDifferenceSymbol from './Symbols/SymmetricDifferenceSymbol';
 
 const SymmetricDifference = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
@@ -17,7 +19,7 @@ const SymmetricDifference = (props) => {
                     {`{${symmetricDifferenceSet.join(', ')}}`}
                 </>;
             else
-                printSet = <>&#8709;</>;
+                printSet = <><PhiSymbol /></>;
 
             return printSet;
         }
@@ -25,7 +27,11 @@ const SymmetricDifference = (props) => {
         return (
             <>
                 <div className="result">
-                    <div className="label">A&#8745;B:</div>
+                    <div className="label">
+                        A
+                        <SymmetricDifferenceSymbol />
+                        B:
+                    </div>
                     {printSymmetricDifferenceSet()}
                 </div>
             </>

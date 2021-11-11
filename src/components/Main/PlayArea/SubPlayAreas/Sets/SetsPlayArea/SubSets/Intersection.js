@@ -1,4 +1,6 @@
 import React from 'react';
+import PhiSymbol from './Symbols/PhiSymbol';
+import IntersectionSymbol from './Symbols/IntersectionSymbol';
 
 const Intersection = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
@@ -16,7 +18,7 @@ const Intersection = (props) => {
                     {`{${intersectedSet.join(', ')}}`}
                 </>;
             else
-                printSet = <>&#8709;</>;
+                printSet = <><PhiSymbol /></>;
 
             return printSet;
         }
@@ -24,7 +26,11 @@ const Intersection = (props) => {
         return (
             <>
                 <div className="result">
-                    <div className="label">A&#8898;B:</div>
+                    <div className="label">
+                        A
+                        <IntersectionSymbol />
+                        B:
+                    </div>
                     {printIntersectedSet()}
                 </div>
             </>

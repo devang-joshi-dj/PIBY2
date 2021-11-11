@@ -1,4 +1,6 @@
 import React from 'react';
+import PhiSymbol from './Symbols/PhiSymbol';
+import DifferenceSymbol from './Symbols/DifferenceSymbol';
 
 const Difference = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
@@ -16,7 +18,7 @@ const Difference = (props) => {
                     {`{${difference.join(', ')}}`}
                 </>;
             else
-                printSet = <>&#8709;</>;
+                printSet = <><PhiSymbol /></>;
 
             return printSet;
         }
@@ -38,11 +40,19 @@ const Difference = (props) => {
         return (
             <>
                 <div className="result">
-                    <div className="label">A-B:</div>
+                    <div className="label">
+                        A
+                        <DifferenceSymbol />
+                        B:
+                    </div>
                     {printADifferenceB()}
                 </div>
                 <div className="result">
-                    <div className="label">B-A:</div>
+                    <div className="label">
+                        B
+                        <DifferenceSymbol />
+                        A:
+                    </div>
                     {printBDifferenceA()}
                 </div>
             </>
