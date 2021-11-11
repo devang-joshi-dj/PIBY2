@@ -5,25 +5,26 @@ const Union = (props) => {
 
     const getUnion = () => {
 
-        const unionSet = () => {
-            let unionSet = [...firstFinalSetArray, ...secondFinalSetArray] // merging all elements from both sets
-            unionSet = unionSet.filter(e => e); // removing empty values
-            unionSet = [...new Set(unionSet)]; // removing duplicate values
+        const printUnionSet = () => {
+            const unionSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
+            // merging all elements from both sets and removing duplicate values
 
-            let printArray;
+            let printSet;
             if (unionSet.length !== 0)
-                printArray = <>{`{${unionSet.join(', ')}}`}</>;
+                printSet = <>
+                    {`{${unionSet.join(', ')}}`}
+                </>;
             else
-                printArray = <>&#8709;</>;
+                printSet = <>&#8709;</>;
 
-            return printArray
+            return printSet;
         }
 
         return (
             <>
                 <div className="result">
-                    <div className="label">A&#8746;B:</div>
-                    {unionSet()}
+                    <div className="label">A&#8899;B:</div>
+                    {printUnionSet()}
                 </div>
             </>
         );
@@ -31,7 +32,7 @@ const Union = (props) => {
 
     return (
         <>
-            <div className="intersection">
+            <div className="union">
                 <h2>Union</h2>
                 {getUnion()}
             </div>

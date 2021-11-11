@@ -13,8 +13,8 @@ const SetsPlayArea = (props) => {
         { value: 'Union', label: 'Union' },
         { value: 'Intersection', label: 'Intersection' },
         { value: 'Difference', label: 'Difference' },
-        { value: 'CartesianProduct', label: 'Cartesian Product' },
         { value: 'SymmetricDifference', label: 'Symmetric Difference' },
+        { value: 'CartesianProduct', label: 'Cartesian Product' },
     ];
 
     const renderSubSets = () => {
@@ -22,8 +22,8 @@ const SetsPlayArea = (props) => {
             Union,
             Intersection,
             Difference,
-            CartesianProduct,
             SymmetricDifference,
+            CartesianProduct,
         ];
 
         return SubSets.map((SubSet, index) => {

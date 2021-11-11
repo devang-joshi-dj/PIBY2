@@ -7,8 +7,8 @@ import SetsPlayArea from './SetsPlayArea/SetsPlayArea';
 const Sets = () => {
     const [firstInputValue, setFirstInputValue] = useState("");
     const [secondInputValue, setSecondInputValue] = useState("");
-    const [firstFinalSetArray, setFirstFinalSetArray] = useState("");
-    const [secondFinalSetArray, setSecondFinalSetArray] = useState("");
+    const [firstFinalSetArray, setFirstFinalSetArray] = useState([]);
+    const [secondFinalSetArray, setSecondFinalSetArray] = useState([]);
 
     return (
         <>

@@ -1,10 +1,59 @@
 import React from 'react';
 
 const Difference = (props) => {
+    const { firstFinalSetArray, secondFinalSetArray } = props;
+
+    const getDifference = () => {
+
+        const printADifferenceB = () => {
+            const difference = [...firstFinalSetArray].filter(x =>
+                !(secondFinalSetArray).includes(x)
+            ); // filtering all elements of first set which are not in second set
+
+            let printSet;
+            if (difference.length !== 0)
+                printSet = <>
+                    {`{${difference.join(', ')}}`}
+                </>;
+            else
+                printSet = <>&#8709;</>;
+
+            return printSet;
+        }
+
+        const printBDifferenceA = () => {
+            let difference = [...secondFinalSetArray].filter(x =>
+                !(firstFinalSetArray).includes(x)
+            ); // filtering all elements of second set which are not in first set
+
+            let printSet;
+            if (difference.length !== 0)
+                printSet = <>{`{${difference.join(', ')}}`}</>;
+            else
+                printSet = <>&#8709;</>;
+
+            return printSet
+        }
+
+        return (
+            <>
+                <div className="result">
+                    <div className="label">A-B:</div>
+                    {printADifferenceB()}
+                </div>
+                <div className="result">
+                    <div className="label">B-A:</div>
+                    {printBDifferenceA()}
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
             <div className="difference">
-                Difference
+                <h2>Difference</h2>
+                {getDifference()}
             </div>
         </>
     );

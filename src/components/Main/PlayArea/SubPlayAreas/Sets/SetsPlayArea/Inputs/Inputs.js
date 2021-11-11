@@ -8,20 +8,22 @@ const Inputs = (props) => {
     const [secondPrintArray, setSecondPrintArray] = useState("");
 
     const trimArray = (array) => {
-        const plainArray = array.split(',');
-        return plainArray.map(element => {
+        let trimmedArray = array.split(',').map(element => {
             return element.trim();
-        });
+        }); // trimming spaces around all individual elements after splitting array
+        trimmedArray = trimmedArray.filter(e => e); // removing empty values
+        trimmedArray = [...new Set(trimmedArray)]; // removing duplicate values
+        return trimmedArray;
     }
 
     useEffect(() => {
-        const trimmedArray = trimArray(firstInputValue);
+        let trimmedArray = trimArray(firstInputValue);
         setFirstFinalSetArray(trimmedArray);
         setFirstPrintArray(`{${trimmedArray.join(', ')}}`);
     }, [firstInputValue, setFirstFinalSetArray]);
 
     useEffect(() => {
-        const trimmedArray = trimArray(secondInputValue);
+        let trimmedArray = trimArray(secondInputValue);
         setSecondFinalSetArray(trimmedArray);
         setSecondPrintArray(`{${trimmedArray.join(', ')}}`);
     }, [secondInputValue, setSecondFinalSetArray]);

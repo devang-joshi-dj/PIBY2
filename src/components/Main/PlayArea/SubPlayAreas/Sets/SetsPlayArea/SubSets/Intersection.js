@@ -5,27 +5,27 @@ const Intersection = (props) => {
 
     const getIntersection = () => {
 
-        const intersectedSet = () => {
-            let intersectedSet = firstFinalSetArray.filter(value =>
+        const printIntersectedSet = () => {
+            const intersectedSet = firstFinalSetArray.filter(value =>
                 secondFinalSetArray.includes(value)
             ); // filtering common elements from both sets
-            intersectedSet = intersectedSet.filter(e => e); // removing empty values
-            intersectedSet = [...new Set(intersectedSet)]; // removing duplicate values
 
-            let printArray;
+            let printSet;
             if (intersectedSet.length !== 0)
-                printArray = <>{`{${intersectedSet.join(', ')}}`}</>;
+                printSet = <>
+                    {`{${intersectedSet.join(', ')}}`}
+                </>;
             else
-                printArray = <>&#8709;</>;
+                printSet = <>&#8709;</>;
 
-            return printArray
+            return printSet;
         }
 
         return (
             <>
                 <div className="result">
-                    <div className="label">A&#8745;B:</div>
-                    {intersectedSet()}
+                    <div className="label">A&#8898;B:</div>
+                    {printIntersectedSet()}
                 </div>
             </>
         );
