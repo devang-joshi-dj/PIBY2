@@ -28,6 +28,7 @@ h2 {
 }
 
 .result {
+    margin: 10px 5px;
     font-weight: lighter;
     color: var(--white);
     font-size: 2rem;
