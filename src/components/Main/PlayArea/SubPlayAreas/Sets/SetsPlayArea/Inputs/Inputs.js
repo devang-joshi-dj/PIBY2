@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './input.css';
+import './inputs.css';
 import Input from '../../../Assets/Input/Input';
 
 const Inputs = (props) => {
@@ -64,7 +64,7 @@ const Inputs = (props) => {
 
     return (
         <>
-            <div className="inputs">
+            <div className="sets-inputs">
                 <div className="info">Individually Input Your Sets With Comma Separated Elements Without Any Curly Or Square Brackets</div>
                 <Input setValue={setFirstInputValue}>
                     A:

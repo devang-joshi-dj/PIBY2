@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Input from '../../../Assets/Input/Input';
 import Radio from '../../../Assets/Radio/Radio';
 import PhiSymbol from './Symbols/PhiSymbol';
@@ -6,6 +6,7 @@ import UnionSymbol from './Symbols/UnionSymbol';
 
 const Complements = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
+    const [universalOption, setUniversalOption] = useState('A⋃B');
     const options = ['A⋃B', 'R'];
 
     const getComplements = () => {
@@ -38,8 +39,16 @@ const Complements = (props) => {
 
         return (
             <>
-                <Input />
-                <Radio options={options} name="universal-options" />
+                {/* <Input>U:</Input> */}
+                <div className="info">
+                    What would be your universal set?
+                </div>
+                <Radio
+                    options={options}
+                    name="universal-options"
+                    option={universalOption}
+                    setOption={setUniversalOption}
+                />
                 <div className="result">
                     <div className="label">
 

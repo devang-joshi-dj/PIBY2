@@ -15,7 +15,7 @@
   --social-media-transition-style: all 0.2s linear;
 }
 
-header, .footer-menu-links, .footer-bottom, .contents .contents-list {
+header, .footer-menu-links, .footer-bottom, .contents .contents-list, .radio-group {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
