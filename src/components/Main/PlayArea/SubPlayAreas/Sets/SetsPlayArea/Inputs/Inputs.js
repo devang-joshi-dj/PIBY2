@@ -3,7 +3,13 @@ import './inputs.css';
 import Input from '../../../Assets/Input/Input';
 
 const Inputs = (props) => {
-    const { firstInputValue, setFirstInputValue, secondInputValue, setSecondInputValue, setFirstFinalSetArray, setSecondFinalSetArray } = props;
+    const {
+        firstInputValue,
+        setFirstInputValue,
+        secondInputValue, setSecondInputValue,
+        setFirstFinalSetArray,
+        setSecondFinalSetArray,
+    } = props;
     const [firstPrintArray, setFirstPrintArray] = useState("");
     const [secondPrintArray, setSecondPrintArray] = useState("");
 

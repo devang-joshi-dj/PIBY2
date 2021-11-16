@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from '../../../Assets/Input/Input';
 import Radio from '../../../Assets/Radio/Radio';
 import PhiSymbol from './Symbols/PhiSymbol';
@@ -7,39 +7,187 @@ import UnionSymbol from './Symbols/UnionSymbol';
 const Complements = (props) => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
     const [universalOption, setUniversalOption] = useState('A⋃B');
-    const options = ['A⋃B', 'R'];
+    const [universalCustomInputValue, setUniversalCustomInputValue] = useState('');
+    const [universalFinalCustomSetArray, setUniversalFinalCustomSetArray] = useState([]);
+    const [options, setOptions] = useState(['A⋃B', 'R', 'Custom']);
+
+    useEffect(() => {
+        setUniversalFinalCustomSetArray([]);
+    }, [universalOption]);
+
+    const trimArray = (array) => {
+        let trimmedArray = array.split(',').map(element => {
+            return element.trim();
+        }); // trimming spaces around all individual elements after splitting array
+        trimmedArray = trimmedArray.filter(e => e); // removing empty values
+        trimmedArray = [...new Set(trimmedArray)]; // removing duplicate values
+        return trimmedArray;
+    }
+
+    useEffect(() => {
+        let trimmedArray = trimArray(universalCustomInputValue);
+        setUniversalFinalCustomSetArray(trimmedArray);
+    }, [universalCustomInputValue]);
+
+    useEffect(() => {
+        firstFinalSetArray.length ?
+            (firstFinalSetArray.map(element => {
+                if (!isNaN(element)) {
+                    setOptions(['A⋃B', 'R', 'Custom']);
+                }
+                else {
+                    setOptions(['A⋃B', 'Custom'])
+                    setUniversalOption('A⋃B')
+                }
+            })) :
+            setOptions(['A⋃B', 'R', 'Custom']);
+    }, [firstFinalSetArray]);
+
+    useEffect(() => {
+        secondFinalSetArray.length ?
+            (secondFinalSetArray.map(element => {
+                if (!isNaN(element)) {
+                    setOptions(['A⋃B', 'R', 'Custom']);
+                }
+                else {
+                    setOptions(['A⋃B', 'Custom'])
+                    setUniversalOption('A⋃B')
+                }
+            })) :
+            setOptions(['A⋃B', 'R', 'Custom']);
+    }, [secondFinalSetArray]);
+
+    const renderUniversalSet = () => {
+        let universalSet;
+        let printUniversalSet;
+
+        switch (universalOption) {
+            case 'A⋃B':
+                universalSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
+                // merging all elements from both sets and removing duplicate values
+
+                if (universalSet.length !== 0) {
+                    printUniversalSet = <>
+                        {`{${universalSet.join(', ')}}`}
+                    </>;
+                }
+                else
+                    printUniversalSet = <><PhiSymbol /></>;
+
+                return (
+                    <>
+                        <div className="result universal-set">
+                            <div className="label">
+                                U:
+                            </div>
+                            {printUniversalSet}
+                        </div>
+                    </>
+                );
+            case 'R':
+                return (
+                    <>
+                        <div className="result universal-set">
+                            <div className="label">
+                                U:
+                            </div>
+                            R
+                        </div>
+                    </>
+                );
+            case 'Custom':
+                universalSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray, ...universalFinalCustomSetArray])];
+                // merging all elements from both sets and removing duplicate values
+
+                if (universalSet.length !== 0) {
+                    printUniversalSet = <>
+                        {`{${universalSet.join(', ')}}`}
+                    </>;
+                }
+                else
+                    printUniversalSet = <><PhiSymbol /></>;
+
+                return (
+                    <>
+                        <div className="result universal-set">
+                            <div className="label">
+                                U:
+                            </div>
+                            {printUniversalSet}
+                        </div>
+                    </>
+                );
+            default:
+                return null;
+        }
+    }
+
+    const renderInput = () => {
+        return universalOption === 'Custom' ? (
+            <Input setValue={setUniversalCustomInputValue}>
+                (A<UnionSymbol />B)<UnionSymbol />
+            </Input>) :
+            null;
+    }
 
     const getComplements = () => {
 
         const printAComplement = () => {
 
-            // let printSet;
-            // if (unionSet.length !== 0)
-            //     printSet = <>
-            //         {`{${unionSet.join(', ')}}`}
-            //     </>;
-            // else
-            //     printSet = <><PhiSymbol /></>;
-
-            // return printSet;
+            switch (universalOption) {
+                case 'A⋃B':
+                    const universalUnionSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
+                    const universalUnionSetDifferenceA = [...universalUnionSet].filter(x =>
+                        !(firstFinalSetArray).includes(x)
+                    );
+                    return universalUnionSetDifferenceA.length !== 0 ?
+                        `{${universalUnionSetDifferenceA.join(', ')}}` :
+                        <PhiSymbol />;
+                case 'R':
+                    return secondFinalSetArray.length ?
+                        `R-{${secondFinalSetArray.join(', ')}}` :
+                        <PhiSymbol />
+                case 'Custom':
+                    const universalCustomUnionSetDifferenceB = [...secondFinalSetArray, ...universalFinalCustomSetArray].filter(x =>
+                        !(firstFinalSetArray).includes(x)
+                    );
+                    return universalCustomUnionSetDifferenceB.length !== 0 ?
+                        `{${universalCustomUnionSetDifferenceB.join(', ')}}` :
+                        <PhiSymbol />;
+                default:
+                    return null;
+            }
         }
 
         const printBComplement = () => {
 
-            // let printSet;
-            // if (unionSet.length !== 0)
-            //     printSet = <>
-            //         {`{${unionSet.join(', ')}}`}
-            //     </>;
-            // else
-            //     printSet = <><PhiSymbol /></>;
-
-            // return printSet;
+            switch (universalOption) {
+                case 'A⋃B':
+                    const universalUnionSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
+                    const universalUnionSetDifferenceB = [...universalUnionSet].filter(x =>
+                        !(secondFinalSetArray).includes(x)
+                    );
+                    return universalUnionSetDifferenceB.length !== 0 ?
+                        `{${universalUnionSetDifferenceB.join(', ')}}` :
+                        <PhiSymbol />;
+                case 'R':
+                    return firstFinalSetArray.length ?
+                        `R-{${firstFinalSetArray.join(', ')}}` :
+                        <PhiSymbol />
+                case 'Custom':
+                    const universalCustomUnionSetDifferenceB = [...firstFinalSetArray, ...universalFinalCustomSetArray].filter(x =>
+                        !(secondFinalSetArray).includes(x)
+                    );
+                    return universalCustomUnionSetDifferenceB.length !== 0 ?
+                        `{${universalCustomUnionSetDifferenceB.join(', ')}}` :
+                        <PhiSymbol />;
+                default:
+                    return null;
+            }
         }
 
         return (
             <>
-                {/* <Input>U:</Input> */}
                 <div className="info">
                     What would be your universal set?
                 </div>
@@ -49,15 +197,23 @@ const Complements = (props) => {
                     option={universalOption}
                     setOption={setUniversalOption}
                 />
-                <div className="result">
+                {renderInput()}
+                {renderUniversalSet()}
+                <div className="result universal-complement-set">
                     <div className="label">
-
+                        U':
+                    </div>
+                    <PhiSymbol />
+                </div>
+                <div className="result a-complement-set">
+                    <div className="label">
+                        A':
                     </div>
                     {printAComplement()}
                 </div>
-                <div className="result">
+                <div className="result b-complement-set">
                     <div className="label">
-
+                        B':
                     </div>
                     {printBComplement()}
                 </div>

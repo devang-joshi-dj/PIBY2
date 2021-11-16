@@ -8,6 +8,7 @@
 }
 
 h2 {
+    text-align: center;
     color: var(--white);
     font-size: 4rem;
     margin: 10px 0;
@@ -16,7 +17,7 @@ h2 {
 .info {
     text-align: center;
     font-weight: lighter;
-    margin-top: 10px;
+    margin: 10px 0 5px 0;
     color: var(--white);
     font-size: 1.2rem;
 }
@@ -39,13 +40,13 @@ h2 {
     flex-direction: row;
 }
 
-@media (max-width:270px) {
+@media (max-width:280px) {
     h2 {
         font-size: 3rem;
     }
 }
 
-@media (max-width:210px) {
+@media (max-width:220px) {
     h2 {
         font-size: 2.2rem;
     }
