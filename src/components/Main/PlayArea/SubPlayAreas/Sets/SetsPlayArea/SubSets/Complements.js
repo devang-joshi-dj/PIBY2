@@ -31,7 +31,7 @@ const Complements = (props) => {
 
     useEffect(() => {
         firstFinalSetArray.length ?
-            (firstFinalSetArray.map(element => {
+            (firstFinalSetArray.forEach(element => {
                 if (!isNaN(element)) {
                     setOptions(['A⋃B', 'R', 'Custom']);
                 }
@@ -45,7 +45,7 @@ const Complements = (props) => {
 
     useEffect(() => {
         secondFinalSetArray.length ?
-            (secondFinalSetArray.map(element => {
+            (secondFinalSetArray.forEach(element => {
                 if (!isNaN(element)) {
                     setOptions(['A⋃B', 'R', 'Custom']);
                 }

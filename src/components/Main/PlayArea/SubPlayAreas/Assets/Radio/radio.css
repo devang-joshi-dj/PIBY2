@@ -8,7 +8,7 @@
 }
 
 .radio-group label {
-    min-width: 100px;
+    min-width: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,19 +69,19 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .radio-group {
         grid-template-columns: auto auto;
     }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 300px) {
     .radio-group label {
         margin: 0 5px;
     }
 }
 
-@media (max-width: 260px) {
+@media (max-width: 280px) {
     .radio-group {
         grid-gap: 10px;
     }
@@ -90,7 +90,7 @@
     }
 }
 
-@media (max-width: 230px) {
+@media (max-width: 250px) {
     .radio-group {
         grid-template-columns: auto;
     }
