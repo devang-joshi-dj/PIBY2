@@ -1,7 +1,7 @@
 import React from 'react';
 import PhiSymbol from './Symbols/PhiSymbol';
 
-const PowerSet = (props) => {
+const PowerSet = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getPowerSet = () => {
@@ -16,15 +16,19 @@ const PowerSet = (props) => {
                 }
             } // getting the powerset of first set
 
-            let printSet;
-            if (powerSet.length !== 1)
-                printSet = <>
-                    {`{${powerSet.map(array => `{${array.join(', ')}}`).join(', ')}}`.replace('{}', '∅')}
-                </>;
-            else
-                printSet = <>{<PhiSymbol />}</>;
-
-            return printSet;
+            return powerSet.length !== 1 ?
+                <>
+                    {
+                        `{${powerSet.map
+                            (array =>
+                                `{${array.join(', ')}}`
+                            )
+                            .join(', ')}}`
+                            .replace('{}', '∅')
+                    }
+                </>
+                :
+                <>{<PhiSymbol />}</>;
         }
 
         const printSecondPowerSet = () => {
@@ -37,15 +41,19 @@ const PowerSet = (props) => {
                 }
             } // getting the powerset of first set
 
-            let printSet;
-            if (powerSet.length !== 1)
-                printSet = <>
-                    {`{${powerSet.map(array => `{${array.join(', ')}}`).join(', ')}}`.replace('{}', '∅')}
-                </>;
-            else
-                printSet = <>{<PhiSymbol />}</>;
-
-            return printSet;
+            return powerSet.length !== 1 ?
+                <>
+                    {
+                        `{${powerSet.map
+                            (array =>
+                                `{${array.join(', ')}}`
+                            )
+                            .join(', ')}}`
+                            .replace('{}', '∅')
+                    }
+                </>
+                :
+                <>{<PhiSymbol />}</>;
         }
 
         return (

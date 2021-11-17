@@ -23,6 +23,7 @@ h2 {
 }
 
 .input label, .label {
+    text-align: center;
     color: var(--white);
     font-size: 2rem;
     margin-right: 10px;

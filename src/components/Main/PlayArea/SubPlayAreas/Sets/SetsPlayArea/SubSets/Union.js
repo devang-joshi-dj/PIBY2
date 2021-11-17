@@ -2,7 +2,7 @@ import React from 'react';
 import PhiSymbol from './Symbols/PhiSymbol';
 import UnionSymbol from './Symbols/UnionSymbol';
 
-const Union = (props) => {
+const Union = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getUnion = () => {
@@ -11,15 +11,9 @@ const Union = (props) => {
             const unionSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
             // merging all elements from both sets and removing duplicate values
 
-            let printSet;
-            if (unionSet.length !== 0)
-                printSet = <>
-                    {`{${unionSet.join(', ')}}`}
-                </>;
-            else
-                printSet = <><PhiSymbol /></>;
-
-            return printSet;
+            return unionSet.length !== 0 ?
+                <>{`{${unionSet.join(', ')}}`}</> :
+                <><PhiSymbol /></>;
         }
 
         return (

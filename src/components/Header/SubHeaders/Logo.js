@@ -2,7 +2,8 @@ import React from 'react';
 import handleLogoOnClick from '../../Miscs/handleLogoOnClick';
 import { useSpring, animated } from 'react-spring';
 
-const Logo = (props) => {
+const Logo = props => {
+    const { setDisplaySubPlayArea } = props;
     const imagesPath = process.env.PUBLIC_URL + "/images/";
 
     const config = { mass: 10, tension: 2000, friction: 500, };
@@ -29,7 +30,7 @@ const Logo = (props) => {
                     alt="PiBy2 Logo"
                     onClick={() => {
                         handleLogoOnClick();
-                        props.setDisplaySubPlayArea(null);
+                        setDisplaySubPlayArea(null);
                     }}
                 />
             </animated.div>

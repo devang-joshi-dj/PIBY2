@@ -1,7 +1,9 @@
 import React from 'react';
 import handleLogoOnClick from '../../Miscs/handleLogoOnClick';
 
-const CopyrightContent = (props) => {
+const CopyrightContent = props => {
+    const { setDisplaySubPlayArea } = props;
+
     return (
         <>
             <div className="copyright-content">
@@ -9,7 +11,7 @@ const CopyrightContent = (props) => {
                     Copyright &copy;2021
                     <span onClick={() => {
                         handleLogoOnClick();
-                        props.setDisplaySubPlayArea(null);
+                        setDisplaySubPlayArea(null);
                     }}>
                         PIBY2
                     </span>

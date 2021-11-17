@@ -2,7 +2,7 @@ import React from 'react';
 import PhiSymbol from './Symbols/PhiSymbol';
 import DifferenceSymbol from './Symbols/DifferenceSymbol';
 
-const Difference = (props) => {
+const Difference = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getDifference = () => {
@@ -12,15 +12,9 @@ const Difference = (props) => {
                 !(secondFinalSetArray).includes(x)
             ); // filtering all elements of first set which are not in second set
 
-            let printSet;
-            if (difference.length !== 0)
-                printSet = <>
-                    {`{${difference.join(', ')}}`}
-                </>;
-            else
-                printSet = <><PhiSymbol /></>;
-
-            return printSet;
+            return difference.length !== 0 ?
+                <>{`{${difference.join(', ')}}`}</> :
+                <><PhiSymbol /></>;
         }
 
         const printBDifferenceA = () => {
@@ -28,13 +22,9 @@ const Difference = (props) => {
                 !(firstFinalSetArray).includes(x)
             ); // filtering all elements of second set which are not in first set
 
-            let printSet;
-            if (difference.length !== 0)
-                printSet = <>{`{${difference.join(', ')}}`}</>;
-            else
-                printSet = <>&#8709;</>;
-
-            return printSet
+            return difference.length !== 0 ?
+                <>{`{${difference.join(', ')}}`}</> :
+                <><PhiSymbol /></>;
         }
 
         return (

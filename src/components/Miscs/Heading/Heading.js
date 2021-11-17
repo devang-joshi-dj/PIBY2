@@ -2,7 +2,8 @@ import React from 'react';
 import './heading.css';
 import { useSpring, animated } from 'react-spring';
 
-const Heading = (props) => {
+const Heading = props => {
+    const { children } = props;
     const config = { duration: 1000 };
     const fadeAnimation = useSpring({
         from: {
@@ -21,7 +22,7 @@ const Heading = (props) => {
                 className="heading"
                 style={fadeAnimation}
             >
-                {props.children}
+                {children}
             </animated.h1>
         </>
     );

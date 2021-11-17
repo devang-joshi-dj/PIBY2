@@ -13,8 +13,9 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (displaySubPlayArea)
-      scrollToPlayArea();
+    return displaySubPlayArea ?
+      scrollToPlayArea() :
+      null;
   }, [displaySubPlayArea]);
 
   return (

@@ -8,7 +8,8 @@ import Probability from './SubPlayAreas/Probability/Probability';
 import Functions from './SubPlayAreas/Functions/Functions';
 import PermutationsAndCombinations from './SubPlayAreas/PermutationsAndCombinations/PermutationsAndCombinations';
 
-const PlayArea = (props) => {
+const PlayArea = props => {
+    const { displaySubPlayArea, playAreaRef } = props;
 
     const renderSubPlayArea = () => {
         const SubPlayAreas = [
@@ -21,9 +22,9 @@ const PlayArea = (props) => {
         ];
 
         return SubPlayAreas.map((SubPlayArea, index) => {
-            if (CONTENTS[index].name === props.displaySubPlayArea)
-                return <SubPlayArea key={index} />;
-            return null;
+            return CONTENTS[index].name === displaySubPlayArea ?
+                <SubPlayArea key={index} /> :
+                null;
         });
     }
 
@@ -31,7 +32,7 @@ const PlayArea = (props) => {
         <>
             <div
                 className="play-area"
-                ref={props.playAreaRef}
+                ref={playAreaRef}
             >
                 {renderSubPlayArea()}
             </div>

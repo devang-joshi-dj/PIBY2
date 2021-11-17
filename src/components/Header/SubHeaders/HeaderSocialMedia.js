@@ -2,7 +2,9 @@ import React from 'react';
 import HamburgerMenu from './HamburgerMenu';
 import SocialMediaCluster from '../../Miscs/SocialMediaCluster/SocialMediaCluster';
 
-const HeaderSocialMedia = (props) => {
+const HeaderSocialMedia = props => {
+    const { showMediaIcons, setShowMediaIcons } = props;
+
     return (
         <>
             <div className="social-media">
@@ -10,8 +12,8 @@ const HeaderSocialMedia = (props) => {
                     <SocialMediaCluster />
                 </ul>
                 <HamburgerMenu
-                    showMediaIcons={props.showMediaIcons}
-                    setShowMediaIcons={props.setShowMediaIcons}
+                    showMediaIcons={showMediaIcons}
+                    setShowMediaIcons={setShowMediaIcons}
                 />
             </div>
         </>

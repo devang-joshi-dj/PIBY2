@@ -2,7 +2,7 @@ import React from 'react';
 import PhiSymbol from './Symbols/PhiSymbol';
 import ProductSymbol from './Symbols/ProductSymbol';
 
-const CartesianProduct = (props) => {
+const CartesianProduct = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getCartesianProduct = () => {
@@ -18,16 +18,18 @@ const CartesianProduct = (props) => {
                 };
             }; // getting the cartesian product of both sets (AB)
 
-            let printSet;
-            if (cartesianProduct.length !== 0) {
-                printSet = <>
-                    {`{${cartesianProduct.map(array => `(${array})`).join(', ')}}`}
-                </>;
-            }
-            else
-                printSet = <><PhiSymbol /></>;
-
-            return printSet;
+            return cartesianProduct.length !== 0 ?
+                <>
+                    {
+                        `{${cartesianProduct.map
+                            (array =>
+                                `(${array})`
+                            )
+                            .join(', ')}}`
+                    }
+                </>
+                :
+                <><PhiSymbol /></>;
         }
 
         const printBACartesianProduct = () => {
@@ -41,16 +43,18 @@ const CartesianProduct = (props) => {
                 };
             }; // getting the cartesian product of both sets (BA)
 
-            let printSet;
-            if (cartesianProduct.length !== 0) {
-                printSet = <>
-                    {`{${cartesianProduct.map(array => `(${array})`).join(', ')}}`}
-                </>;
-            }
-            else
-                printSet = <><PhiSymbol /></>;
-
-            return printSet;
+            return cartesianProduct.length !== 0 ?
+                <>
+                    {
+                        `{${cartesianProduct.map
+                            (array =>
+                                `(${array})`
+                            )
+                            .join(', ')}}`
+                    }
+                </>
+                :
+                <><PhiSymbol /></>;
         }
 
         return (

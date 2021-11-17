@@ -12,20 +12,21 @@ const Contents = (props) => {
     const filter = (e) => {
         // function for filtering Content List according the value in Search Bar
         const keyword = e.target.value;
-
-        if (keyword !== '') {
-            const results = CONTENTS.filter((content) => {
-                const contentTagsCheck = content.tags.filter((tag) => {
-                    return tag.toLowerCase().includes(keyword.toLowerCase());
-                });
-                return contentTagsCheck.length === 0 ? false : true;
-            });
-            setFoundContents(results);
-        } else {
+        let results;
+        return (keyword !== '') ?
+            (
+                results = CONTENTS.filter((content) => {
+                    const contentTagsCheck = content.tags.filter((tag) => {
+                        return tag.toLowerCase().includes(keyword.toLowerCase());
+                    });
+                    return contentTagsCheck.length === 0 ? false : true;
+                }),
+                setName(keyword),
+                setFoundContents(results)
+            )
+            :
             setFoundContents(CONTENTS);
-        }
 
-        setName(keyword);
     };
 
     return (

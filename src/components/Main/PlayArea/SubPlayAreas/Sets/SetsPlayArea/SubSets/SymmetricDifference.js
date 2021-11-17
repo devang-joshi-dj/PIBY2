@@ -2,7 +2,7 @@ import React from 'react';
 import PhiSymbol from './Symbols/PhiSymbol';
 import SymmetricDifferenceSymbol from './Symbols/SymmetricDifferenceSymbol';
 
-const SymmetricDifference = (props) => {
+const SymmetricDifference = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getSymmetricDifference = () => {
@@ -13,15 +13,9 @@ const SymmetricDifference = (props) => {
                 ...secondFinalSetArray.filter(x => !firstFinalSetArray.includes(x))
             ]; // filtering union + interesection of A and B
 
-            let printSet;
-            if (symmetricDifferenceSet.length !== 0)
-                printSet = <>
-                    {`{${symmetricDifferenceSet.join(', ')}}`}
-                </>;
-            else
-                printSet = <><PhiSymbol /></>;
-
-            return printSet;
+            return symmetricDifferenceSet.length !== 0 ?
+                <>{`{${symmetricDifferenceSet.join(', ')}}`}</> :
+                <><PhiSymbol /></>;
         }
 
         return (

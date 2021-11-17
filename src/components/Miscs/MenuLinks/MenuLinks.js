@@ -58,18 +58,20 @@ const MenuLinks = (props) => {
     );
 }
 
-const MenuLink = (props) => {
+const MenuLink = props => {
+    const { link, setShowMediaIcons, linkName } = props;
+
     return (
         <>
             <li>
                 <a
-                    href={props.link}
+                    href={link}
                     onClick={() => {
-                        if (props.setShowMediaIcons)
-                            props.setShowMediaIcons(false)
+                        if (setShowMediaIcons)
+                            setShowMediaIcons(false)
                     }}
                 >
-                    {props.linkName}
+                    {linkName}
                 </a>
             </li>
         </>

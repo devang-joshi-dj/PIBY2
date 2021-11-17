@@ -2,10 +2,11 @@ import React from 'react';
 import './select.css'
 import Select from 'react-select';
 
-const SetsPlayArea = (props) => {
+const SetsPlayArea = props => {
+    const { setSelectedValue, options, selectedValue } = props;
 
     const handleOperationChange = e => {
-        props.setSelectedValue(e.value);
+        setSelectedValue(e.value);
     }
 
     return (
@@ -14,8 +15,8 @@ const SetsPlayArea = (props) => {
                 <label htmlFor="select">Select The Desired Operation:</label>
                 <Select
                     id="select"
-                    options={props.options}
-                    value={props.options.find(obj => obj.value === props.selectedValue)}
+                    options={options}
+                    value={options.find(obj => obj.value === selectedValue)}
                     onChange={handleOperationChange}
                 />
             </div>

@@ -9,9 +9,9 @@ const ContentsList = (props) => {
         const contentNameComponent = document.querySelectorAll('.content');
         const mappedData = [...contentNameComponent].map((contentNameSubComponent) => {
             const textContent = contentNameSubComponent.childNodes[0].textContent;
-            if (textContent === contentName)
-                return textContent;
-            return null;
+            return textContent === contentName ?
+                textContent :
+                null;
         });
 
         const index = mappedData.indexOf(contentName);

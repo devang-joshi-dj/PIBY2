@@ -2,7 +2,7 @@ import React from 'react';
 import PhiSymbol from './Symbols/PhiSymbol';
 import IntersectionSymbol from './Symbols/IntersectionSymbol';
 
-const Intersection = (props) => {
+const Intersection = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getIntersection = () => {
@@ -12,15 +12,9 @@ const Intersection = (props) => {
                 secondFinalSetArray.includes(value)
             ); // filtering common elements from both sets
 
-            let printSet;
-            if (intersectedSet.length !== 0)
-                printSet = <>
-                    {`{${intersectedSet.join(', ')}}`}
-                </>;
-            else
-                printSet = <><PhiSymbol /></>;
-
-            return printSet;
+            return intersectedSet.length !== 0 ?
+                <>{`{${intersectedSet.join(', ')}}`}</> :
+                <><PhiSymbol /></>;
         }
 
         return (

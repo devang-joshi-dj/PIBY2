@@ -70,16 +70,18 @@ const SocialMediaCluster = () => {
     );
 }
 
-const SocialMedia = (props) => {
+const SocialMedia = props => {
+    const { link, iconsWithClassName } = props;
+
     return (
         <>
             <li>
                 <a
-                    href={props.link}
+                    href={link}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    {props.iconsWithClassName}
+                    {iconsWithClassName}
                 </a>
             </li>
         </>

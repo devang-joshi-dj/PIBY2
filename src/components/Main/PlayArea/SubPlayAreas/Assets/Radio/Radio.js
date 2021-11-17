@@ -1,24 +1,25 @@
 import React from 'react';
 import './radio.css';
 
-const Radio = (props) => {
+const Radio = props => {
+    const { radioOptions, radioName, radioOption, setOption } = props
 
-    const handleChange = (e) => {
-        props.setOption(e.target.id);
+    const handleChange = e => {
+        setOption(e.target.id);
     };
 
     return (
         <>
             <div className="radio-group">
-                {props.options.map((option, index) => {
+                {radioOptions.map((option, index) => {
                     return (
                         <label key={index} >
                             <input
                                 type="radio"
                                 id={option}
-                                name={props.name}
+                                name={radioName}
                                 value={option}
-                                checked={option === props.option}
+                                checked={option === radioOption}
                                 onChange={handleChange}
                             />
                             <span>{option}</span>

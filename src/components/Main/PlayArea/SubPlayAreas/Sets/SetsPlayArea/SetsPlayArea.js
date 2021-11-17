@@ -8,7 +8,7 @@ import CartesianProduct from './SubSets/CartesianProduct';
 import PowerSet from './SubSets/PowerSet';
 import Complements from './SubSets/Complements';
 
-const SetsPlayArea = (props) => {
+const SetsPlayArea = props => {
     const [selectedOperation, setSelectedOperation] = useState();
 
     const operations = [
@@ -33,9 +33,9 @@ const SetsPlayArea = (props) => {
         ];
 
         return SubSets.map((SubSet, index) => {
-            if (operations[index].value === selectedOperation)
-                return <SubSet key={index} {...props} />;
-            return null;
+            return operations[index].value === selectedOperation ?
+                <SubSet key={index} {...props} /> :
+                null;
         });
     }
 

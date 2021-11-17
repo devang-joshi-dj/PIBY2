@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './inputs.css';
 import Input from '../../../Assets/Input/Input';
 
-const Inputs = (props) => {
+const Inputs = props => {
     const {
         firstInputValue,
         setFirstInputValue,
@@ -13,7 +13,7 @@ const Inputs = (props) => {
     const [firstPrintArray, setFirstPrintArray] = useState("");
     const [secondPrintArray, setSecondPrintArray] = useState("");
 
-    const trimArray = (array) => {
+    const trimArray = array => {
         let trimmedArray = array.split(',').map(element => {
             return element.trim();
         }); // trimming spaces around all individual elements after splitting array
@@ -45,10 +45,9 @@ const Inputs = (props) => {
     }
 
     const renderFirstInputSet = () => {
-        if (firstInputValue)
-            return <FirstInputSet />
-        else
-            return null;
+        return firstInputValue ?
+            <FirstInputSet /> :
+            null;
     }
 
     const SecondInputSet = () => {
@@ -62,10 +61,9 @@ const Inputs = (props) => {
     }
 
     const renderSecondInputSet = () => {
-        if (secondInputValue)
-            return <SecondInputSet />
-        else
-            return null;
+        return secondInputValue ?
+            <SecondInputSet /> :
+            null;
     }
 
     return (
