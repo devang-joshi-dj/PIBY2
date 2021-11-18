@@ -25,7 +25,10 @@ const Contents = (props) => {
                 setFoundContents(results)
             )
             :
-            setFoundContents(CONTENTS);
+            (
+                setName(keyword),
+                setFoundContents(CONTENTS)
+            );
 
     };
 
