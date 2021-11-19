@@ -7,6 +7,7 @@ import SymmetricDifference from './SubSets/SymmetricDifference';
 import CartesianProduct from './SubSets/CartesianProduct';
 import PowerSet from './SubSets/PowerSet';
 import Complements from './SubSets/Complements';
+import Check from './SubSets/Check';
 
 const SetsPlayArea = props => {
     const [selectedOperation, setSelectedOperation] = useState();
@@ -19,6 +20,7 @@ const SetsPlayArea = props => {
         { value: 'CartesianProduct', label: 'Cartesian Product' },
         { value: 'PowerSet', label: 'PowerSet' },
         { value: 'Complements', label: 'Complements' },
+        { value: 'Check', label: 'Check' },
     ];
 
     const renderSubSets = () => {
@@ -30,6 +32,7 @@ const SetsPlayArea = props => {
             CartesianProduct,
             PowerSet,
             Complements,
+            Check,
         ];
 
         return SubSets.map((SubSet, index) => {

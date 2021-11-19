@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import './input.css';
 
 const Input = props => {
     const { setValue, children } = props;
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState('');
 
     const handleChange = e => {
         setInputValue(e.target.value);
