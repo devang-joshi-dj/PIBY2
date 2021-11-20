@@ -6,6 +6,7 @@ const Logo = props => {
     const { setDisplaySubPlayArea } = props;
     const imagesPath = process.env.PUBLIC_URL + "/images/";
 
+    // for animation
     const config = { mass: 10, tension: 2000, friction: 500, };
     const slideFadeAnimation = useSpring({
         from: {

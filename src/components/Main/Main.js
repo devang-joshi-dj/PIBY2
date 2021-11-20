@@ -6,6 +6,7 @@ const Main = props => {
     const { displaySubPlayArea, playAreaRef, setDisplaySubPlayArea } = props;
 
     const renderPlayArea = () => {
+        // function to render PlayArea when displaySubplayArea prop is set to any value
         return displaySubPlayArea != null ?
             <PlayArea
                 playAreaRef={playAreaRef}

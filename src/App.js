@@ -9,10 +9,12 @@ const App = () => {
   const playAreaRef = useRef(null);
 
   const scrollToPlayArea = () => {
+    // function to scroll to PlayArea
     playAreaRef.current.scrollIntoView();
   }
 
   useEffect(() => {
+    // function to scrollDown to PlayArea when displaySubPlayArea values is changed
     return displaySubPlayArea ?
       scrollToPlayArea() :
       null;

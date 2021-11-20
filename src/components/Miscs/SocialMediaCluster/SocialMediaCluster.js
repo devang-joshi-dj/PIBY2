@@ -38,6 +38,8 @@ const socialMediaClusterList = [
 ];
 
 const SocialMediaCluster = () => {
+
+    // for animation
     const config = { mass: 10, tension: 2000, friction: 500, };
     const slideFadeAnimation = useTrail(socialMediaClusterList.length, {
         from: {

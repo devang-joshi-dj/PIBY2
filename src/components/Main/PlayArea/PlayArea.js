@@ -12,6 +12,8 @@ const PlayArea = props => {
     const { displaySubPlayArea, playAreaRef } = props;
 
     const renderSubPlayArea = () => {
+        // function to render the SubPlayArea according to the displaySubPlayArea prop
+
         const SubPlayAreas = [
             Sets,
             Matrices,

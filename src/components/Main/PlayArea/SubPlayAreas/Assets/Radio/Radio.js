@@ -5,6 +5,8 @@ const Radio = props => {
     const { radioOptions, radioName, radioOption, setOption } = props
 
     const handleChange = e => {
+        // function to handle the operations when the value is changed in radio button
+
         setOption(e.target.id);
     };
 

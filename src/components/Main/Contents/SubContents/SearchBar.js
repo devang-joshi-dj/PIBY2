@@ -3,6 +3,8 @@ import { useSpring, animated } from 'react-spring';
 
 const SearchBar = (props) => {
     const searchBar = useRef(null);
+
+    // for animation
     const config = { mass: 10, tension: 1500, friction: 500, };
     const slideFadeAnimation = useSpring({
         from: {
@@ -17,6 +19,7 @@ const SearchBar = (props) => {
     });
 
     useEffect(() => {
+        // function to put searchBar into focus on page load
         searchBar.current.focus();
     }, []);
 

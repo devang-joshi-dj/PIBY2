@@ -6,6 +6,8 @@ const Input = props => {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = e => {
+        // function to handle the operations when the value is changed in input component
+
         setInputValue(e.target.value);
         setValue(e.target.value);
     }

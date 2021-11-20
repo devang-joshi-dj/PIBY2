@@ -4,6 +4,8 @@ import { useSpring, animated } from 'react-spring';
 
 const Heading = props => {
     const { children } = props;
+
+    // for animation
     const config = { duration: 1000 };
     const fadeAnimation = useSpring({
         from: {

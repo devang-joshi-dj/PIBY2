@@ -25,6 +25,8 @@ const MenuLinkList = [
 ];
 
 const MenuLinks = (props) => {
+
+    // for animation
     const config = { mass: 10, tension: 2000, friction: 500, };
     const slideFadeAnimation = useTrail(MenuLinkList.length, {
         from: {

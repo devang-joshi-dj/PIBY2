@@ -4,9 +4,15 @@ import { useTrail, animated } from 'react-spring';
 const ContentsList = (props) => {
 
     const handleContentChange = (contentName) => {
+        // function to be executed when any content is clicked
+
+        // setting setDisplaySubPlayArea to content that is clicked
         props.setDisplaySubPlayArea(contentName);
 
+        // getting contentNameComponent
         const contentNameComponent = document.querySelectorAll('.content');
+
+        // getting value of content which is clicked
         const mappedData = [...contentNameComponent].map((contentNameSubComponent) => {
             const textContent = contentNameSubComponent.childNodes[0].textContent;
             return textContent === contentName ?
@@ -14,6 +20,7 @@ const ContentsList = (props) => {
                 null;
         });
 
+        // getting index of content which is clicked and then geting the textContent
         const index = mappedData.indexOf(contentName);
         const contentNameTextContent = contentNameComponent[index].childNodes[0].textContent;
 
@@ -28,6 +35,7 @@ const ContentsList = (props) => {
         document.title = `${contentNameTextContent} | Pi/2`;
     }
 
+    // for animation
     const config = { mass: 10, tension: 1500, friction: 200, };
     const slideFadeAnimation = useTrail(props.foundContents.length, {
         from: {
