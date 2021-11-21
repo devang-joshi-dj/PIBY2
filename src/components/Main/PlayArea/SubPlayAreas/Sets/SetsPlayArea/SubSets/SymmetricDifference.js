@@ -6,8 +6,11 @@ const SymmetricDifference = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getSymmetricDifference = () => {
+        // function to get symmetric difference of firstFinalSetArray and secondFinalSetArray
 
         const printSymmetricDifferenceSet = () => {
+            // function to print symmetric difference of firstFinalSetArray and secondFinalSetArray
+
             const symmetricDifferenceSet = [
                 ...firstFinalSetArray.filter(x => !secondFinalSetArray.includes(x)),
                 ...secondFinalSetArray.filter(x => !firstFinalSetArray.includes(x))

@@ -5,8 +5,10 @@ const PowerSet = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getPowerSet = () => {
+        // function to get powerset of firstFinalSetArray and secondFinalSetArray
 
         const printFirstPowerSet = () => {
+            // function to print powerset of firstFinalSetArray
 
             const powerSet = [[]];
             for (var i = 0; i < firstFinalSetArray.length; i++) {
@@ -32,6 +34,7 @@ const PowerSet = props => {
         }
 
         const printSecondPowerSet = () => {
+            // function to print powerset of secondFinalSetArray
 
             const powerSet = [[]];
             for (var i = 0; i < secondFinalSetArray.length; i++) {

@@ -6,8 +6,11 @@ const Intersection = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getIntersection = () => {
+        // function to get intersection of firstFinalSetArray and secondFinalSetArray
 
         const printIntersectedSet = () => {
+            // function to print intersection of firstFinalSetArray and secondFinalSetArray
+
             const intersectedSet = firstFinalSetArray.filter(value =>
                 secondFinalSetArray.includes(value)
             ); // filtering common elements from both sets

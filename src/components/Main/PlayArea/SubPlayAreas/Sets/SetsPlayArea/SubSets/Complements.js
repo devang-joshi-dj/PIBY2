@@ -12,10 +12,14 @@ const Complements = props => {
     const [options, setOptions] = useState(['A⋃B', 'R', 'Custom']);
 
     useEffect(() => {
+        // function to set universalFinalCustomSetArray to empty
+
         setUniversalFinalCustomSetArray([]);
     }, [universalOption]);
 
     const trimArray = array => {
+        // function to trim and filter any input that is passed
+
         let trimmedArray = array.split(',').map(element => {
             return element.trim();
         }); // trimming spaces around all individual elements after splitting array
@@ -25,11 +29,15 @@ const Complements = props => {
     }
 
     useEffect(() => {
+        // function to trim universalCustomInputValue whenever universalCustomInputValue is changed
+
         let trimmedArray = trimArray(universalCustomInputValue);
         setUniversalFinalCustomSetArray(trimmedArray);
     }, [universalCustomInputValue]);
 
     useEffect(() => {
+        // function to set Options accordingly with the value in the firstFinalSetArray
+
         return firstFinalSetArray.length ?
             (firstFinalSetArray.map(element => {
                 return !isNaN(element) ?
@@ -43,6 +51,8 @@ const Complements = props => {
     }, [firstFinalSetArray]);
 
     useEffect(() => {
+        // function to set Options accordingly with the value in the secondFinalSetArray
+
         return secondFinalSetArray.length ?
             (secondFinalSetArray.map(element => {
                 return !isNaN(element) ?
@@ -56,6 +66,8 @@ const Complements = props => {
     }, [secondFinalSetArray]);
 
     const renderUniversalSet = () => {
+        // function to render UniversalSet accordingly with the selected universalOption value
+
         switch (universalOption) {
             case 'A⋃B':
                 const universalSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
@@ -112,6 +124,8 @@ const Complements = props => {
     }
 
     const renderInput = () => {
+        // function to render Input when universalOption is equal to Custom
+
         return universalOption === 'Custom' ? (
             <Input setValue={setUniversalCustomInputValue}>
                 (A<UnionSymbol />B)<UnionSymbol />
@@ -120,8 +134,10 @@ const Complements = props => {
     }
 
     const getComplements = () => {
+        // function to get complements of firstFinalSetArray and secondFinalSetArray
 
         const printAComplement = () => {
+            // function to print complements of firstFinalSetArray
 
             switch (universalOption) {
                 case 'A⋃B':
@@ -149,6 +165,7 @@ const Complements = props => {
         }
 
         const printBComplement = () => {
+            // function to print complements of secondFinalSetArray
 
             switch (universalOption) {
                 case 'A⋃B':

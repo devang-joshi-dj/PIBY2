@@ -10,10 +10,12 @@ const Inputs = props => {
         setFirstFinalSetArray,
         setSecondFinalSetArray,
     } = props;
-    const [firstPrintArray, setFirstPrintArray] = useState("");
-    const [secondPrintArray, setSecondPrintArray] = useState("");
+    const [firstPrintArray, setFirstPrintArray] = useState('');
+    const [secondPrintArray, setSecondPrintArray] = useState('');
 
     const trimArray = array => {
+        // function to trim and filter any input that is passed
+
         let trimmedArray = array.split(',').map(element => {
             return element.trim();
         }); // trimming spaces around all individual elements after splitting array
@@ -23,16 +25,20 @@ const Inputs = props => {
     }
 
     useEffect(() => {
+        // function to trim firstInputValue whenever firstInputValue is changed
+
         let trimmedArray = trimArray(firstInputValue);
         setFirstFinalSetArray(trimmedArray);
         setFirstPrintArray(`{${trimmedArray.join(', ')}}`);
-    }, [firstInputValue, setFirstFinalSetArray]);
+    }, [firstInputValue]);
 
     useEffect(() => {
+        // function to trim secondInputValue whenever secondInputValue is changed
+
         let trimmedArray = trimArray(secondInputValue);
         setSecondFinalSetArray(trimmedArray);
         setSecondPrintArray(`{${trimmedArray.join(', ')}}`);
-    }, [secondInputValue, setSecondFinalSetArray]);
+    }, [secondInputValue]);
 
     const FirstInputSet = () => {
         return (
@@ -45,6 +51,8 @@ const Inputs = props => {
     }
 
     const renderFirstInputSet = () => {
+        // function to render FirstInputSet when firstInputValue is set to any value
+
         return firstInputValue ?
             <FirstInputSet /> :
             null;
@@ -61,6 +69,8 @@ const Inputs = props => {
     }
 
     const renderSecondInputSet = () => {
+        // function to render SecondInputSet when secondInputValue is set to any value
+
         return secondInputValue ?
             <SecondInputSet /> :
             null;

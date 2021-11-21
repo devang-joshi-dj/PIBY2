@@ -6,8 +6,10 @@ const CartesianProduct = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getCartesianProduct = () => {
+        // function to get cartesian product of firstFinalSetArray X secondFinalSetArray and secondFinalSetArray X firstFinalSetArray
 
         const printABCartesianProduct = () => {
+            // function to print cartesian product of firstFinalSetArray X secondFinalSetArray
 
             const cartesianProduct = [];
             for (let i = 0; i < firstFinalSetArray.length; i++) {
@@ -33,6 +35,7 @@ const CartesianProduct = props => {
         }
 
         const printBACartesianProduct = () => {
+            // function to print cartesian product of secondFinalSetArray X firstFinalSetArray
 
             const cartesianProduct = [];
             for (let i = 0; i < secondFinalSetArray.length; i++) {

@@ -24,6 +24,8 @@ const SetsPlayArea = props => {
     ];
 
     const renderSubSets = () => {
+        // function to render SubSets when selectedOperation is set to any value
+
         const SubSets = [
             Union,
             Intersection,

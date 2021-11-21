@@ -6,8 +6,11 @@ const Union = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
 
     const getUnion = () => {
+        // function to get union of firstFinalSetArray and secondFinalSetArray
 
         const printUnionSet = () => {
+            // function to print union of firstFinalSetArray and secondFinalSetArray
+
             const unionSet = [...new Set([...firstFinalSetArray, ...secondFinalSetArray])];
             // merging all elements from both sets and removing duplicate values
 
