@@ -5,7 +5,29 @@
     flex-direction: column;
 }
 
-.difference-symbol, .intersection-symbol, .phi-symbol, .product-symbol, .symmetric-difference-symbol, .union-symbol {
+.difference-symbol,
+.intersection-symbol,
+.phi-symbol,
+.product-symbol,
+.symmetric-difference-symbol,
+.union-symbol,
+.belongs-to-symbol,
+.does-not-belongs-to-symbol,
+.contains-to-symbol,
+.does-not-contains-to-symbol {
+    height: 100%;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: inline-block;
     margin: 0 1px;
+}
+
+.input-element {
+    font-size: 1.1rem;
+    color: var(--white);
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
 }

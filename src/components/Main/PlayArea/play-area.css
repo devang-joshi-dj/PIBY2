@@ -39,6 +39,8 @@ h2 {
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 @media (max-width:280px) {

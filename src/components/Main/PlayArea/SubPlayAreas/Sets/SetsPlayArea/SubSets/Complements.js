@@ -20,7 +20,7 @@ const Complements = props => {
     const trimArray = array => {
         // function to trim and filter any input that is passed
 
-        let trimmedArray = array.split(',').map(element => {
+        const trimmedArray = array.split(',').map(element => {
             return element.trim();
         }); // trimming spaces around all individual elements after splitting array
         trimmedArray = trimmedArray.filter(e => e); // removing empty values
@@ -31,7 +31,7 @@ const Complements = props => {
     useEffect(() => {
         // function to trim universalCustomInputValue whenever universalCustomInputValue is changed
 
-        let trimmedArray = trimArray(universalCustomInputValue);
+        const trimmedArray = trimArray(universalCustomInputValue);
         setUniversalFinalCustomSetArray(trimmedArray);
     }, [universalCustomInputValue]);
 

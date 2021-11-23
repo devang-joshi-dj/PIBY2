@@ -27,18 +27,18 @@ const Inputs = props => {
     useEffect(() => {
         // function to trim firstInputValue whenever firstInputValue is changed
 
-        let trimmedArray = trimArray(firstInputValue);
+        const trimmedArray = trimArray(firstInputValue);
         setFirstFinalSetArray(trimmedArray);
         setFirstPrintArray(`{${trimmedArray.join(', ')}}`);
-    }, [firstInputValue]);
+    }, [firstInputValue, setFirstFinalSetArray]);
 
     useEffect(() => {
         // function to trim secondInputValue whenever secondInputValue is changed
 
-        let trimmedArray = trimArray(secondInputValue);
+        const trimmedArray = trimArray(secondInputValue);
         setSecondFinalSetArray(trimmedArray);
         setSecondPrintArray(`{${trimmedArray.join(', ')}}`);
-    }, [secondInputValue]);
+    }, [secondInputValue, setSecondFinalSetArray]);
 
     const FirstInputSet = () => {
         return (

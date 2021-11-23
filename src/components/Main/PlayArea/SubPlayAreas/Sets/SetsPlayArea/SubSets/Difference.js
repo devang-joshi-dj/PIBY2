@@ -23,7 +23,7 @@ const Difference = props => {
         const printBDifferenceA = () => {
             // function to print difference of secondFinalSetArray and firstFinalSetArray
 
-            let difference = [...secondFinalSetArray].filter(x =>
+            const difference = [...secondFinalSetArray].filter(x =>
                 !(firstFinalSetArray).includes(x)
             ); // filtering all elements of second set which are not in first set
 
