@@ -20,7 +20,7 @@ const Complements = props => {
     const trimArray = array => {
         // function to trim and filter any input that is passed
 
-        const trimmedArray = array.split(',').map(element => {
+        let trimmedArray = array.split(',').map(element => {
             return element.trim();
         }); // trimming spaces around all individual elements after splitting array
         trimmedArray = trimmedArray.filter(e => e); // removing empty values

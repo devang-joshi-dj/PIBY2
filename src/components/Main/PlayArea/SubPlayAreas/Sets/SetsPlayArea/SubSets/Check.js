@@ -140,7 +140,7 @@ const Complements = props => {
                                     null
                             }
                             {
-                                firstMixedSet.size == firstFinalSetArray.length ?
+                                firstMixedSet.size === firstFinalSetArray.length ?
                                     (
                                         <>
                                             <div className="result">
@@ -161,7 +161,7 @@ const Complements = props => {
                                     )
                             }
                             {
-                                secondMixedSet.size == secondFinalSetArray.length ?
+                                secondMixedSet.size === secondFinalSetArray.length ?
                                     (
                                         <>
                                             <div className="result">
