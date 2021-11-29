@@ -1,16 +1,16 @@
 .input {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .input input {
-    font-size: 1.5rem;
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

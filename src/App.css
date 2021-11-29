@@ -1,21 +1,25 @@
 :root {
-  --navy-blue: #202A44;
-  --dark-blue: #0B0E17;
-  --sky-blue: #87CEEB;
-  --white: #FFFFFF;
-  --dark-white: #E1D9D1;
+  --navy-blue: #202a44;
+  --dark-blue: #0b0e17;
+  --sky-blue: #87ceeb;
+  --white: #ffffff;
+  --dark-white: #e1d9d1;
   --black: #000000;
   --light-black: #171717;
-  --crimson: #DC143C;
-  --mail: #FF9800;
-  --facebook: #1877F2;
-  --instagram: #E4405F;
-  --linkedin: #0A66C2;
+  --crimson: #dc143c;
+  --mail: #ff9800;
+  --facebook: #1877f2;
+  --instagram: #e4405f;
+  --linkedin: #0a66c2;
   --github: #333333;
   --social-media-transition-style: all 0.2s linear;
 }
 
-header, .footer-menu-links, .footer-bottom, .contents .contents-list, .radio-group {
+header,
+.footer-menu-links,
+.footer-bottom,
+.contents .contents-list,
+.radio-group {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;

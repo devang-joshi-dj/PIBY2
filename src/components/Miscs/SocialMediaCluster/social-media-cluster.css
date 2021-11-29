@@ -1,49 +1,49 @@
 .mail {
-    color: var(--mail);
-    transition: var(--social-media-transition-style);
+  color: var(--mail);
+  transition: var(--social-media-transition-style);
 }
 
 .mail:hover {
-    color: var(--white);
-    background-color: var(--mail);
+  color: var(--white);
+  background-color: var(--mail);
 }
 
 .facebook {
-    color: var(--facebook);
-    transition: var(--social-media-transition-style);
+  color: var(--facebook);
+  transition: var(--social-media-transition-style);
 }
 
 .facebook:hover {
-    color: var(--white);
-    background-color: var(--facebook);
+  color: var(--white);
+  background-color: var(--facebook);
 }
 
 .instagram {
-    color: var(--instagram);
-    transition: var(--social-media-transition-style);
+  color: var(--instagram);
+  transition: var(--social-media-transition-style);
 }
 
 .instagram:hover {
-    color: var(--white);
-    background-color: var(--facebook);
+  color: var(--white);
+  background-color: var(--facebook);
 }
 
 .linkedin {
-    color: var(--linkedin);
-    transition: var(--social-media-transition-style);
+  color: var(--linkedin);
+  transition: var(--social-media-transition-style);
 }
 
 .linkedin:hover {
-    color: var(--white);
-    background-color: var(--facebook);
+  color: var(--white);
+  background-color: var(--facebook);
 }
 
 .github {
-    color: var(--github);
-    transition: var(--social-media-transition-style);
+  color: var(--github);
+  transition: var(--social-media-transition-style);
 }
 
 .github:hover {
-    color: var(--white);
-    background-color: var(--facebook);
+  color: var(--white);
+  background-color: var(--facebook);
 }
