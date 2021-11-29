@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './matrices.css';
 import Heading from '../../../../Miscs/Heading/Heading';
 import Inputs from './SubMatrices/Inputs/Inputs';
-import MatricesPlayArea from './SubMatrices/MatricesPlayArea/MatricesPlayArea';
+import MatricesPlayAreas from './SubMatrices/MatricesPlayArea/MatricesPlayArea';
 
 const Matrices = () => {
     const [firstInputValue, setFirstInputValue] = useState('');
@@ -16,7 +16,7 @@ const Matrices = () => {
                     setFirstInputValue={setFirstInputValue}
                     setSecondInputValue={setSecondInputValue}
                 />
-                <MatricesPlayArea
+                <MatricesPlayAreas
                     firstInputValue={firstInputValue}
                     secondInputValue={secondInputValue}
                 />

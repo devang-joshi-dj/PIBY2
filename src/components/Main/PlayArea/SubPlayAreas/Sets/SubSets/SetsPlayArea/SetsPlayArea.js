@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Select from '../../../Assets/Select/Select';
-import Intersection from './SubSetsPlayArea/Intersection';
-import Union from './SubSetsPlayArea/Union';
-import Difference from './SubSetsPlayArea/Difference';
-import SymmetricDifference from './SubSetsPlayArea/SymmetricDifference';
-import CartesianProduct from './SubSetsPlayArea/CartesianProduct';
-import PowerSet from './SubSetsPlayArea/PowerSet';
-import Complements from './SubSetsPlayArea/Complements';
-import Check from './SubSetsPlayArea/Check';
+import Intersection from './SubSetsPlayAreas/Intersection';
+import Union from './SubSetsPlayAreas/Union';
+import Difference from './SubSetsPlayAreas/Difference';
+import SymmetricDifference from './SubSetsPlayAreas/SymmetricDifference';
+import CartesianProduct from './SubSetsPlayAreas/CartesianProduct';
+import PowerSet from './SubSetsPlayAreas/PowerSet';
+import Complements from './SubSetsPlayAreas/Complements';
+import Check from './SubSetsPlayAreas/Check';
 
 const SetsPlayArea = props => {
     const [selectedOperation, setSelectedOperation] = useState();
@@ -23,10 +23,10 @@ const SetsPlayArea = props => {
         { value: 'Check', label: 'Check' },
     ];
 
-    const renderSubSets = () => {
-        // function to render SubSets when selectedOperation is set to any value
+    const renderSubSetsPlayAreas = () => {
+        // function to render SubSetsPlayAreas when selectedOperation is set to any value
 
-        const SubSets = [
+        const SubSetsPlayAreas = [
             Union,
             Intersection,
             Difference,
@@ -37,7 +37,7 @@ const SetsPlayArea = props => {
             Check,
         ];
 
-        return SubSets.map((SubSet, index) => {
+        return SubSetsPlayAreas.map((SubSet, index) => {
             return operations[index].value === selectedOperation ?
                 <SubSet key={index} {...props} /> :
                 null;
@@ -53,7 +53,7 @@ const SetsPlayArea = props => {
                     selectedValue={selectedOperation}
                     setSelectedValue={setSelectedOperation}
                 />
-                {renderSubSets()}
+                {renderSubSetsPlayAreas()}
             </div>
         </>
     );

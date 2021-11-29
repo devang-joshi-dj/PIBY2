@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Select from '../../../Assets/Select/Select';
+import Addition from './SubMatricesPlayAreas/Addition';
+import Difference from './SubMatricesPlayAreas/Difference';
+import Multiplication from './SubMatricesPlayAreas/Multiplication';
 
 const MatricesPlayArea = props => {
     const [selectedOperation, setSelectedOperation] = useState();
@@ -10,20 +13,20 @@ const MatricesPlayArea = props => {
         { value: 'Multiplication', label: 'Multiplication' },
     ];
 
-    const renderSubSets = () => {
-        // function to render SubSets when selectedOperation is set to any value
+    const renderSubMatricesPlayAreas = () => {
+        // function to render SubMatricesPlayAreas when selectedOperation is set to any value
 
-        // const SubSets = [
-        //     Addition,
-        //     Difference,
-        //     Multiplication,
-        // ];
+        const SubMatricesPlayAreas = [
+            Addition,
+            Difference,
+            Multiplication,
+        ];
 
-        // return SubSets.map((SubSet, index) => {
-        //     return operations[index].value === selectedOperation ?
-        //         <SubSet key={index} {...props} /> :
-        //         null;
-        // });
+        return SubMatricesPlayAreas.map((SubSet, index) => {
+            return operations[index].value === selectedOperation ?
+                <SubSet key={index} {...props} /> :
+                null;
+        });
     }
 
     return (
@@ -35,7 +38,7 @@ const MatricesPlayArea = props => {
                     selectedValue={selectedOperation}
                     setSelectedValue={setSelectedOperation}
                 />
-                {renderSubSets()}
+                {renderSubMatricesPlayAreas()}
             </div>
         </>
     );
