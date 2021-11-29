@@ -1,7 +1,12 @@
 .matrices-input {
+  width: 100%;
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+
+.matrices-input input {
+  text-align: center;
 }

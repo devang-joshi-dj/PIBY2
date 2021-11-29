@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Input from '../../../Assets/Input/Input';
-import Radio from '../../../Assets/Radio/Radio';
+import Input from '../../../../Assets/Input/Input';
+import Radio from '../../../../Assets/Radio/Radio';
 import PhiSymbol from './Symbols/PhiSymbol';
 import UnionSymbol from './Symbols/UnionSymbol';
 

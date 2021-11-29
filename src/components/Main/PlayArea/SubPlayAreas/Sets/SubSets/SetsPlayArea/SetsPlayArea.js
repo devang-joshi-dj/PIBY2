@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Select from '../../Assets/Select/Select';
-import Intersection from './SubSets/Intersection';
-import Union from './SubSets/Union';
-import Difference from './SubSets/Difference';
-import SymmetricDifference from './SubSets/SymmetricDifference';
-import CartesianProduct from './SubSets/CartesianProduct';
-import PowerSet from './SubSets/PowerSet';
-import Complements from './SubSets/Complements';
-import Check from './SubSets/Check';
+import Select from '../../../Assets/Select/Select';
+import Intersection from './SubSetsPlayArea/Intersection';
+import Union from './SubSetsPlayArea/Union';
+import Difference from './SubSetsPlayArea/Difference';
+import SymmetricDifference from './SubSetsPlayArea/SymmetricDifference';
+import CartesianProduct from './SubSetsPlayArea/CartesianProduct';
+import PowerSet from './SubSetsPlayArea/PowerSet';
+import Complements from './SubSetsPlayArea/Complements';
+import Check from './SubSetsPlayArea/Check';
 
 const SetsPlayArea = props => {
     const [selectedOperation, setSelectedOperation] = useState();

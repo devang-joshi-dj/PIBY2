@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './sets.css';
 import Heading from '../../../../Miscs/Heading/Heading';
-import Inputs from './SetsPlayArea/Inputs/Inputs';
-import SetsPlayArea from './SetsPlayArea/SetsPlayArea';
+import Inputs from './SubSets/Inputs/Inputs';
+import SetsPlayArea from './SubSets/SetsPlayArea/SetsPlayArea';
 
 const Sets = () => {
     const [firstInputValue, setFirstInputValue] = useState('');

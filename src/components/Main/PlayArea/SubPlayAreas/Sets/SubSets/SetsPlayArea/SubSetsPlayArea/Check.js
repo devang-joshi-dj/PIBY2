@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Input from '../../../Assets/Input/Input';
-import Radio from '../../../Assets/Radio/Radio';
+import Input from '../../../../Assets/Input/Input';
+import Radio from '../../../../Assets/Radio/Radio';
 import BelongsToSymbol from './Symbols/BelongsToSymbol';
 import DoesNotBelongsToSymbol from './Symbols/DoesNotBelongsToSymbol';
 import ContainsToSymbol from './Symbols/ContainsToSymbol';
