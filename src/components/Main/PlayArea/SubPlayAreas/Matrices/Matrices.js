@@ -7,7 +7,6 @@ const Matrices = () => {
         <>
             <div className="matrices">
                 <Heading>Matrices</Heading>
-
             </div>
         </>
     );
