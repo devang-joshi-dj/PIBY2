@@ -1,25 +1,39 @@
 import React, { useState } from 'react';
 import './matrices.css';
 import Heading from '../../../../Miscs/Heading/Heading';
-import Inputs from './SubMatrices/Inputs/Inputs';
+import Selects from './SubMatrices/Selects/Selects';
 import MatricesPlayAreas from './SubMatrices/MatricesPlayArea/MatricesPlayArea';
 
 const Matrices = () => {
-    const [firstInputValue, setFirstInputValue] = useState('');
-    const [secondInputValue, setSecondInputValue] = useState('');
+    const [rowsSelectedValue, setRowsSelectedValue] = useState('');
+    const [columnsSelectedValue, setColumnsSelectedValue] = useState('');
+
+    const renderPlayArea = () => {
+        // function to render PlayArea when rowsSelectedValue and columnsSelectedValue both are set to any value
+
+        return rowsSelectedValue && columnsSelectedValue ?
+            (
+                <>
+                    <MatricesPlayAreas
+                        rowsSelectedValue={rowsSelectedValue}
+                        columnsSelectedValue={columnsSelectedValue}
+                    />
+                </>
+            ) :
+            null;
+    }
 
     return (
         <>
             <div className="matrices">
                 <Heading>Matrices</Heading>
-                <Inputs
-                    setFirstInputValue={setFirstInputValue}
-                    setSecondInputValue={setSecondInputValue}
+                <Selects
+                    rowsSelectedValue={rowsSelectedValue}
+                    setRowsSelectedValue={setRowsSelectedValue}
+                    columnsSelectedValue={columnsSelectedValue}
+                    setColumnsSelectedValue={setColumnsSelectedValue}
                 />
-                <MatricesPlayAreas
-                    firstInputValue={firstInputValue}
-                    secondInputValue={secondInputValue}
-                />
+                {renderPlayArea()}
             </div>
         </>
     );

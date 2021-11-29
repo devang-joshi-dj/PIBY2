@@ -1,0 +1,17 @@
+.matrix-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.matrix-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.matrix-row input {
+  margin: 0 5px;
+  text-align: center;
+}

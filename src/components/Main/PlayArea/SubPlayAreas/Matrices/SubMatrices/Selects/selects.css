@@ -5,8 +5,18 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin: 10px 0;
 }
 
 .matrices-input input {
   text-align: center;
+}
+
+@media (max-width: 300px) {
+  .matrices-input {
+    flex-direction: column;
+  }
+  .matrices-input #select {
+    font-size: 2rem;
+  }
 }
