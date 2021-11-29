@@ -45,6 +45,6 @@ Distributed under the MIT License. See [LICENSE](https://github.com/devang-joshi
 
 - **Devang Joshi** - _Student_ - [Devang Joshi](https://github.com/devang-joshi-dj/) - _Made PIBY2 from Scratch_
 
-## Acknowledgements
+## Acknowledgement
 
 - [Devang Joshi](https://github.com/devang-joshi-dj)
