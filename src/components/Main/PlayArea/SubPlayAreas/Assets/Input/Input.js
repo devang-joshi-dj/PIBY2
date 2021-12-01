@@ -21,8 +21,6 @@ const Input = props => {
                 setInputValue(e.target.value),
                 setValue(e.target.value)
             );
-
-
     }
 
     return (
