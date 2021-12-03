@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 
-const SearchBar = (props) => {
+const SearchBar = props => {
     const searchBar = useRef(null);
 
     // for animation

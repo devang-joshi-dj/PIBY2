@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTrail, animated } from 'react-spring';
 
-const ContentsList = (props) => {
+const ContentsList = props => {
 
     const handleContentChange = (contentName) => {
         // function to be executed when any content is clicked

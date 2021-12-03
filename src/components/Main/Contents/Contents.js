@@ -5,7 +5,7 @@ import Heading from '../../Miscs/Heading/Heading';
 import SearchBar from './SubContents/SearchBar';
 import ContentsList from './SubContents/ContentsList';
 
-const Contents = (props) => {
+const Contents = props => {
     const [name, setName] = useState('');
     const [foundContents, setFoundContents] = useState(CONTENTS);
 

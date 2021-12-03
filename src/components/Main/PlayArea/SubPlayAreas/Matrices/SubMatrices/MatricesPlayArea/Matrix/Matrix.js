@@ -1,9 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Matrix = props => {
-    const { rowsSelectedValue, columnsSelectedValue, matrix, setMatrix } = props;
+    const {
+        rowsSelectedValue,
+        columnsSelectedValue,
+        matrix,
+        setMatrix } = props;
+    const [currentRow, setCurrentRow] = useState(0);
+    const [currentColumn, setCurrentColumn] = useState(0);
+    const [readyFocus, setReadyFocus] = useState(false);
+    const matrixInputsElement = useRef();
 
     useEffect(() => {
+        // function to set matrix, and current row and column to focus on when matrix structure gets changed
+
         return rowsSelectedValue && columnsSelectedValue ?
             (
                 setMatrix(
@@ -14,25 +24,44 @@ const Matrix = props => {
                             () => ''
                         )
                     )
-                )
+                ),
+                setCurrentRow(0),
+                setCurrentColumn(0),
+                setReadyFocus(true)
             ) :
             null
     }, [rowsSelectedValue, columnsSelectedValue, setMatrix])
 
+    useEffect(() => {
+        // function to focus on input on every re-render accordingly
+
+        return readyFocus ?
+            matrixInputsElement
+                .current
+                .children[0]
+                .children[currentRow]
+                .children[currentColumn]
+                .childNodes[0]
+                .focus() :
+            null;
+    }, [readyFocus, matrix, matrixInputsElement, currentRow, currentColumn])
+
     const handleChange = (row, column, e) => {
+        // function to set the matrix value accordingly after handling and restricting input in input fields
+
         const pattern = /^[0-9\b]+$/;
         return e.target.value === '' || pattern.test(e.target.value) ?
             (
-                setMatrix(
-                    () => matrix.map((currentRow, currentRowIndex) => (
-                        currentRow.map((value, valueIndex) =>
-                            currentRowIndex === row && valueIndex === column ?
-                                e.target.value
-                                :
-                                value
-                        )
-                    ))
-                )
+                setMatrix(() => matrix.map((currentRow, currentRowIndex) => (
+                    currentRow.map((value, valueIndex) =>
+                        currentRowIndex === row && valueIndex === column ?
+                            e.target.value
+                            :
+                            value
+                    )
+                ))),
+                setCurrentRow(row),
+                setCurrentColumn(column)
             ) :
             null;
     };
@@ -75,7 +104,9 @@ const Matrix = props => {
 
     return (
         <>
-            <MatrixRow />
+            <div className="matrix" ref={matrixInputsElement}>
+                <MatrixRow />
+            </div>
         </>
     );
 }
