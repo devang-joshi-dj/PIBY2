@@ -8,7 +8,6 @@ const Matrix = props => {
         setMatrix } = props;
     const [currentRow, setCurrentRow] = useState(0);
     const [currentColumn, setCurrentColumn] = useState(0);
-    const [readyFocus, setReadyFocus] = useState(false);
     const matrixInputsElement = useRef();
 
     useEffect(() => {
@@ -26,8 +25,7 @@ const Matrix = props => {
                     )
                 ),
                 setCurrentRow(0),
-                setCurrentColumn(0),
-                setReadyFocus(true)
+                setCurrentColumn(0)
             ) :
             null
     }, [rowsSelectedValue, columnsSelectedValue, setMatrix])
@@ -35,7 +33,7 @@ const Matrix = props => {
     useEffect(() => {
         // function to focus on input on every re-render accordingly
 
-        return readyFocus ?
+        return matrix.length ?
             matrixInputsElement
                 .current
                 .children[0]
@@ -44,7 +42,7 @@ const Matrix = props => {
                 .childNodes[0]
                 .focus() :
             null;
-    }, [readyFocus, matrix, matrixInputsElement, currentRow, currentColumn])
+    }, [matrix, matrixInputsElement, currentRow, currentColumn])
 
     const handleChange = (row, column, e) => {
         // function to set the matrix value accordingly after handling and restricting input in input fields
