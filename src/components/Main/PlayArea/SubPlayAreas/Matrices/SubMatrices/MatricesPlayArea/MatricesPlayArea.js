@@ -29,7 +29,8 @@ const MatricesPlayArea = props => {
                         <Matrix
                             matrix={matrix}
                             setMatrix={setMatrix}
-                            {...props}
+                            rowsSelectedValue={rowsSelectedValue}
+                            columnsSelectedValue={columnsSelectedValue}
                         />
                     </div>
                 </>
@@ -48,7 +49,11 @@ const MatricesPlayArea = props => {
 
         return SubMatricesPlayAreas.map((SubSet, index) => {
             return operations[index].value === selectedOperation ?
-                <SubSet key={index} {...props} /> :
+                <SubSet
+                    matrix={matrix}
+                    key={index}
+                    {...props}
+                /> :
                 null;
         });
     }

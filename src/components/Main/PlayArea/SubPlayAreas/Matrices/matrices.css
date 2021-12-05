@@ -16,3 +16,60 @@
   margin: 0 5px;
   text-align: center;
 }
+
+.matrices .result {
+  align-items: center;
+}
+
+.print-matrix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 90%;
+}
+
+.print-matrix-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.print-matrix-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.print-matrix-column div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  background: var(--black);
+}
+
+@media (max-width: 600px) {
+  .matrices .result {
+    flex-direction: column;
+  }
+  .print-matrix-row {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .matrices .result {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+}
