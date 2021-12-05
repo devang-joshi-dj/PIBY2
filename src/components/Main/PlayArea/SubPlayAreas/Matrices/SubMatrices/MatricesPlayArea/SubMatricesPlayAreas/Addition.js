@@ -24,10 +24,10 @@ const Addition = props => {
             null
     }, [rowsSelectedValue, columnsSelectedValue])
 
-    const getMatrix = () => {
+    const getMatrixAddition = () => {
         // function to get addition of firstMatrix and secondMatrix
 
-        const printMatrix = () => {
+        const printMatrixAddition = () => {
             // function to print addition of firstMatrix and secondMatrix
 
             let finalMatrix;
@@ -62,6 +62,17 @@ const Addition = props => {
 
         return (
             <>
+                <div className="matrix-input">
+                    <div className="label">
+                        Input your 2nd Matrix:
+                    </div>
+                    <Matrix
+                        matrix={secondMatrix}
+                        setMatrix={setSecondMatrix}
+                        rowsSelectedValue={rowsSelectedValue}
+                        columnsSelectedValue={columnsSelectedValue}
+                    />
+                </div>
                 <div className="result">
                     <div className="label">
                         A+B:
@@ -71,7 +82,7 @@ const Addition = props => {
                             secondMatrix.length &&
                             matrix.length === Number(rowsSelectedValue) &&
                             secondMatrix.length === Number(rowsSelectedValue) ?
-                            printMatrix()
+                            printMatrixAddition()
                             :
                             null
                     }
@@ -84,18 +95,7 @@ const Addition = props => {
         <>
             <div className="addition">
                 <h2>Addition</h2>
-                <div className="matrix-input">
-                    <div className="label">
-                        Input your 2nd Matrix:
-                    </div>
-                    <Matrix
-                        matrix={secondMatrix}
-                        setMatrix={setSecondMatrix}
-                        rowsSelectedValue={rowsSelectedValue}
-                        columnsSelectedValue={columnsSelectedValue}
-                    />
-                </div>
-                {getMatrix()}
+                {getMatrixAddition()}
             </div>
         </>
     );
