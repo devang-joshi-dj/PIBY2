@@ -151,7 +151,7 @@ const Complements = props => {
                 case 'R':
                     return secondFinalSetArray.length ?
                         `R-{${secondFinalSetArray.join(', ')}}` :
-                        <PhiSymbol />
+                        <PhiSymbol />;
                 case 'Custom':
                     const universalCustomUnionSetDifferenceB = [...secondFinalSetArray, ...universalFinalCustomSetArray].filter(x =>
                         !(firstFinalSetArray).includes(x)
@@ -179,7 +179,7 @@ const Complements = props => {
                 case 'R':
                     return firstFinalSetArray.length ?
                         `R-{${firstFinalSetArray.join(', ')}}` :
-                        <PhiSymbol />
+                        <PhiSymbol />;
                 case 'Custom':
                     const universalCustomUnionSetDifferenceB = [...firstFinalSetArray, ...universalFinalCustomSetArray].filter(x =>
                         !(secondFinalSetArray).includes(x)
