@@ -1,3 +1,15 @@
+.matrices,
+.matrices-play-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.matrices .label {
+  min-width: 52px;
+}
+
 .matrix-column {
   display: flex;
   align-items: center;
@@ -12,7 +24,7 @@
   flex-direction: column;
 }
 
-.matrix-row input {
+.matrices input {
   margin: 0 5px;
   text-align: center;
 }
@@ -60,6 +72,9 @@
 @media (max-width: 600px) {
   .matrices .result {
     flex-direction: column;
+  }
+  .print-matrix {
+    width: 100%;
   }
   .print-matrix-row {
     padding: 0;

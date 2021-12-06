@@ -21,7 +21,7 @@ const Addition = props => {
                     )
                 )
             ) :
-            null
+            null;
     }, [rowsSelectedValue, columnsSelectedValue])
 
     const getMatrixAddition = () => {
@@ -46,7 +46,7 @@ const Addition = props => {
                                     finalMatrix.map((row, rowIndex) => (
                                         <div key={rowIndex} className="print-matrix-column">
                                             {row.map((column, columnIndex) => (
-                                                <div>
+                                                <div key={columnIndex}>
                                                     {finalMatrix[rowIndex][columnIndex]}
                                                 </div>
                                             ))}
@@ -57,7 +57,7 @@ const Addition = props => {
                         }
                     </div>
                 </>
-            )
+            );
         }
 
         return (

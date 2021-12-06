@@ -13,7 +13,8 @@ const Input = props => {
             (
                 (e.target.value === '' || pattern.test(e.target.value)) ?
                     (
-                        setInputValue(e.target.value)
+                        setInputValue(e.target.value),
+                        setValue(e.target.value)
                     ) :
                     null
             ) :

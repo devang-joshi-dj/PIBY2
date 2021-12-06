@@ -62,10 +62,16 @@ label {
   h2 {
     font-size: 3rem;
   }
+  .input label {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 220px) {
   h2 {
     font-size: 2.2rem;
+  }
+  .input label {
+    font-size: 1rem;
   }
 }

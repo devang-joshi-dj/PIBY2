@@ -21,7 +21,7 @@ const Difference = props => {
                     )
                 )
             ) :
-            null
+            null;
     }, [rowsSelectedValue, columnsSelectedValue])
 
     const getMatrixDifference = () => {
@@ -46,7 +46,7 @@ const Difference = props => {
                                     finalMatrix.map((row, rowIndex) => (
                                         <div key={rowIndex} className="print-matrix-column">
                                             {row.map((column, columnIndex) => (
-                                                <div>
+                                                <div key={columnIndex}>
                                                     {finalMatrix[rowIndex][columnIndex]}
                                                 </div>
                                             ))}
@@ -57,7 +57,7 @@ const Difference = props => {
                         }
                     </div>
                 </>
-            )
+            );
         }
 
         const printBDifferenceAMatrix = () => {
@@ -79,7 +79,7 @@ const Difference = props => {
                                     finalMatrix.map((row, rowIndex) => (
                                         <div key={rowIndex} className="print-matrix-column">
                                             {row.map((column, columnIndex) => (
-                                                <div>
+                                                <div key={columnIndex}>
                                                     {finalMatrix[rowIndex][columnIndex]}
                                                 </div>
                                             ))}
@@ -90,7 +90,7 @@ const Difference = props => {
                         }
                     </div>
                 </>
-            )
+            );
         }
 
         return (
