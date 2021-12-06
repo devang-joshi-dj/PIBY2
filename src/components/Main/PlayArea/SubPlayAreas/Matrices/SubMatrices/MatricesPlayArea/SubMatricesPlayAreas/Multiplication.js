@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Select from 'react-select';
 import Input from '../../../../Assets/Input/Input';
 import Radio from '../../../../Assets/Radio/Radio';
 import Matrix from '../Matrix/Matrix';
-import Select from 'react-select';
+import ProductSymbol from './Symbols/ProductSymbol';
 
 const Multiplication = props => {
     const { matrix, rowsSelectedValue, columnsSelectedValue } = props;
@@ -10,7 +11,8 @@ const Multiplication = props => {
     const [multiplicationOption, setMultiplicationOption] = useState('Constant');
     const [constantValue, setConstantValue] = useState(0);
     const options = ['Constant', 'Matrix'];
-    const [finalInitialMatrix, setFinalInitialMatrix] = useState([]);
+    const [finalMatrixStructure, setFinalMatrixStructure] = useState([]);
+    const [finalOptionalMatrixStructure, setFinalOptionalMatrixStructure] = useState([]);
     const [secondMatrixColumnsSelectedValue, setSecondMatrixColumnsSelectedValue] = useState();
 
     useEffect(() => {
@@ -20,7 +22,7 @@ const Multiplication = props => {
             case 'Constant':
                 return rowsSelectedValue && columnsSelectedValue ?
                     (
-                        setFinalInitialMatrix(
+                        setFinalMatrixStructure(
                             Array.from(
                                 { length: rowsSelectedValue }, () =>
                                 Array.from(
@@ -34,12 +36,21 @@ const Multiplication = props => {
             case 'Matrix':
                 return rowsSelectedValue && secondMatrixColumnsSelectedValue ?
                     (
-                        setFinalInitialMatrix(
+                        setFinalMatrixStructure(
                             Array.from(
                                 { length: rowsSelectedValue }, () =>
                                 Array.from(
                                     { length: secondMatrixColumnsSelectedValue },
-                                    () => null
+                                    () => ''
+                                )
+                            )
+                        ),
+                        setFinalOptionalMatrixStructure(
+                            Array.from(
+                                { length: columnsSelectedValue }, () =>
+                                Array.from(
+                                    { length: columnsSelectedValue },
+                                    () => ''
                                 )
                             )
                         )
@@ -52,10 +63,6 @@ const Multiplication = props => {
         rowsSelectedValue,
         columnsSelectedValue,
         secondMatrixColumnsSelectedValue])
-
-    // useEffect(() => {
-    //     console.log(secondMatrix)
-    // }, [secondMatrix])
 
     useEffect(() => {
         // function to set constantValue to zero and secondMatrixColumnsSelectedValue to null if there is a change in multiplicationOption
@@ -137,7 +144,7 @@ const Multiplication = props => {
             let finalMatrix;
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
-                    finalMatrix = finalInitialMatrix;
+                    finalMatrix = finalMatrixStructure;
                     finalMatrix[i][j] = Number(matrix[i][j]) * constantValue;
                 }
 
@@ -145,7 +152,9 @@ const Multiplication = props => {
                 <>
                     <div className="result">
                         <div className="label">
-                            kXA:
+                            k
+                            <ProductSymbol />
+                            A:
                         </div>
                         <div className="print-matrix">
                             {
@@ -172,56 +181,113 @@ const Multiplication = props => {
         const PrintMatrixToMatrixMultiplication = () => {
             // function to print Matrix To Matrix Multiplication
 
-            // let finalMatrix = finalInitialMatrix;
-            // for (let i = 0; i < rowsSelectedValue; i++) {
-            //     let cal = 0;
-            //     for (let j = 0; j < columnsSelectedValue; j++) {
-            //         for (let k = 0; k < secondMatrixColumnsSelectedValue; k++) {
-            //             cal += Number(matrix[j][k]) * Number(secondMatrix[k][j]);
-            //             finalMatrix[k][j] = cal
-            //         }
-            //     }
-            // }
+            const PrintAMatrixToBMatrixMultiplication = () => {
+                let finalMatrix = finalMatrixStructure;
+                for (let i = 0; i < rowsSelectedValue; i++) {
+                    for (let j = 0; j < secondMatrixColumnsSelectedValue; j++) {
+                        finalMatrix[i][j] = 0;
+                        for (let k = 0; k < columnsSelectedValue; k++) {
+                            finalMatrix[i][j] += matrix[i][k] * secondMatrix[k][j];
+                        }
+                    }
+                }
 
-            // return (
-            //     <>
-            //         {
-            //             secondMatrix.length &&
-            //                 secondMatrix.length === Number(columnsSelectedValue) ?
-            //                 <div className="result">
-            //                     <div className="label">
-            //                         AXB:
-            //                     </div>
-            //                     <div className="print-matrix">
-            //                         {
-            //                             <div className="print-matrix-row">
-            //                                 {
-            //                                     finalMatrix.map((row, rowIndex) => (
-            //                                         <div key={rowIndex} className="print-matrix-column">
-            //                                             {row.map((column, columnIndex) => (
-            //                                                 <div key={columnIndex}>
-            //                                                     {finalMatrix[rowIndex][columnIndex]}
-            //                                                 </div>
-            //                                             ))}
-            //                                         </div>
-            //                                     ))
-            //                                 }
-            //                             </div>
-            //                         }
-            //                     </div>
-            //                 </div>
-            //                 : null
-            //         }
-            //     </>
-            // );
+                return (
+                    <>
+                        {
+                            secondMatrix.length &&
+                                secondMatrix.length === Number(columnsSelectedValue) ?
+                                <div className="result">
+                                    <div className="label">
+                                        A
+                                        <ProductSymbol />
+                                        B:
+                                    </div>
+                                    <div className="print-matrix">
+                                        {
+                                            <div className="print-matrix-row">
+                                                {
+                                                    finalMatrix.map((row, rowIndex) => (
+                                                        <div key={rowIndex} className="print-matrix-column">
+                                                            {row.map((column, columnIndex) => (
+                                                                <div key={columnIndex}>
+                                                                    {finalMatrix[rowIndex][columnIndex]}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    ))
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                                : null
+                        }
+                    </>
+                );
+            }
+
+            const PrintBMatrixToAMatrixMultiplication = () => {
+                let finalMatrix = finalOptionalMatrixStructure;
+                for (let i = 0; i < columnsSelectedValue; i++) {
+                    for (let j = 0; j < columnsSelectedValue; j++) {
+                        finalMatrix[i][j] = 0;
+                        for (let k = 0; k < secondMatrixColumnsSelectedValue; k++) {
+                            finalMatrix[i][j] += secondMatrix[i][k] * matrix[k][j];
+                        }
+                    }
+                }
+
+                return (
+                    <>
+                        {
+                            secondMatrix.length &&
+                                secondMatrix.length === Number(columnsSelectedValue) ?
+                                <div className="result">
+                                    <div className="label">
+                                        B
+                                        <ProductSymbol />
+                                        A:
+                                    </div>
+                                    <div className="print-matrix">
+                                        {
+                                            <div className="print-matrix-row">
+                                                {
+                                                    finalMatrix.map((row, rowIndex) => (
+                                                        <div key={rowIndex} className="print-matrix-column">
+                                                            {row.map((column, columnIndex) => (
+                                                                <div key={columnIndex}>
+                                                                    {finalMatrix[rowIndex][columnIndex]}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    ))
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                                : null
+                        }
+                    </>
+                );
+            }
 
             return (
                 <>
+                    <PrintAMatrixToBMatrixMultiplication />
+                    {
+                        rowsSelectedValue === secondMatrixColumnsSelectedValue ?
+                            <PrintBMatrixToAMatrixMultiplication /> :
+                            null
+                    }
                 </>
             );
         }
 
         const renderMultiplication = () => {
+            // function to render result of specific type of multiplication accordingly
+
             switch (multiplicationOption) {
                 case 'Constant':
                     return <PrintConstantToMatrixMultiplication />
@@ -248,12 +314,11 @@ const Multiplication = props => {
                     setOption={setMultiplicationOption}
                 />
                 {renderInput()}
-
                 {
                     matrix.length &&
-                        finalInitialMatrix.length &&
+                        finalMatrixStructure.length &&
                         matrix.length === Number(rowsSelectedValue) &&
-                        finalInitialMatrix.length === Number(rowsSelectedValue) ?
+                        finalMatrixStructure.length === Number(rowsSelectedValue) ?
                         renderMultiplication()
                         : null
                 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Matrix from '../Matrix/Matrix';
+import AdditionSymbol from './Symbols/AdditionSymbol';
 
 const Addition = props => {
     const { matrix, rowsSelectedValue, columnsSelectedValue } = props;
@@ -75,7 +76,9 @@ const Addition = props => {
                 </div>
                 <div className="result">
                     <div className="label">
-                        A+B:
+                        A
+                        <AdditionSymbol />
+                        B:
                     </div>
                     {
                         matrix.length &&

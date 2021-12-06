@@ -28,6 +28,26 @@ h2 {
   font-size: 1.2rem;
 }
 
+.addition-symbol,
+.difference-symbol,
+.intersection-symbol,
+.phi-symbol,
+.product-symbol,
+.symmetric-difference-symbol,
+.union-symbol,
+.belongs-to-symbol,
+.does-not-belongs-to-symbol,
+.contains-to-symbol,
+.does-not-contains-to-symbol {
+  height: 100%;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin: 0 1px;
+}
+
 .symbol {
   text-align: center;
   font-weight: lighter;

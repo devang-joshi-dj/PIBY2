@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Matrix from '../Matrix/Matrix';
+import DifferenceSymbol from './Symbols/DifferenceSymbol';
 
 const Difference = props => {
     const { matrix, rowsSelectedValue, columnsSelectedValue } = props;
@@ -108,7 +109,9 @@ const Difference = props => {
                 </div>
                 <div className="result">
                     <div className="label">
-                        A-B:
+                        A
+                        <DifferenceSymbol />
+                        B:
                     </div>
                     {
                         matrix.length &&
@@ -122,7 +125,9 @@ const Difference = props => {
                 </div>
                 <div className="result">
                     <div className="label">
-                        B-A:
+                        B
+                        <DifferenceSymbol />
+                        A:
                     </div>
                     {
                         matrix.length &&

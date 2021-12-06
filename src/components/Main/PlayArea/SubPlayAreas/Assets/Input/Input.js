@@ -8,7 +8,7 @@ const Input = props => {
     const handleChange = e => {
         // function to handle the operations when the value is changed in input component
 
-        const pattern = /^[0-9\b]+$/;
+        const pattern = /^-?(\d+\.?\d*|\d*\.?\d+)$/;
         return filter ?
             (
                 (e.target.value === '' || pattern.test(e.target.value)) ?

@@ -47,7 +47,7 @@ const Matrix = props => {
     const handleChange = (row, column, e) => {
         // function to set the matrix value accordingly after handling and restricting input in input fields
 
-        const pattern = /^[0-9\b]+$/;
+        const pattern = /^-?(\d+\.?\d*|\d*\.?\d+)$/;
         return e.target.value === '' || pattern.test(e.target.value) ?
             (
                 setMatrix(() => matrix.map((currentRow, currentRowIndex) => (
