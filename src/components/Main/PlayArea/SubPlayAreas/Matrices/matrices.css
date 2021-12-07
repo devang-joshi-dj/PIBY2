@@ -69,6 +69,10 @@
   background: var(--black);
 }
 
+.multiplication #select {
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   .matrices .result {
     flex-direction: column;
