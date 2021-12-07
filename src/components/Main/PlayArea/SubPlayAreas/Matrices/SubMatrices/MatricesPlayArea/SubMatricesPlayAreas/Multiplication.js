@@ -16,7 +16,7 @@ const Multiplication = props => {
     const [secondMatrixColumnsSelectedValue, setSecondMatrixColumnsSelectedValue] = useState();
 
     useEffect(() => {
-        // function to set finalMatrix when matrix structure gets changed
+        // function to set finalMatrixStructure when matrix structure gets changed
 
         switch (multiplicationOption) {
             case 'Constant':

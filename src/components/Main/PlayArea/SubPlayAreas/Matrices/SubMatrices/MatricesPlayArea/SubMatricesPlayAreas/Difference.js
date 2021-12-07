@@ -5,14 +5,14 @@ import DifferenceSymbol from './Symbols/DifferenceSymbol';
 const Difference = props => {
     const { matrix, rowsSelectedValue, columnsSelectedValue } = props;
     const [secondMatrix, setSecondMatrix] = useState([]);
-    const [finalInitialMatrix, setFinalInitialMatrix] = useState([]);
+    const [finalMatrixStructure, setFinalMatrixStructure] = useState([]);
 
     useEffect(() => {
-        // function to set finalMatrix when matrix structure gets changed
+        // function to set finalMatrixStructure when matrix structure gets changed
 
         return rowsSelectedValue && columnsSelectedValue ?
             (
-                setFinalInitialMatrix(
+                setFinalMatrixStructure(
                     Array.from(
                         { length: rowsSelectedValue }, () =>
                         Array.from(
@@ -34,7 +34,7 @@ const Difference = props => {
             let finalMatrix;
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
-                    finalMatrix = finalInitialMatrix;
+                    finalMatrix = finalMatrixStructure;
                     finalMatrix[i][j] = Number(matrix[i][j]) - Number(secondMatrix[i][j]);
                 }
 
@@ -67,7 +67,7 @@ const Difference = props => {
             let finalMatrix;
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
-                    finalMatrix = finalInitialMatrix;
+                    finalMatrix = finalMatrixStructure;
                     finalMatrix[i][j] = Number(secondMatrix[i][j]) - Number(matrix[i][j]);
                 }
 

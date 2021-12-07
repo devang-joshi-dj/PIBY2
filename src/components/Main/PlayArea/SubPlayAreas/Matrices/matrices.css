@@ -69,7 +69,8 @@
   background: var(--black);
 }
 
-.multiplication #select {
+.multiplication #select,
+.transpose {
   width: 100%;
 }
 

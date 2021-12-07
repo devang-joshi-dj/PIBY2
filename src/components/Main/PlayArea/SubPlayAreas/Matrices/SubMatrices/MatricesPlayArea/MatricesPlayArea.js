@@ -4,6 +4,7 @@ import Matrix from './Matrix/Matrix';
 import Addition from './SubMatricesPlayAreas/Addition';
 import Difference from './SubMatricesPlayAreas/Difference';
 import Multiplication from './SubMatricesPlayAreas/Multiplication';
+import Transpose from './SubMatricesPlayAreas/Transpose';
 
 const MatricesPlayArea = props => {
     const { rowsSelectedValue, columnsSelectedValue } = props;
@@ -14,6 +15,7 @@ const MatricesPlayArea = props => {
         { value: 'Addition', label: 'Addition' },
         { value: 'Difference', label: 'Difference' },
         { value: 'Multiplication', label: 'Multiplication' },
+        { value: 'Transpose', label: 'Transpose' },
     ];
 
     const renderMatrixInput = () => {
@@ -45,6 +47,7 @@ const MatricesPlayArea = props => {
             Addition,
             Difference,
             Multiplication,
+            Transpose,
         ];
 
         return SubMatricesPlayAreas.map((SubSet, index) => {
