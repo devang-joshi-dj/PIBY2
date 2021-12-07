@@ -3,17 +3,11 @@ import React from 'react';
 const Transpose = props => {
     const { matrix, rowsSelectedValue } = props;
 
-    const getMatrixAddition = () => {
+    const getMatrixTranspose = () => {
         // function to get transpose of matrix
 
-        const printMatrixAddition = () => {
+        const printMatrixTranspose = () => {
             // function to print transpose of matrix
-
-            // for (let i = 0; i < rowsSelectedValue; i++)
-            //     for (let j = 0; j < columnsSelectedValue; j++) {
-            //         finalMatrix = finalMatrixStructure;
-            //         finalMatrix[i][j] = Number(matrix[i][j])
-            //     }
 
             const finalMatrix = matrix[0].map((_, colIndex) => matrix.map(row => Number(row[colIndex])));
 
@@ -49,7 +43,7 @@ const Transpose = props => {
                     {
                         matrix.length &&
                             matrix.length === Number(rowsSelectedValue) ?
-                            printMatrixAddition()
+                            printMatrixTranspose()
                             :
                             null
                     }
@@ -62,7 +56,7 @@ const Transpose = props => {
         <>
             <div className="transpose">
                 <h2>Transpose</h2>
-                {getMatrixAddition()}
+                {getMatrixTranspose()}
             </div>
         </>
     );
