@@ -64,10 +64,9 @@ const Difference = props => {
         const printBDifferenceAMatrix = () => {
             // function to print difference of secondMatrix and firstMatrix
 
-            let finalMatrix;
+            let finalMatrix = finalMatrixStructure;
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
-                    finalMatrix = finalMatrixStructure;
                     finalMatrix[i][j] = Number(secondMatrix[i][j]) - Number(matrix[i][j]);
                 }
 

@@ -27,12 +27,12 @@ const Multiplication = props => {
                                 { length: rowsSelectedValue }, () =>
                                 Array.from(
                                     { length: columnsSelectedValue },
-                                    () => null
+                                    () => ''
                                 )
                             )
                         )
                     ) :
-                    null
+                    null;
             case 'Matrix':
                 return rowsSelectedValue && secondMatrixColumnsSelectedValue ?
                     (
@@ -55,7 +55,7 @@ const Multiplication = props => {
                             )
                         )
                     ) :
-                    null
+                    null;
             default:
                 return null;
         }
@@ -141,11 +141,10 @@ const Multiplication = props => {
         const PrintConstantToMatrixMultiplication = () => {
             // function to print Constant To Matrix Multiplication
 
-            let finalMatrix;
+            let finalMatrix = finalMatrixStructure;
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
-                    finalMatrix = finalMatrixStructure;
-                    finalMatrix[i][j] = Number(matrix[i][j]) * constantValue;
+                    finalMatrix[i][j] = Number(matrix[i][j]) * Number(constantValue);
                 }
 
             return (
@@ -182,6 +181,8 @@ const Multiplication = props => {
             // function to print Matrix To Matrix Multiplication
 
             const PrintAMatrixToBMatrixMultiplication = () => {
+                // function to print A Matrix To B Matrix Multiplication
+
                 let finalMatrix = finalMatrixStructure;
                 for (let i = 0; i < rowsSelectedValue; i++) {
                     for (let j = 0; j < secondMatrixColumnsSelectedValue; j++) {
@@ -228,6 +229,8 @@ const Multiplication = props => {
             }
 
             const PrintBMatrixToAMatrixMultiplication = () => {
+                // function to print B Matrix To A Matrix Multiplication
+
                 let finalMatrix = finalOptionalMatrixStructure;
                 for (let i = 0; i < columnsSelectedValue; i++) {
                     for (let j = 0; j < columnsSelectedValue; j++) {

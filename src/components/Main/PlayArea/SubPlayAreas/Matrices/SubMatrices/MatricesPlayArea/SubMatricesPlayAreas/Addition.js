@@ -31,10 +31,9 @@ const Addition = props => {
         const printMatrixAddition = () => {
             // function to print addition of firstMatrix and secondMatrix
 
-            let finalMatrix;
+            let finalMatrix = finalMatrixStructure;
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
-                    finalMatrix = finalMatrixStructure;
                     finalMatrix[i][j] = Number(matrix[i][j]) + Number(secondMatrix[i][j]);
                 }
 

@@ -4,6 +4,7 @@ import Matrix from './Matrix/Matrix';
 import Addition from './SubMatricesPlayAreas/Addition';
 import Difference from './SubMatricesPlayAreas/Difference';
 import Multiplication from './SubMatricesPlayAreas/Multiplication';
+import Division from './SubMatricesPlayAreas/Division';
 import Transpose from './SubMatricesPlayAreas/Transpose';
 
 const MatricesPlayArea = props => {
@@ -15,6 +16,7 @@ const MatricesPlayArea = props => {
         { value: 'Addition', label: 'Addition' },
         { value: 'Difference', label: 'Difference' },
         { value: 'Multiplication', label: 'Multiplication' },
+        { value: 'Division', label: 'Division' },
         { value: 'Transpose', label: 'Transpose' },
     ];
 
@@ -47,6 +49,7 @@ const MatricesPlayArea = props => {
             Addition,
             Difference,
             Multiplication,
+            Division,
             Transpose,
         ];
 
