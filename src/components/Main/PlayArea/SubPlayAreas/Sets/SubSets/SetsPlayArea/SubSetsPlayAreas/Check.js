@@ -7,7 +7,7 @@ import ContainsToSymbol from './Symbols/ContainsToSymbol';
 import DoesNotContainsToSymbol from './Symbols/DoesNotContainsToSymbol';
 import PhiSymbol from './Symbols/PhiSymbol';
 
-const Complements = props => {
+const Checks = props => {
     const { firstFinalSetArray, secondFinalSetArray } = props;
     const [checkInputValue, setCheckInputValue] = useState('');
     const [checkOption, setCheckOption] = useState('Belongs To');
@@ -215,4 +215,4 @@ const Complements = props => {
     );
 }
 
-export default Complements;
+export default Checks;
