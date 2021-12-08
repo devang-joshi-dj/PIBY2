@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './input.css';
 
 const Input = props => {
-    const { setValue, children, filter } = props;
+    const { placeholder, setValue, children, filter } = props;
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = e => {
@@ -39,6 +39,7 @@ const Input = props => {
                 <input
                     id={children}
                     type="text"
+                    placeholder={placeholder ? placeholder : null}
                     value={inputValue}
                     onChange={handleChange}
                 />

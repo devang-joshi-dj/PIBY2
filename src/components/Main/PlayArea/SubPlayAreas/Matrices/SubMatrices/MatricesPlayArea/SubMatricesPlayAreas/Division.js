@@ -71,7 +71,11 @@ const Division = props => {
 
         return (
             <>
-                <Input setValue={setConstantValue} filter={true}>
+                <Input
+                    placeholder="0"
+                    setValue={setConstantValue}
+                    filter={true}
+                >
                     Input your Constant:
                 </Input>
                 {

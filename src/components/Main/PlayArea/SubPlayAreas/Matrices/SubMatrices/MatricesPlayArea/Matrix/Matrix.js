@@ -74,6 +74,7 @@ const Matrix = props => {
                         <div key={index} className="input">
                             <input
                                 type="text"
+                                placeholder="0"
                                 value={matrix[currentRow][index]}
                                 onChange={e => handleChange(currentRow, index, e)}
                             />
