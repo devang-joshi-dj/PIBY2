@@ -38,7 +38,7 @@ label {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   #select {
     font-size: 1.5rem;
     width: 100%;
