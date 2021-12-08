@@ -7,6 +7,8 @@
   --black: #000000;
   --light-black: #171717;
   --crimson: #dc143c;
+  --success: #22bb33;
+  --failure: #bb2124;
   --mail: #ff9800;
   --facebook: #1877f2;
   --instagram: #e4405f;
@@ -26,4 +28,12 @@ header,
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+.success {
+  color: var(--success);
+}
+
+.failure {
+  color: var(--failure);
 }

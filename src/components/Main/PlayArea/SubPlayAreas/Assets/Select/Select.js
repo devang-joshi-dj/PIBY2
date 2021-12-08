@@ -2,7 +2,7 @@ import React from 'react';
 import './select.css'
 import Select from 'react-select';
 
-const SetsPlayArea = props => {
+const SelectComponent = props => {
     const { setSelectedValue, options, selectedValue } = props;
 
     const handleOperationChange = e => {
@@ -26,4 +26,4 @@ const SetsPlayArea = props => {
     )
 }
 
-export default SetsPlayArea;
+export default SelectComponent;

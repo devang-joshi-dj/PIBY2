@@ -7,6 +7,7 @@ import Multiplication from './SubMatricesPlayAreas/Multiplication';
 import Division from './SubMatricesPlayAreas/Division';
 import Transpose from './SubMatricesPlayAreas/Transpose';
 import FindElement from './SubMatricesPlayAreas/FindElement';
+import CheckType from './SubMatricesPlayAreas/CheckType';
 
 const MatricesPlayArea = props => {
     const { rowsSelectedValue, columnsSelectedValue } = props;
@@ -20,6 +21,7 @@ const MatricesPlayArea = props => {
         { value: 'Division', label: 'Division' },
         { value: 'Transpose', label: 'Transpose' },
         { value: 'FindElement', label: 'Find Element' },
+        { value: 'CheckType', label: 'Check Type' },
     ];
 
     const renderMatrixInput = () => {
@@ -54,6 +56,7 @@ const MatricesPlayArea = props => {
             Division,
             Transpose,
             FindElement,
+            CheckType,
         ];
 
         return SubMatricesPlayAreas.map((SubMatricesPlayAreas, index) => {

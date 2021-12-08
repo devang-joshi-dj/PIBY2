@@ -2,7 +2,7 @@ import React from 'react';
 import './selects.css';
 import Select from 'react-select';
 
-const Matrices = props => {
+const Selects = props => {
     const {
         rowsSelectedValue,
         setRowsSelectedValue,
@@ -22,11 +22,11 @@ const Matrices = props => {
     }
 
     const options = [
-        { value: '1', label: '1' },
-        { value: '2', label: '2' },
-        { value: '3', label: '3' },
-        { value: '4', label: '4' },
-        { value: '5', label: '5' },
+        { value: 1, label: 1 },
+        { value: 2, label: 2 },
+        { value: 3, label: 3 },
+        { value: 4, label: 4 },
+        { value: 5, label: 5 },
     ];
 
     return (
@@ -51,4 +51,4 @@ const Matrices = props => {
     );
 }
 
-export default Matrices;
+export default Selects;

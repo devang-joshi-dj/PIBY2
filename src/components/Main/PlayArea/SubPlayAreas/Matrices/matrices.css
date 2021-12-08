@@ -70,8 +70,46 @@
 }
 
 .multiplication #select,
-.transpose {
+.transpose,
+.check-type {
   width: 100%;
+}
+
+.types {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.check-type .icon {
+  font-size: 1.2em;
+}
+
+.check-type .result {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+@media (max-width: 1160px) {
+  .check-type .result {
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 810px) {
+  .check-type .result {
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .check-type .result {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+  }
 }
 
 @media (max-width: 600px) {
