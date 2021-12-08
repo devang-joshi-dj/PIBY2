@@ -132,20 +132,22 @@ const CheckType = props => {
     const checkSkewSymmetricMatrix = useCallback(() => {
         // function to check whether the matrix is skew symmetric matrix or not
 
-        if (rowsSelectedValue === 1 && columnsSelectedValue === 1 && !nullMatrix) {
-            return setSkewSymmetricMatrix(false);
-        } else
-            if (squareMatrix) {
-                const secondMatrix = matrix[0].map((_, colIndex) => matrix.map(row => Number(row[colIndex])));
+        if (squareMatrix) {
+            const secondMatrix = matrix[0].map((_, colIndex) => matrix.map(row => Number(row[colIndex])));
 
-                for (let i = 0; i < rowsSelectedValue; i++)
-                    for (let j = i + 1; j < columnsSelectedValue; j++)
-                        if (Number(matrix[i][j]) !== (Number(secondMatrix[i][j]) * (-1)))
-                            return setSkewSymmetricMatrix(false);
-                return setSkewSymmetricMatrix(true);
-            }
-            else setSkewSymmetricMatrix(false);
-    }, [squareMatrix, rowsSelectedValue, columnsSelectedValue, nullMatrix, matrix])
+            for (let i = 0; i < rowsSelectedValue; i++)
+                for (let j = 0; j < columnsSelectedValue; j++)
+                    if (i === j && Number(matrix[i][j]) !== 0)
+                        return setSkewSymmetricMatrix(false)
+
+            for (let i = 0; i < rowsSelectedValue; i++)
+                for (let j = i + 1; j < columnsSelectedValue; j++)
+                    if (Number(matrix[i][j]) !== (Number(secondMatrix[i][j]) * (-1)))
+                        return setSkewSymmetricMatrix(false);
+            return setSkewSymmetricMatrix(true);
+        }
+        else setSkewSymmetricMatrix(false);
+    }, [squareMatrix, rowsSelectedValue, columnsSelectedValue, matrix])
 
     useEffect(() => {
         // function to execute all functions to check every matrix type when matrix, rowsSelectedValue or columnsSelectedValue gets changed
