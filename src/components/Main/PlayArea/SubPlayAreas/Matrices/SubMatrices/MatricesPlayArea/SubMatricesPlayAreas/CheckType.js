@@ -205,32 +205,30 @@ const CheckType = props => {
 
             return types.map((type, index) => {
                 return (
-                    <>
-                        <div className="types" key={index}>
-                            <div className="icon">
-                                {
-                                    type.stateName ?
-                                        (
-                                            <>
-                                                <div className="success">
-                                                    <CorrectSymbol />
-                                                </div>
-                                            </>
-                                        ) :
-                                        (
-                                            <>
-                                                <div className="failure">
-                                                    <WrongSymbol />
-                                                </div>
-                                            </>
-                                        )
-                                }
-                            </div>
-                            <div className="label">
-                                {type.label}
-                            </div>
+                    <div className="types" key={index}>
+                        <div className="icon">
+                            {
+                                type.stateName ?
+                                    (
+                                        <>
+                                            <div className="success">
+                                                <CorrectSymbol />
+                                            </div>
+                                        </>
+                                    ) :
+                                    (
+                                        <>
+                                            <div className="failure">
+                                                <WrongSymbol />
+                                            </div>
+                                        </>
+                                    )
+                            }
                         </div>
-                    </>
+                        <div className="label">
+                            {type.label}
+                        </div>
+                    </div>
                 );
             });
         }
