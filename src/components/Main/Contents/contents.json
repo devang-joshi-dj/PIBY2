@@ -8,44 +8,64 @@
                 "theory",
                 "collection",
                 "elements",
-                "empty",
-                "infinite",
-                "singleton",
                 "union",
                 "intersection",
-                "difference"
+                "difference",
+                "symmetric",
+                "cartesian",
+                "product",
+                "powerset",
+                "complements",
+                "belongs to",
+                "contains to"
             ]
         },
         {
             "index": "2",
             "name": "Matrices",
             "tags": [
-                "matrices"
+                "matrices",
+                "matrix",
+                "addition",
+                "difference",
+                "division",
+                "multiplication",
+                "transpose",
+                "rows",
+                "columns",
+                "order"
             ]
         },
         {
             "index": "3",
+            "name": "Determinants",
+            "tags": [
+                "determinants"
+            ]
+        },
+        {
+            "index": "4",
             "name": "Mensuration",
             "tags": [
                 "mensuration"
             ]
         },
         {
-            "index": "4",
+            "index": "5",
             "name": "Probability",
             "tags": [
                 "probability"
             ]
         },
         {
-            "index": "5",
+            "index": "6",
             "name": "Functions",
             "tags": [
                 "functions"
             ]
         },
         {
-            "index": "6",
+            "index": "7",
             "name": "Permutations and Combinations",
             "tags": [
                 "permutations and combinations"

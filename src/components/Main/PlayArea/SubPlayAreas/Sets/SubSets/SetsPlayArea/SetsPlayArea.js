@@ -37,9 +37,9 @@ const SetsPlayArea = props => {
             Check,
         ];
 
-        return SubSetsPlayAreas.map((SubSet, index) => {
+        return SubSetsPlayAreas.map((SubSetsPlayAreas, index) => {
             return operations[index].value === selectedOperation ?
-                <SubSet key={index} {...props} /> :
+                <SubSetsPlayAreas key={index} {...props} /> :
                 null;
         });
     }

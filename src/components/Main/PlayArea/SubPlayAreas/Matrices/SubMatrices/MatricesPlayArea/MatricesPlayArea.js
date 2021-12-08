@@ -53,9 +53,9 @@ const MatricesPlayArea = props => {
             Transpose,
         ];
 
-        return SubMatricesPlayAreas.map((SubSet, index) => {
+        return SubMatricesPlayAreas.map((SubMatricesPlayAreas, index) => {
             return operations[index].value === selectedOperation ?
-                <SubSet
+                <SubMatricesPlayAreas
                     matrix={matrix}
                     key={index}
                     {...props}
