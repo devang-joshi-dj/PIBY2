@@ -3,6 +3,7 @@ import './play-area.css';
 import { CONTENTS } from '../Contents/contents.json';
 import Sets from './SubPlayAreas/Sets/Sets';
 import Matrices from './SubPlayAreas/Matrices/Matrices';
+import Determinants from './SubPlayAreas/Determinants/Determinants';
 import Mensuration from './SubPlayAreas/Mensuration/Mensuration';
 import Probability from './SubPlayAreas/Probability/Probability';
 import Functions from './SubPlayAreas/Functions/Functions';
@@ -17,6 +18,7 @@ const PlayArea = props => {
         const SubPlayAreas = [
             Sets,
             Matrices,
+            Determinants,
             Mensuration,
             Probability,
             Functions,
