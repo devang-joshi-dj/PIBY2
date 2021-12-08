@@ -5,9 +5,7 @@
             "name": "Sets",
             "tags": [
                 "sets",
-                "theory",
                 "collection",
-                "elements",
                 "union",
                 "intersection",
                 "difference",
@@ -16,8 +14,8 @@
                 "product",
                 "powerset",
                 "complements",
-                "belongs to",
-                "contains to"
+                "belongs",
+                "contains"
             ]
         },
         {
