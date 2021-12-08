@@ -85,6 +85,10 @@
   font-size: 1.2em;
 }
 
+.check-type .label {
+  text-align: left;
+}
+
 .check-type .result {
   display: grid;
   grid-template-columns: auto auto auto auto;
