@@ -26,61 +26,6 @@ header {
 
 /* Logo End */
 
-/* Menu Start */
-
-.menu-link {
-  grid-column: 3/4;
-  z-index: 98;
-}
-
-.menu-link ul {
-  height: 10rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.menu-link ul li {
-  font-size: 2.2rem;
-}
-
-.menu-link ul li a {
-  padding: 5px;
-  display: block;
-  color: var(--black);
-  cursor: pointer;
-  text-transform: capitalize;
-  text-decoration: none;
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-}
-
-.menu-link ul li a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  right: 1.25rem;
-  left: 1.25rem;
-  background-color: var(--sky-blue);
-  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-  transform-origin: bottom center;
-  z-index: -1;
-}
-
-.menu-link ul li a:hover {
-  color: var(--navy-blue);
-}
-
-.menu-link ul li a:hover:after {
-  right: 0;
-  left: 0;
-  height: 100%;
-}
-
-/* Menu End */
-
 /* Social Media Start */
 
 .social-media {
@@ -106,98 +51,42 @@ header {
 
 /* Social Media End */
 
-/* Hamburger Menu Start */
-
-.hamburger-menu {
-  padding: 4px;
-  display: none;
-  border-radius: 5px;
-  font-size: 3rem;
-  color: var(--black);
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger-menu:hover {
-  background-color: var(--sky-blue);
-  color: var(--white);
-}
-
-.hamburger-menu div {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-/* Hamburger Menu End */
-
 /* Header End */
 
 /* MEDIA QUERIES Start */
 
-@media (max-width: 1080px) {
+@media (max-width: 1150px) {
   header {
     height: 8rem;
     grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
   }
+
   .logo,
-  .menu-link ul,
   .social-media ul {
     height: 8rem;
   }
+
   .logo img {
     height: 6rem;
     width: auto;
   }
 }
 
-@media (max-width: 998px) {
+@media (max-width: 1000px) {
   header {
     height: 7rem;
     grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
   }
-  .menu-link {
-    display: none;
-  }
+
   .logo,
   .social-media ul {
     height: 7rem;
   }
+
   .logo img {
     height: 5rem;
   }
-  .mobile-menu-link {
-    grid-column: 2/4;
-    position: relative;
-    z-index: 99;
-    font-size: 2.5rem;
-    background-color: white;
-    height: 20rem;
-    display: grid;
-    grid-column: 2/5;
-    align-items: center;
-    padding: 0 3rem;
-    transition: all 2s linear;
-    transform-origin: top;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  }
-  .menu-link.mobile-menu-link ul div {
-    width: 100%;
-  }
-  .mobile-menu-link ul {
-    height: 20rem;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .mobile-menu-link ul li,
-  .mobile-menu-link ul li a {
-    width: 100%;
-  }
-  .mobile-menu-link ul li:first-child {
-    transition-delay: 0.2s;
-  }
+
   .social-media {
     grid-row: 1/2;
     grid-column: 3/5;
@@ -205,18 +94,12 @@ header {
     align-items: center;
     transition: all 2s linear;
   }
-  .social-media .social-media-desktop {
-    height: 0;
-    display: none;
-  }
+
   .social-media {
     height: 7rem;
     display: flex;
     justify-self: end;
     align-items: center;
-  }
-  .social-media .hamburger-menu {
-    display: block;
   }
 }
 
@@ -225,13 +108,16 @@ header {
     height: 6rem;
     grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
   }
+
   .logo,
   .social-media ul {
     height: 6rem;
   }
+
   .logo img {
     height: 5rem;
   }
+
   .social-media {
     height: 6rem;
     display: flex;
@@ -253,6 +139,10 @@ header {
   .logo img {
     height: 5rem;
   }
+
+  .social-media {
+    display: none;
+  }
 }
 
 @media (max-width: 300px) {
@@ -267,33 +157,18 @@ header {
   }
 }
 
-@media (max-width: 200px) {
-  .menu-link {
-    padding: 0 8px 8px 8px;
-  }
-}
-
 @media (max-width: 180px) {
   header,
   .logo {
     height: 3rem;
   }
+
   .logo img {
     height: 2rem;
   }
+
   .social-media {
     height: 30px;
-  }
-  .hamburger-menu {
-    padding: 2px;
-  }
-  .hamburger-menu div {
-    width: 20px;
-    height: 20px;
-  }
-  .social-media .hamburger-menu {
-    display: block;
-    font-size: 2rem;
   }
 }
 

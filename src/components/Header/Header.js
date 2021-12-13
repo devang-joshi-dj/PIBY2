@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './header.css';
 import Logo from './SubHeaders/Logo';
-import HeaderMenuLinks from './SubHeaders/HeaderMenuLinks';
 import HeaderSocialMedia from './SubHeaders/HeaderSocialMedia';
 
 const Header = props => {
     const { setDisplaySubPlayArea } = props;
-    const [showMediaIcons, setShowMediaIcons] = useState(false);
 
     return (
         <>
@@ -14,14 +12,7 @@ const Header = props => {
                 <Logo
                     setDisplaySubPlayArea={setDisplaySubPlayArea}
                 />
-                <HeaderMenuLinks
-                    showMediaIcons={showMediaIcons}
-                    setShowMediaIcons={setShowMediaIcons}
-                />
-                <HeaderSocialMedia
-                    showMediaIcons={showMediaIcons}
-                    setShowMediaIcons={setShowMediaIcons}
-                />
+                <HeaderSocialMedia />
             </header>
         </>
     );

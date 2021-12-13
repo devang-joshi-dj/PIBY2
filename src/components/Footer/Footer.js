@@ -3,7 +3,6 @@ import './footer.css';
 import FooterContent from './SubFooters/FooterContent';
 import FooterSocialMedia from './SubFooters/FooterSocialMedia';
 import CopyrightContent from './SubFooters/CopyrightContent';
-import FooterMenuLinks from './SubFooters/FooterMenuLinks';
 
 const Footer = props => {
     const { setDisplaySubPlayArea } = props;
@@ -19,7 +18,6 @@ const Footer = props => {
                     <CopyrightContent
                         setDisplaySubPlayArea={setDisplaySubPlayArea}
                     />
-                    <FooterMenuLinks />
                 </div>
             </footer>
         </>
