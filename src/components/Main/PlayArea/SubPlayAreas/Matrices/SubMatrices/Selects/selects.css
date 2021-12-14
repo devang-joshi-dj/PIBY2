@@ -12,8 +12,8 @@
   text-align: center;
 }
 
-.matrices-input #select,
-.matrices-input div.label {
+.find-element #select,
+.find-element div.label {
   width: 100%;
 }
 

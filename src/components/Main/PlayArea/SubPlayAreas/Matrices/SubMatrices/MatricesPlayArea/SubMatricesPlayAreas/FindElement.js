@@ -113,7 +113,7 @@ const FindElement = props => {
 
     return (
         <>
-            <div className="addition">
+            <div className="find-element">
                 <h2>Find Element</h2>
                 {getElement()}
             </div>
