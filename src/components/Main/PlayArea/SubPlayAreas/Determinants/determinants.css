@@ -1,0 +1,16 @@
+.determinants,
+.determinants-play-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.determinants .label {
+  min-width: 52px;
+}
+
+.determinants input {
+  margin: 0 5px;
+  text-align: center;
+}

@@ -31,7 +31,7 @@ const Selects = props => {
 
     return (
         <>
-            <div className="matrices-input">
+            <div className="matrix-input">
                 <div className="label">Specify the Order of the Matrix:</div>
                 <Select
                     id="select"

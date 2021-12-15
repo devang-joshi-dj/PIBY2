@@ -1,0 +1,68 @@
+import React, { useState } from 'react';
+import Select from '../../../Assets/Select/Select';
+import Matrix from '../../../Assets/Matrix/Matrix';
+
+const DeterminantsPlayArea = props => {
+    const { rowsAndColumnsSelectedValue } = props;
+    const [selectedOperation, setSelectedOperation] = useState();
+    const [matrix, setMatrix] = useState([]);
+
+    const operations = [
+    ];
+
+    const renderMatrixInput = () => {
+        // function to render Matrix Input according to rowsAndColumnsSelectedValue when they are set to any value
+
+        return rowsAndColumnsSelectedValue ?
+            (
+                <>
+                    <div className="matrix-input">
+                        <div className="label">
+                            Input your Matrix:
+                        </div>
+                        <Matrix
+                            matrix={matrix}
+                            setMatrix={setMatrix}
+                            rowsSelectedValue={rowsAndColumnsSelectedValue}
+                            columnsSelectedValue={rowsAndColumnsSelectedValue}
+                        />
+                    </div>
+                </>
+            ) :
+            null;
+    }
+
+    const renderSubDeterminantsPlayAreas = () => {
+        // function to render SubDeterminantsPlayAreas when selectedOperation is set to any value
+
+        const SubDeterminantsPlayAreas = [
+        ];
+
+        return SubDeterminantsPlayAreas.map((SubDeterminantsPlayAreas, index) => {
+            return operations[index].value === selectedOperation ?
+                <SubDeterminantsPlayAreas
+                    matrix={matrix}
+                    key={index}
+                    {...props}
+                /> :
+                null;
+        });
+    }
+
+    return (
+        <>
+            <div className="determinants-play-area">
+                {renderMatrixInput()}
+                <Select
+                    class="determinants-select"
+                    options={operations}
+                    selectedValue={selectedOperation}
+                    setSelectedValue={setSelectedOperation}
+                />
+                {renderSubDeterminantsPlayAreas()}
+            </div>
+        </>
+    );
+}
+
+export default DeterminantsPlayArea;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Matrix from '../Matrix/Matrix';
+import Matrix from '../../../../Assets/Matrix/Matrix';
 import AdditionSymbol from './Symbols/AdditionSymbol';
 
 const Addition = props => {

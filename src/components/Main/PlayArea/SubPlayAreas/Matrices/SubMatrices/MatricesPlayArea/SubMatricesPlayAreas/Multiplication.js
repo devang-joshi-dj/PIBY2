@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import Input from '../../../../Assets/Input/Input';
 import Radio from '../../../../Assets/Radio/Radio';
-import Matrix from '../Matrix/Matrix';
+import Matrix from '../../../../Assets/Matrix/Matrix';
 import ProductSymbol from './Symbols/ProductSymbol';
 
 const Multiplication = props => {

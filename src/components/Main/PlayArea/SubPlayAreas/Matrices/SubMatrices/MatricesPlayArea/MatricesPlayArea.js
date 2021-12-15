@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Select from '../../../Assets/Select/Select';
-import Matrix from './Matrix/Matrix';
+import Matrix from '../../../Assets/Matrix/Matrix';
 import Addition from './SubMatricesPlayAreas/Addition';
 import Difference from './SubMatricesPlayAreas/Difference';
 import Multiplication from './SubMatricesPlayAreas/Multiplication';
