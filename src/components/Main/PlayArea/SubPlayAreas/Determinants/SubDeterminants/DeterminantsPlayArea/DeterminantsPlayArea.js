@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from '../../../Assets/Select/Select';
 import Matrix from '../../../Assets/Matrix/Matrix';
+import FindDeterminant from './SubDeterminantsPlayAreas/FindDeterminant';
 
 const DeterminantsPlayArea = props => {
     const { rowsAndColumnsSelectedValue } = props;
@@ -8,6 +9,7 @@ const DeterminantsPlayArea = props => {
     const [matrix, setMatrix] = useState([]);
 
     const operations = [
+        { value: 'FindDeterminant', label: 'Find Determinant' },
     ];
 
     const renderMatrixInput = () => {
@@ -36,6 +38,7 @@ const DeterminantsPlayArea = props => {
         // function to render SubDeterminantsPlayAreas when selectedOperation is set to any value
 
         const SubDeterminantsPlayAreas = [
+            FindDeterminant,
         ];
 
         return SubDeterminantsPlayAreas.map((SubDeterminantsPlayAreas, index) => {
@@ -43,7 +46,7 @@ const DeterminantsPlayArea = props => {
                 <SubDeterminantsPlayAreas
                     matrix={matrix}
                     key={index}
-                    {...props}
+                    rowsAndColumnsSelectedValue={rowsAndColumnsSelectedValue}
                 /> :
                 null;
         });

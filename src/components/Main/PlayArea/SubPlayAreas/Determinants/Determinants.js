@@ -7,7 +7,6 @@ import DeterminantsPlayAreas from './SubDeterminants/DeterminantsPlayArea/Determ
 const Determinants = () => {
     const [rowsAndColumnsSelectedValue, setRowsAndColumnsSelectedValue] = useState('');
 
-
     const renderPlayArea = () => {
         // function to render PlayArea when rowsAndColumnsSelectedValue both are set to any value
 
