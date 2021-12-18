@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Select from '../../../Assets/Select/Select';
 import Matrix from '../../../Assets/Matrix/Matrix';
 import FindDeterminant from './SubDeterminantsPlayAreas/FindDeterminant';
+// import FindMinors from './SubDeterminantsPlayAreas/FindMinors';
+// import FindCoFactors from './SubDeterminantsPlayAreas/FindCoFactors';
+// import Multiplication from './SubDeterminantsPlayAreas/Multiplication';
+// import Division from './SubDeterminantsPlayAreas/Division';
 
 const DeterminantsPlayArea = props => {
     const { rowsAndColumnsSelectedValue } = props;
@@ -10,6 +14,10 @@ const DeterminantsPlayArea = props => {
 
     const operations = [
         { value: 'FindDeterminant', label: 'Find Determinant' },
+        // { value: 'FindMinors', label: 'Find Minors' },
+        // { value: 'FindCoFactors', label: 'Find Co-factors' },
+        // { value: 'Multiplication', label: 'Multiplication' },
+        // { value: 'Division', label: 'Division' },
     ];
 
     const renderMatrixInput = () => {
@@ -39,6 +47,10 @@ const DeterminantsPlayArea = props => {
 
         const SubDeterminantsPlayAreas = [
             FindDeterminant,
+            // FindMinors,
+            // FindCoFactors,
+            // Multiplication,
+            // Division,
         ];
 
         return SubDeterminantsPlayAreas.map((SubDeterminantsPlayAreas, index) => {
