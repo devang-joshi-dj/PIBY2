@@ -35,7 +35,8 @@ const Division = props => {
             for (let i = 0; i < rowsSelectedValue; i++)
                 for (let j = 0; j < columnsSelectedValue; j++) {
                     finalMatrix[i][j] = isNaN(Number(matrix[i][j]) / Number(constantValue)) ?
-                        0 : (Number(matrix[i][j]) / Number(constantValue));
+                        'Undefined' :
+                        (Number(matrix[i][j]) / Number(constantValue));
                 }
 
             return (

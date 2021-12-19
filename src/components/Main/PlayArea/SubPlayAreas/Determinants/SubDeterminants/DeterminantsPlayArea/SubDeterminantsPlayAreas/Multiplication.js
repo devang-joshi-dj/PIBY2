@@ -33,11 +33,6 @@ const Multiplication = props => {
     }, [rowsAndColumnsSelectedValue])
 
     useEffect(() => {
-        console.log(currentRowOrColumnNum)
-
-    }, [currentRowOrColumnNum])
-
-    useEffect(() => {
         // function to set rowsAndColumnsNumOptions accordingly with rowsAndColumnsSelectedValue even when it changes
 
         const rowsAndColumnsNumOptionsLabelsTemplate = ['1st', '2nd', '3rd', '4th', '5th']
@@ -77,19 +72,23 @@ const Multiplication = props => {
             switch (currentRowOrColumn) {
                 case 'Row':
                     finalMatrix = finalMatrixStructure;
-                    for (let i = 0; i < rowsAndColumnsSelectedValue; i++)
-                        for (let j = 0; j < rowsAndColumnsSelectedValue; j++)
+                    for (let i = 0; i < rowsAndColumnsSelectedValue; i++) {
+                        for (let j = 0; j < rowsAndColumnsSelectedValue; j++) {
                             i === currentRowOrColumnNum - 1 ?
                                 finalMatrix[i][j] = Number(matrix[i][j]) * Number(inputValue) :
                                 finalMatrix[i][j] = Number(matrix[i][j]);
+                        }
+                    }
                     break;
                 case 'Column':
                     finalMatrix = finalMatrixStructure;
-                    for (let i = 0; i < rowsAndColumnsSelectedValue; i++)
-                        for (let j = 0; j < rowsAndColumnsSelectedValue; j++)
+                    for (let i = 0; i < rowsAndColumnsSelectedValue; i++) {
+                        for (let j = 0; j < rowsAndColumnsSelectedValue; j++) {
                             j === currentRowOrColumnNum - 1 ?
                                 finalMatrix[i][j] = Number(matrix[i][j]) * Number(inputValue) :
                                 finalMatrix[i][j] = Number(matrix[i][j]);
+                        }
+                    }
                     break;
                 default:
                     break;
@@ -140,7 +139,7 @@ const Multiplication = props => {
             return (
                 <>
                     <div className="info">
-                        Specify with what would you do multiplication with?:
+                        Specify with what you would do multiplication? :
                     </div>
                     <div className="matrix-input">
                         <Select

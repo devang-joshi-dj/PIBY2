@@ -5,7 +5,7 @@ import FindDeterminant from './SubDeterminantsPlayAreas/FindDeterminant';
 // import FindMinors from './SubDeterminantsPlayAreas/FindMinors';
 // import FindCoFactors from './SubDeterminantsPlayAreas/FindCoFactors';
 import Multiplication from './SubDeterminantsPlayAreas/Multiplication';
-// import Division from './SubDeterminantsPlayAreas/Division';
+import Division from './SubDeterminantsPlayAreas/Division';
 
 const DeterminantsPlayArea = props => {
     const { rowsAndColumnsSelectedValue } = props;
@@ -17,7 +17,7 @@ const DeterminantsPlayArea = props => {
         // { value: 'FindMinors', label: 'Find Minors' },
         // { value: 'FindCoFactors', label: 'Find Co-factors' },
         { value: 'Multiplication', label: 'Multiplication' },
-        // { value: 'Division', label: 'Division' },
+        { value: 'Division', label: 'Division' },
     ];
 
     const renderMatrixInput = () => {
@@ -50,7 +50,7 @@ const DeterminantsPlayArea = props => {
             // FindMinors,
             // FindCoFactors,
             Multiplication,
-            // Division,
+            Division,
         ];
 
         return SubDeterminantsPlayAreas.map((SubDeterminantsPlayAreas, index) => {
