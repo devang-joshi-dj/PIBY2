@@ -104,7 +104,7 @@ const Multiplication = props => {
 
                 return (
                     <>
-                        <div className="matrices-input">
+                        <div className="matrix-input">
                             <div className="label">Specify the Order of the Matrix:</div>
                             <div className="label">{columnsSelectedValue}</div>
                             <div className="symbol">X</div>

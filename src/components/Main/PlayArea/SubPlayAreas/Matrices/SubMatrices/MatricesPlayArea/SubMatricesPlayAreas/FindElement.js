@@ -32,6 +32,7 @@ const FindElement = props => {
         // function to get the specific element
 
         const printSelects = () => {
+            // function to render select elements
 
             const handleRowValueChange = e => {
                 // function to handle the value of currentRow when the value is changed in select component
