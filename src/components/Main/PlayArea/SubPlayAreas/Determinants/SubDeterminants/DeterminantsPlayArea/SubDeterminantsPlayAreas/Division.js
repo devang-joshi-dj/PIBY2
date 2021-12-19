@@ -6,7 +6,7 @@ const Division = props => {
     const { matrix, rowsAndColumnsSelectedValue } = props;
     const [currentRowOrColumnNum, setCurrentRowOrColumnNum] = useState();
     const [rowsAndColumnsNumOptions, setRowsAndColumnsNumOptions] = useState();
-    const [inputValue, setInputValue] = useState();
+    const [inputValue, setInputValue] = useState(0);
 
     const [currentRowOrColumn, setCurrentRowOrColumn] = useState();
     const rowOrColumnSelectOption = [
