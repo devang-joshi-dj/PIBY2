@@ -346,7 +346,7 @@ const FindDeterminant = props => {
     return (
         <>
             <div className="find-determinant">
-                <h2>FindDeterminant</h2>
+                <h2>Find Determinant</h2>
                 {getDeterminant()}
             </div>
         </>
