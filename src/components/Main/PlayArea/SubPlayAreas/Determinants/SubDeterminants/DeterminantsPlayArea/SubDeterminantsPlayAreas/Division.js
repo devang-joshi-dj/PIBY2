@@ -147,7 +147,7 @@ const Division = props => {
             return (
                 <>
                     <div className="info">
-                        Specify with what you would do division? :
+                        Specify with what you would do division?
                     </div>
                     <div className="matrix-input">
                         <Select

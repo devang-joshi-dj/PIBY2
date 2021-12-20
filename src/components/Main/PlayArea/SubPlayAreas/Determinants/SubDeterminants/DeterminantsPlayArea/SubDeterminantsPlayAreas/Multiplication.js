@@ -139,7 +139,7 @@ const Multiplication = props => {
             return (
                 <>
                     <div className="info">
-                        Specify with what you would do multiplication? :
+                        Specify with what you would do multiplication?
                     </div>
                     <div className="matrix-input">
                         <Select
