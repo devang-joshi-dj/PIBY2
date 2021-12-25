@@ -49,7 +49,7 @@ const FindElement = props => {
             return (
                 <>
                     <div className="matrices-input">
-                        <div className="label">Specify the Order of the Element:</div>
+                        <div className="info">Specify the Order for the Element:</div>
                         <Select
                             id="select"
                             options={rowOptions}

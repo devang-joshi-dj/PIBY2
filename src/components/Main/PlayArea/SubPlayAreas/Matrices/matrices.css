@@ -81,6 +81,10 @@
   grid-gap: 20px;
 }
 
+.matrices-input {
+  font-size: 2rem;
+}
+
 @media (max-width: 1160px) {
   .check-type .result {
     grid-template-columns: auto auto auto;

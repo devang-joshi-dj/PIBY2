@@ -51,6 +51,7 @@ h2 {
 
 .symbol {
   text-align: center;
+  font-size: 2rem;
   font-weight: lighter;
   margin: 0 10px;
   color: var(--white);
