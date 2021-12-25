@@ -15,6 +15,7 @@
   text-align: center;
 }
 
-.find-minors {
+.find-minors,
+.find-co-factors {
   width: 100%;
 }
