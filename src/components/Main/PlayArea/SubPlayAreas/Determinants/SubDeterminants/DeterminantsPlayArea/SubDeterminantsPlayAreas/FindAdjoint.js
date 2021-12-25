@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const FindCoFactors = props => {
+const FindAdjoint = props => {
     const { matrix, rowsAndColumnsSelectedValue } = props;
     const [finalMatrixStructure, setFinalMatrixStructure] = useState([]);
 
@@ -20,11 +20,11 @@ const FindCoFactors = props => {
             null
     }, [rowsAndColumnsSelectedValue])
 
-    const getCoFactors = () => {
-        // function to get co-factors of matrix
+    const getAdjoint = () => {
+        // function to get adjoint of matrix
 
-        const printCoFactors = () => {
-            // function to print co-factors of matrix
+        const printAdjoint = () => {
+            // function to print adjoint of matrix
 
             let finalMatrix;
             switch (rowsAndColumnsSelectedValue) {
@@ -1419,11 +1419,15 @@ const FindCoFactors = props => {
                     if ((i + j + 2) % 2 !== 0) finalMatrix[i][j] = -finalMatrix[i][j];
                 }
 
+            finalMatrix = finalMatrix[0].map((_, colIndex) =>
+                finalMatrix.map((row) => Number(row[colIndex]))
+            );
+
             return (
                 <>
                     <div className="result">
                         <div className="label">
-                            A(A):
+                            Adj(A):
                         </div>
                         <div className="print-matrix">
                             {
@@ -1454,7 +1458,7 @@ const FindCoFactors = props => {
                         matrix.length === Number(rowsAndColumnsSelectedValue) &&
                         finalMatrixStructure.length &&
                         finalMatrixStructure.length === Number(rowsAndColumnsSelectedValue) ?
-                        printCoFactors()
+                        printAdjoint()
                         :
                         null
                 }
@@ -1464,12 +1468,12 @@ const FindCoFactors = props => {
 
     return (
         <>
-            <div className="find-co-factors">
-                <h2>Find Co-Factors</h2>
-                {getCoFactors()}
+            <div className="find-adjoint">
+                <h2>Find Adjoint</h2>
+                {getAdjoint()}
             </div>
         </>
     );
 }
 
-export default FindCoFactors;
+export default FindAdjoint;

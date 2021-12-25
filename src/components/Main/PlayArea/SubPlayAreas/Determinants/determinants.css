@@ -7,7 +7,7 @@
 }
 
 .determinants .label {
-  min-width: 52px;
+  min-width: 65px;
 }
 
 .determinants input {
@@ -16,6 +16,7 @@
 }
 
 .find-minors,
-.find-co-factors {
+.find-co-factors,
+.find-adjoint {
   width: 100%;
 }
