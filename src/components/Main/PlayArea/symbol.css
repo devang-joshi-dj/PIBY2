@@ -1,0 +1,32 @@
+.addition-symbol,
+.difference-symbol,
+.division-symbol,
+.intersection-symbol,
+.phi-symbol,
+.product-symbol,
+.symmetric-difference-symbol,
+.union-symbol,
+.belongs-to-symbol,
+.does-not-belongs-to-symbol,
+.contains-to-symbol,
+.does-not-contains-to-symbol,
+.adjoint-symbol,
+.co-factors-symbol,
+.determinant-symbol,
+.minors-symbol {
+	height: 100%;
+	line-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: inline-block;
+	margin: 0 1px;
+}
+
+.symbol {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: lighter;
+	margin: 0 10px;
+	color: var(--white);
+}

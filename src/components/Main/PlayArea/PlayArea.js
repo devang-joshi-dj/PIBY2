@@ -1,5 +1,6 @@
 import React from 'react';
 import './play-area.css';
+import './symbol.css';
 import { CONTENTS } from '../Contents/contents.json';
 import Sets from './SubPlayAreas/Sets/Sets';
 import Matrices from './SubPlayAreas/Matrices/Matrices';

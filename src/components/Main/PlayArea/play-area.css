@@ -1,23 +1,36 @@
 .play-area {
-	padding: 10px 10px;
+	padding: 10px;
 }
 
-.play-area,
+.play-area {
+	min-height: 100vh;
+	background-color: var(--dark-blue);
+}
+
 .sets,
 .matrices,
 .mensuration,
 .probability,
 .functions,
 .permutations-and-combinations {
-	min-height: 100vh;
+	min-height: calc(100vh - 20px);
 	background-color: var(--dark-blue);
 }
 
-h2 {
+.matrices input,
+.determinants input {
+	margin: 0 5px;
 	text-align: center;
-	color: var(--white);
-	font-size: 4rem;
-	margin: 10px 0;
+}
+
+.sets .label,
+.matrices .label,
+.determinants .label {
+	min-width: 66px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }
 
 .info {
@@ -28,47 +41,18 @@ h2 {
 	font-size: 1.2rem;
 }
 
-.addition-symbol,
-.difference-symbol,
-.division-symbol,
-.intersection-symbol,
-.phi-symbol,
-.product-symbol,
-.symmetric-difference-symbol,
-.union-symbol,
-.belongs-to-symbol,
-.does-not-belongs-to-symbol,
-.contains-to-symbol,
-.does-not-contains-to-symbol,
-.adjoint-symbol,
-.co-factors-symbol,
-.determinant-symbol,
-.minors-symbol {
-	height: 100%;
-	line-height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	display: inline-block;
-	margin: 0 1px;
-}
-
-.symbol {
-	text-align: center;
-	font-size: 2rem;
-	font-weight: lighter;
-	margin: 0 10px;
-	color: var(--white);
-}
-
-.input label,
-.label,
-label {
+label,
+.label {
+	min-width: fit-content !important;
 	text-align: center;
 	color: var(--white);
 	font-size: 2rem;
 	margin: 0 10px;
 	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }
 
 .result {
@@ -84,20 +68,56 @@ label {
 	word-break: break-word;
 }
 
-@media (max-width: 280px) {
-	h2 {
-		font-size: 3rem;
+.matrices .result,
+.determinants .result {
+	align-items: center;
+}
+
+@media (max-width: 580px) {
+	label,
+	.label {
+		min-width: auto !important;
+		font-size: 1.8rem;
 	}
-	.input label {
-		font-size: 1.2rem;
+	.result {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 420px) {
+	.result,
+	label,
+	.label {
+		font-size: 1.6rem;
+	}
+}
+
+@media (max-width: 380px) {
+	.result,
+	label,
+	.label {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.result,
+	label,
+	.label {
+		min-width: fit-content !important;
+		font-size: 1.8rem;
 	}
 }
 
 @media (max-width: 220px) {
-	h2 {
-		font-size: 2.2rem;
+	.result,
+	label,
+	.label {
+		font-size: 1.6rem;
 	}
-	.input label {
-		font-size: 1rem;
+
+	.matrices input,
+	.determinants input {
+		margin: 0 2px;
 	}
 }

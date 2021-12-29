@@ -13,11 +13,3 @@
 	word-wrap: break-word;
 	word-break: break-word;
 }
-
-.sets .label {
-	min-width: 66px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-}

@@ -70,3 +70,9 @@
 		margin: 5px 0;
 	}
 }
+
+@media (max-width: 380px) {
+	.radio-group label span {
+		font-size: 1.4rem !important;
+	}
+}

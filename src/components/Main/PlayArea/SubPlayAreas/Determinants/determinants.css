@@ -6,21 +6,17 @@
 	flex-direction: column;
 }
 
-.determinants .label {
-	min-width: 66px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-}
-
-.determinants input {
-	margin: 0 5px;
-	text-align: center;
-}
-
+.determinants .multiplication #select,
+.determinants .division #select,
 .find-minors,
 .find-co-factors,
-.find-adjoint {
+.find-adjoint,
+.division {
 	width: 100%;
+}
+
+@media (max-width: 600px) {
+	.determinants .result {
+		flex-direction: column;
+	}
 }

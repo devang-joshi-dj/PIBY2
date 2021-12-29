@@ -14,3 +14,16 @@
 	outline: none;
 	border: none;
 }
+
+@media (max-width: 320px) {
+	.input {
+		margin: 10px 5px;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 220px) {
+	.input input {
+		padding: 2px;
+	}
+}

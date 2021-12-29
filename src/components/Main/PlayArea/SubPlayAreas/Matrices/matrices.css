@@ -6,19 +6,6 @@
 	flex-direction: column;
 }
 
-.matrices .label {
-	min-width: 52px;
-}
-
-.matrices input {
-	margin: 0 5px;
-	text-align: center;
-}
-
-.matrices .result {
-	align-items: center;
-}
-
 .print-matrix {
 	display: flex;
 	align-items: center;
@@ -55,7 +42,8 @@
 	background: var(--black);
 }
 
-.multiplication #select,
+.matrices .multiplication #select,
+.matrices .division #select,
 .transpose,
 .check-type {
 	width: 100%;
@@ -123,5 +111,12 @@
 	.matrices .result {
 		margin: 10px 0;
 		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 220px) {
+	.print-matrix-column div {
+		margin: 2px;
+		padding: 2px;
 	}
 }
