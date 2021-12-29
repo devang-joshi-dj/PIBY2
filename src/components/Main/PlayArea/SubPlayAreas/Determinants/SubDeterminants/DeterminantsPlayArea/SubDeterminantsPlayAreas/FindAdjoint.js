@@ -38,9 +38,10 @@ const FindAdjoint = props => {
                     if ((i + j + 2) % 2 !== 0) finalMatrix[i][j] = -finalMatrix[i][j];
                 }
 
-            finalMatrix = finalMatrix[0].map((_, colIndex) =>
-                finalMatrix.map((row) => Number(row[colIndex]))
-            );
+            if (rowsAndColumnsSelectedValue !== 1)
+                finalMatrix = finalMatrix[0].map((_, colIndex) =>
+                    finalMatrix.map((row) => Number(row[colIndex]))
+                );
 
             return (
                 <>

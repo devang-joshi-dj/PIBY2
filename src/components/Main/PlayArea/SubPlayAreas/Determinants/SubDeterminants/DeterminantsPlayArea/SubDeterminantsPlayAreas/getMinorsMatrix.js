@@ -3,7 +3,7 @@ const getMinorsMatrix = (length, finalMatrixStructure, matrix) => {
     switch (length) {
         case 1:
             finalMatrix = finalMatrixStructure;
-            finalMatrix[0][0] = Number();
+            finalMatrix[0][0] = 'NULL';
             break;
         case 2:
             finalMatrix = finalMatrixStructure;
