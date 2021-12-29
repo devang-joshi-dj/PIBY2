@@ -164,7 +164,7 @@ const Multiplication = props => {
 					for (let j = 0; j < secondMatrixColumnsSelectedValue; j++) {
 						finalMatrix[i][j] = 0;
 						for (let k = 0; k < columnsSelectedValue; k++) {
-							finalMatrix[i][j] += matrix[i][k] * secondMatrix[k][j];
+							finalMatrix[i][j] += Number(matrix[i][k]) * Number(secondMatrix[k][j]);
 						}
 					}
 				}
@@ -205,7 +205,7 @@ const Multiplication = props => {
 					for (let j = 0; j < columnsSelectedValue; j++) {
 						finalMatrix[i][j] = 0;
 						for (let k = 0; k < secondMatrixColumnsSelectedValue; k++) {
-							finalMatrix[i][j] += secondMatrix[i][k] * matrix[k][j];
+							finalMatrix[i][j] += Number(secondMatrix[i][k]) * Number(matrix[k][j]);
 						}
 					}
 				}
