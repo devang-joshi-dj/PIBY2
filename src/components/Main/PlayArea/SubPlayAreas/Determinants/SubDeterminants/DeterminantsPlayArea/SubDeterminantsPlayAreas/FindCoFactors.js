@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getMinorsMatrix from './getMinorsMatrix';
+import CoFactorsSymbol from './Symbols/CoFactorsSymbol';
 
 const FindCoFactors = props => {
 	const { matrix, rowsAndColumnsSelectedValue } = props;
@@ -31,7 +32,9 @@ const FindCoFactors = props => {
 			return (
 				<>
 					<div className="result">
-						<div className="label">A(A):</div>
+						<div className="label">
+							<CoFactorsSymbol>A</CoFactorsSymbol>:
+						</div>
 						<div className="print-matrix">
 							{
 								<div className="print-matrix-row">

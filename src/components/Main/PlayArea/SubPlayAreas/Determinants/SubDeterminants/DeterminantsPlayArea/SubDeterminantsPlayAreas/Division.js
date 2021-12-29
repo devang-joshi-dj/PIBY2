@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import Input from '../../../../Assets/Input/Input';
+import DivisionSymbol from './Symbols/DivisionSymbol';
 
 const Division = props => {
 	const { matrix, rowsAndColumnsSelectedValue } = props;
@@ -92,7 +93,11 @@ const Division = props => {
 			return (
 				<>
 					<div className="result">
-						<div className="label">A/k:</div>
+						<div className="label">
+							A
+							<DivisionSymbol />
+							k:
+						</div>
 						<div className="print-matrix">
 							{
 								<div className="print-matrix-row">

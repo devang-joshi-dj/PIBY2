@@ -1,4 +1,5 @@
 import React from 'react';
+import DeterminantSymbol from './Symbols/DeterminantSymbol';
 
 const FindDeterminant = props => {
 	const { matrix, rowsAndColumnsSelectedValue } = props;
@@ -143,7 +144,9 @@ const FindDeterminant = props => {
 		return (
 			<>
 				<div className="result">
-					<div className="label">|A|:</div>
+					<div className="label">
+						<DeterminantSymbol>A</DeterminantSymbol>:
+					</div>
 					{matrix.length && matrix.length === Number(rowsAndColumnsSelectedValue)
 						? printDeterminant()
 						: null}

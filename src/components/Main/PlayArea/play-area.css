@@ -39,7 +39,11 @@ h2 {
 .belongs-to-symbol,
 .does-not-belongs-to-symbol,
 .contains-to-symbol,
-.does-not-contains-to-symbol {
+.does-not-contains-to-symbol,
+.adjoint-symbol,
+.co-factors-symbol,
+.determinant-symbol,
+.minors-symbol {
 	height: 100%;
 	line-height: 100%;
 	display: flex;

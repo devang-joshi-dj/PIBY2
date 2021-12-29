@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getMinorsMatrix from './getMinorsMatrix';
+import AdjointSymbol from './Symbols/AdjointSymbol';
 
 const FindAdjoint = props => {
 	const { matrix, rowsAndColumnsSelectedValue } = props;
@@ -36,7 +37,9 @@ const FindAdjoint = props => {
 			return (
 				<>
 					<div className="result">
-						<div className="label">Adj(A):</div>
+						<div className="label">
+							<AdjointSymbol>A</AdjointSymbol>:
+						</div>
 						<div className="print-matrix">
 							{
 								<div className="print-matrix-row">

@@ -15,5 +15,9 @@
 }
 
 .sets .label {
-	min-width: 52px;
+	min-width: 66px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }

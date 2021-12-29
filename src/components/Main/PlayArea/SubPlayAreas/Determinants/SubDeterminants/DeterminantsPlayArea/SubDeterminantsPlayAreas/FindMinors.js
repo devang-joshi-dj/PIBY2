@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getMinorsMatrix from './getMinorsMatrix';
+import MinorsSymbol from './Symbols/MinorsSymbol';
 
 const FindMinors = props => {
 	const { matrix, rowsAndColumnsSelectedValue } = props;
@@ -26,7 +27,9 @@ const FindMinors = props => {
 			return (
 				<>
 					<div className="result">
-						<div className="label">M(A):</div>
+						<div className="label">
+							<MinorsSymbol>A</MinorsSymbol>:
+						</div>
 						<div className="print-matrix">
 							{
 								<div className="print-matrix-row">

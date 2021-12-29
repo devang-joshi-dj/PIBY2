@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import Input from '../../../../Assets/Input/Input';
+import ProductSymbol from './Symbols/ProductSymbol';
 
 const Multiplication = props => {
 	const { matrix, rowsAndColumnsSelectedValue } = props;
@@ -88,7 +89,11 @@ const Multiplication = props => {
 			return (
 				<>
 					<div className="result">
-						<div className="label">kXA:</div>
+						<div className="label">
+							k
+							<ProductSymbol />
+							A:
+						</div>
 						<div className="print-matrix">
 							{
 								<div className="print-matrix-row">
