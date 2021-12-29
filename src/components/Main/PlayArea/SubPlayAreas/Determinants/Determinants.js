@@ -5,34 +5,30 @@ import Selects from './SubDeterminants/Selects/Selects';
 import DeterminantsPlayAreas from './SubDeterminants/DeterminantsPlayArea/DeterminantsPlayArea';
 
 const Determinants = () => {
-    const [rowsAndColumnsSelectedValue, setRowsAndColumnsSelectedValue] = useState('');
+	const [rowsAndColumnsSelectedValue, setRowsAndColumnsSelectedValue] = useState('');
 
-    const renderPlayArea = () => {
-        // function to render PlayArea when rowsAndColumnsSelectedValue both are set to any value
+	const renderPlayArea = () => {
+		// function to render PlayArea when rowsAndColumnsSelectedValue both are set to any value
 
-        return rowsAndColumnsSelectedValue ?
-            (
-                <>
-                    <DeterminantsPlayAreas
-                        rowsAndColumnsSelectedValue={rowsAndColumnsSelectedValue}
-                    />
-                </>
-            ) :
-            null;
-    }
+		return rowsAndColumnsSelectedValue ? (
+			<>
+				<DeterminantsPlayAreas rowsAndColumnsSelectedValue={rowsAndColumnsSelectedValue} />
+			</>
+		) : null;
+	};
 
-    return (
-        <>
-            <div className="determinants">
-                <Heading>Determinants</Heading>
-                <Selects
-                    rowsAndColumnsSelectedValue={rowsAndColumnsSelectedValue}
-                    setRowsAndColumnsSelectedValue={setRowsAndColumnsSelectedValue}
-                />
-                {renderPlayArea()}
-            </div>
-        </>
-    );
-}
+	return (
+		<>
+			<div className="determinants">
+				<Heading>Determinants</Heading>
+				<Selects
+					rowsAndColumnsSelectedValue={rowsAndColumnsSelectedValue}
+					setRowsAndColumnsSelectedValue={setRowsAndColumnsSelectedValue}
+				/>
+				{renderPlayArea()}
+			</div>
+		</>
+	);
+};
 
 export default Determinants;

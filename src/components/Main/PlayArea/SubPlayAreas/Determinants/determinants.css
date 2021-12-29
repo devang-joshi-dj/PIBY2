@@ -1,22 +1,22 @@
 .determinants,
 .determinants-play-area {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
 }
 
 .determinants .label {
-  min-width: 65px;
+	min-width: 65px;
 }
 
 .determinants input {
-  margin: 0 5px;
-  text-align: center;
+	margin: 0 5px;
+	text-align: center;
 }
 
 .find-minors,
 .find-co-factors,
 .find-adjoint {
-  width: 100%;
+	width: 100%;
 }

@@ -5,38 +5,34 @@ import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
-  const [displaySubPlayArea, setDisplaySubPlayArea] = useState(null);
-  const playAreaRef = useRef(null);
+	const [displaySubPlayArea, setDisplaySubPlayArea] = useState(null);
+	const playAreaRef = useRef(null);
 
-  const scrollToPlayArea = () => {
-    // function to scroll to PlayArea
-    playAreaRef.current.scrollIntoView();
-  }
+	const scrollToPlayArea = () => {
+		// function to scroll to PlayArea
 
-  useEffect(() => {
-    // function to scrollDown to PlayArea when displaySubPlayArea values is changed
-    return displaySubPlayArea ?
-      scrollToPlayArea() :
-      null;
-  }, [displaySubPlayArea]);
+		playAreaRef.current.scrollIntoView();
+	};
 
-  return (
-    <>
-      <div className="App">
-        <Header
-          setDisplaySubPlayArea={setDisplaySubPlayArea}
-        />
-        <Main
-          displaySubPlayArea={displaySubPlayArea}
-          setDisplaySubPlayArea={setDisplaySubPlayArea}
-          playAreaRef={playAreaRef}
-        />
-        <Footer
-          setDisplaySubPlayArea={setDisplaySubPlayArea}
-        />
-      </div>
-    </>
-  );
-}
+	useEffect(() => {
+		// function to scrollDown to PlayArea when displaySubPlayArea values is changed
+
+		return displaySubPlayArea ? scrollToPlayArea() : null;
+	}, [displaySubPlayArea]);
+
+	return (
+		<>
+			<div className="App">
+				<Header setDisplaySubPlayArea={setDisplaySubPlayArea} />
+				<Main
+					displaySubPlayArea={displaySubPlayArea}
+					setDisplaySubPlayArea={setDisplaySubPlayArea}
+					playAreaRef={playAreaRef}
+				/>
+				<Footer setDisplaySubPlayArea={setDisplaySubPlayArea} />
+			</div>
+		</>
+	);
+};
 
 export default App;

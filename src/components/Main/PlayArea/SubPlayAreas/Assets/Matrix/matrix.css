@@ -1,13 +1,13 @@
 .matrix-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }
 
 .matrix-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }

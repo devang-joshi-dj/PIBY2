@@ -10,53 +10,53 @@ import Complements from './SubSetsPlayAreas/Complements';
 import Check from './SubSetsPlayAreas/Check';
 
 const SetsPlayArea = props => {
-    const [selectedOperation, setSelectedOperation] = useState();
+	const [selectedOperation, setSelectedOperation] = useState();
 
-    const operations = [
-        { value: 'Union', label: 'Union' },
-        { value: 'Intersection', label: 'Intersection' },
-        { value: 'Difference', label: 'Difference' },
-        { value: 'SymmetricDifference', label: 'Symmetric Difference' },
-        { value: 'CartesianProduct', label: 'Cartesian Product' },
-        { value: 'PowerSet', label: 'PowerSet' },
-        { value: 'Complements', label: 'Complements' },
-        { value: 'Check', label: 'Check' },
-    ];
+	const operations = [
+		{ value: 'Union', label: 'Union' },
+		{ value: 'Intersection', label: 'Intersection' },
+		{ value: 'Difference', label: 'Difference' },
+		{ value: 'SymmetricDifference', label: 'Symmetric Difference' },
+		{ value: 'CartesianProduct', label: 'Cartesian Product' },
+		{ value: 'PowerSet', label: 'PowerSet' },
+		{ value: 'Complements', label: 'Complements' },
+		{ value: 'Check', label: 'Check' },
+	];
 
-    const renderSubSetsPlayAreas = () => {
-        // function to render SubSetsPlayAreas when selectedOperation is set to any value
+	const renderSubSetsPlayAreas = () => {
+		// function to render SubSetsPlayAreas when selectedOperation is set to any value
 
-        const SubSetsPlayAreas = [
-            Union,
-            Intersection,
-            Difference,
-            SymmetricDifference,
-            CartesianProduct,
-            PowerSet,
-            Complements,
-            Check,
-        ];
+		const SubSetsPlayAreas = [
+			Union,
+			Intersection,
+			Difference,
+			SymmetricDifference,
+			CartesianProduct,
+			PowerSet,
+			Complements,
+			Check,
+		];
 
-        return SubSetsPlayAreas.map((SubSetsPlayAreas, index) => {
-            return operations[index].value === selectedOperation ?
-                <SubSetsPlayAreas key={index} {...props} /> :
-                null;
-        });
-    }
+		return SubSetsPlayAreas.map((SubSetsPlayAreas, index) => {
+			return operations[index].value === selectedOperation ? (
+				<SubSetsPlayAreas key={index} {...props} />
+			) : null;
+		});
+	};
 
-    return (
-        <>
-            <div className="sets-play-area">
-                <Select
-                    class="sets-select"
-                    options={operations}
-                    selectedValue={selectedOperation}
-                    setSelectedValue={setSelectedOperation}
-                />
-                {renderSubSetsPlayAreas()}
-            </div>
-        </>
-    );
-}
+	return (
+		<>
+			<div className="sets-play-area">
+				<Select
+					class="sets-select"
+					options={operations}
+					selectedValue={selectedOperation}
+					setSelectedValue={setSelectedOperation}
+				/>
+				{renderSubSetsPlayAreas()}
+			</div>
+		</>
+	);
+};
 
 export default SetsPlayArea;

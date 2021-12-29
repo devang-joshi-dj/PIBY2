@@ -1,19 +1,19 @@
 .sets,
 .sets-play-area {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
 }
 
 .input-element {
-  font-size: 1.1rem;
-  color: var(--white);
-  max-width: 100%;
-  word-wrap: break-word;
-  word-break: break-word;
+	font-size: 1.1rem;
+	color: var(--white);
+	max-width: 100%;
+	word-wrap: break-word;
+	word-break: break-word;
 }
 
 .sets .label {
-  min-width: 52px;
+	min-width: 52px;
 }

@@ -1,27 +1,27 @@
 .matrix-input {
-  width: 100%;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin: 10px 0;
+	width: 100%;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin: 10px 0;
 }
 
 .matrix-input input {
-  text-align: center;
+	text-align: center;
 }
 
 .find-element #select,
 .find-element div.label {
-  width: 100%;
+	width: 100%;
 }
 
 @media (max-width: 320px) {
-  .matrix-input {
-    flex-direction: column;
-  }
-  .matrix-input #select {
-    font-size: 2rem;
-  }
+	.matrix-input {
+		flex-direction: column;
+	}
+	.matrix-input #select {
+		font-size: 2rem;
+	}
 }

@@ -1,127 +1,127 @@
 .matrices,
 .matrices-play-area {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
 }
 
 .matrices .label {
-  min-width: 52px;
+	min-width: 52px;
 }
 
 .matrices input {
-  margin: 0 5px;
-  text-align: center;
+	margin: 0 5px;
+	text-align: center;
 }
 
 .matrices .result {
-  align-items: center;
+	align-items: center;
 }
 
 .print-matrix {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 90%;
 }
 
 .print-matrix-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 10px;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 10px;
+	width: 100%;
 }
 
 .print-matrix-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
 }
 
 .print-matrix-column div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin: 5px;
-  padding: 5px;
-  width: 100%;
-  background: var(--black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin: 5px;
+	padding: 5px;
+	width: 100%;
+	background: var(--black);
 }
 
 .multiplication #select,
 .transpose,
 .check-type {
-  width: 100%;
+	width: 100%;
 }
 
 .types {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
 
 .check-type .icon {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .check-type .label {
-  text-align: left;
+	text-align: left;
 }
 
 .check-type .result {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 20px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 20px;
 }
 
 .matrices-input {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 @media (max-width: 1160px) {
-  .check-type .result {
-    grid-template-columns: auto auto auto;
-    grid-gap: 30px;
-  }
+	.check-type .result {
+		grid-template-columns: auto auto auto;
+		grid-gap: 30px;
+	}
 }
 
 @media (max-width: 810px) {
-  .check-type .result {
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
-  }
+	.check-type .result {
+		grid-template-columns: auto auto;
+		grid-gap: 20px;
+	}
 }
 
 @media (max-width: 580px) {
-  .check-type .result {
-    grid-template-columns: auto;
-    grid-gap: 10px;
-  }
+	.check-type .result {
+		grid-template-columns: auto;
+		grid-gap: 10px;
+	}
 }
 
 @media (max-width: 600px) {
-  .matrices .result {
-    flex-direction: column;
-  }
-  .print-matrix {
-    width: 100%;
-  }
-  .print-matrix-row {
-    padding: 0;
-    width: 100%;
-  }
+	.matrices .result {
+		flex-direction: column;
+	}
+	.print-matrix {
+		width: 100%;
+	}
+	.print-matrix-row {
+		padding: 0;
+		width: 100%;
+	}
 }
 
 @media (max-width: 300px) {
-  .matrices .result {
-    margin: 10px 0;
-    font-size: 1.5rem;
-  }
+	.matrices .result {
+		margin: 10px 0;
+		font-size: 1.5rem;
+	}
 }

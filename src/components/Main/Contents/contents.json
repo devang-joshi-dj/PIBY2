@@ -1,73 +1,73 @@
 {
-    "CONTENTS": [
-        {
-            "index": "1",
-            "name": "Sets",
-            "tags": [
-                "sets",
-                "collection",
-                "union",
-                "intersection",
-                "difference",
-                "symmetric",
-                "cartesian",
-                "product",
-                "powerset",
-                "complements",
-                "belongs",
-                "contains"
-            ]
-        },
-        {
-            "index": "2",
-            "name": "Matrices",
-            "tags": [
-                "matrices",
-                "matrix",
-                "addition",
-                "difference",
-                "division",
-                "multiplication",
-                "transpose",
-                "rows",
-                "columns",
-                "order"
-            ]
-        },
-        {
-            "index": "3",
-            "name": "Determinants",
-            "tags": [
-                "determinants"
-            ]
-        },
-        {
-            "index": "4",
-            "name": "Mensuration",
-            "tags": [
-                "mensuration"
-            ]
-        },
-        {
-            "index": "5",
-            "name": "Probability",
-            "tags": [
-                "probability"
-            ]
-        },
-        {
-            "index": "6",
-            "name": "Functions",
-            "tags": [
-                "functions"
-            ]
-        },
-        {
-            "index": "7",
-            "name": "Permutations and Combinations",
-            "tags": [
-                "permutations and combinations"
-            ]
-        }
-    ]
+	"CONTENTS": [
+		{
+			"index": "1",
+			"name": "Sets",
+			"tags": [
+				"sets",
+				"collection",
+				"union",
+				"intersection",
+				"difference",
+				"symmetric",
+				"cartesian",
+				"product",
+				"powerset",
+				"complements",
+				"belongs",
+				"contains"
+			]
+		},
+		{
+			"index": "2",
+			"name": "Matrices",
+			"tags": [
+				"matrices",
+				"matrix",
+				"addition",
+				"difference",
+				"division",
+				"multiplication",
+				"transpose",
+				"rows",
+				"columns",
+				"order"
+			]
+		},
+		{
+			"index": "3",
+			"name": "Determinants",
+			"tags": [
+				"determinants"
+			]
+		},
+		{
+			"index": "4",
+			"name": "Mensuration",
+			"tags": [
+				"mensuration"
+			]
+		},
+		{
+			"index": "5",
+			"name": "Probability",
+			"tags": [
+				"probability"
+			]
+		},
+		{
+			"index": "6",
+			"name": "Functions",
+			"tags": [
+				"functions"
+			]
+		},
+		{
+			"index": "7",
+			"name": "Permutations and Combinations",
+			"tags": [
+				"permutations and combinations"
+			]
+		}
+	]
 }

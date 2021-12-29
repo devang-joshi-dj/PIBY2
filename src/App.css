@@ -1,20 +1,20 @@
 :root {
-  --navy-blue: #202a44;
-  --dark-blue: #0b0e17;
-  --sky-blue: #87ceeb;
-  --white: #ffffff;
-  --dark-white: #e1d9d1;
-  --black: #000000;
-  --light-black: #171717;
-  --crimson: #dc143c;
-  --success: #22bb33;
-  --failure: #bb2124;
-  --mail: #ff9800;
-  --facebook: #1877f2;
-  --instagram: #e4405f;
-  --linkedin: #0a66c2;
-  --github: #333333;
-  --social-media-transition-style: all 0.2s linear;
+	--navy-blue: #202a44;
+	--dark-blue: #0b0e17;
+	--sky-blue: #87ceeb;
+	--white: #ffffff;
+	--dark-white: #e1d9d1;
+	--black: #000000;
+	--light-black: #171717;
+	--crimson: #dc143c;
+	--success: #22bb33;
+	--failure: #bb2124;
+	--mail: #ff9800;
+	--facebook: #1877f2;
+	--instagram: #e4405f;
+	--linkedin: #0a66c2;
+	--github: #333333;
+	--social-media-transition-style: all 0.2s linear;
 }
 
 header,
@@ -22,18 +22,18 @@ header,
 .footer-bottom,
 .contents .contents-list,
 .radio-group {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .success {
-  color: var(--success);
+	color: var(--success);
 }
 
 .failure {
-  color: var(--failure);
+	color: var(--failure);
 }

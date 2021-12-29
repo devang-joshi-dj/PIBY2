@@ -3,46 +3,50 @@ import PhiSymbol from './Symbols/PhiSymbol';
 import SymmetricDifferenceSymbol from './Symbols/SymmetricDifferenceSymbol';
 
 const SymmetricDifference = props => {
-    const { firstFinalSetArray, secondFinalSetArray } = props;
+	const { firstFinalSetArray, secondFinalSetArray } = props;
 
-    const getSymmetricDifference = () => {
-        // function to get symmetric difference of firstFinalSetArray and secondFinalSetArray
+	const getSymmetricDifference = () => {
+		// function to get symmetric difference of firstFinalSetArray and secondFinalSetArray
 
-        const printSymmetricDifferenceSet = () => {
-            // function to print symmetric difference of firstFinalSetArray and secondFinalSetArray
+		const printSymmetricDifferenceSet = () => {
+			// function to print symmetric difference of firstFinalSetArray and secondFinalSetArray
 
-            const symmetricDifferenceSet = [
-                ...firstFinalSetArray.filter(x => !secondFinalSetArray.includes(x)),
-                ...secondFinalSetArray.filter(x => !firstFinalSetArray.includes(x))
-            ]; // filtering union + interesection of A and B
+			const symmetricDifferenceSet = [
+				...firstFinalSetArray.filter(x => !secondFinalSetArray.includes(x)),
+				...secondFinalSetArray.filter(x => !firstFinalSetArray.includes(x)),
+			]; // filtering union + interesection of A and B
 
-            return symmetricDifferenceSet.length !== 0 ?
-                <>{`{${symmetricDifferenceSet.join(', ')}}`}</> :
-                <><PhiSymbol /></>;
-        }
+			return symmetricDifferenceSet.length !== 0 ? (
+				<>{`{${symmetricDifferenceSet.join(', ')}}`}</>
+			) : (
+				<>
+					<PhiSymbol />
+				</>
+			);
+		};
 
-        return (
-            <>
-                <div className="result">
-                    <div className="label">
-                        A
-                        <SymmetricDifferenceSymbol />
-                        B:
-                    </div>
-                    {printSymmetricDifferenceSet()}
-                </div>
-            </>
-        );
-    }
+		return (
+			<>
+				<div className="result">
+					<div className="label">
+						A
+						<SymmetricDifferenceSymbol />
+						B:
+					</div>
+					{printSymmetricDifferenceSet()}
+				</div>
+			</>
+		);
+	};
 
-    return (
-        <>
-            <div className="symmetric-difference">
-                <h2>Symmetric Difference</h2>
-                {getSymmetricDifference()}
-            </div>
-        </>
-    );
-}
+	return (
+		<>
+			<div className="symmetric-difference">
+				<h2>Symmetric Difference</h2>
+				{getSymmetricDifference()}
+			</div>
+		</>
+	);
+};
 
 export default SymmetricDifference;

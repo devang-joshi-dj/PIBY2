@@ -3,13 +3,13 @@ import './functions.css';
 import Heading from '../../../../Miscs/Heading/Heading';
 
 const Functions = () => {
-    return (
-        <>
-            <div className="functions">
-                <Heading>Functions</Heading>
-            </div>
-        </>
-    );
-}
+	return (
+		<>
+			<div className="functions">
+				<Heading>Functions</Heading>
+			</div>
+		</>
+	);
+};
 
 export default Functions;
