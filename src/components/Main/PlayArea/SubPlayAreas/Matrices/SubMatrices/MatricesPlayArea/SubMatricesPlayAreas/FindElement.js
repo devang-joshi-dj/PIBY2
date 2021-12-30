@@ -48,8 +48,8 @@ const FindElement = props => {
 
 			return (
 				<>
+					<div className="info">Specify the Order for the Element:</div>
 					<div className="matrices-input">
-						<div className="info">Specify the Order for the Element:</div>
 						<Select
 							id="select"
 							options={rowOptions}
@@ -77,12 +77,14 @@ const FindElement = props => {
 						<div className="label">
 							A<sub>{`${currentRow}${currentColumn}`}</sub>:
 						</div>
-						{matrix.length &&
-						matrix.length === Number(rowsSelectedValue) &&
-						currentRow <= rowsSelectedValue &&
-						currentColumn <= columnsSelectedValue
-							? Number(matrix[currentRow - 1][currentColumn - 1])
-							: `Does not exist`}
+						<div className="element">
+							{matrix.length &&
+							matrix.length === Number(rowsSelectedValue) &&
+							currentRow <= rowsSelectedValue &&
+							currentColumn <= columnsSelectedValue
+								? Number(matrix[currentRow - 1][currentColumn - 1])
+								: `Does not exist`}
+						</div>
 					</div>
 				</>
 			);

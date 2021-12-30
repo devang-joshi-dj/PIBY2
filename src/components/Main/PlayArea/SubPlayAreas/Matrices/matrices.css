@@ -44,6 +44,7 @@
 
 .matrices .multiplication #select,
 .matrices .division #select,
+.matrices .element,
 .transpose,
 .check-type {
 	width: 100%;
@@ -71,6 +72,10 @@
 
 .matrices-input {
 	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }
 
 @media (max-width: 1160px) {
@@ -98,19 +103,15 @@
 	.matrices .result {
 		flex-direction: column;
 	}
+	.matrices-input {
+		flex-direction: column;
+	}
 	.print-matrix {
 		width: 100%;
 	}
 	.print-matrix-row {
 		padding: 0;
 		width: 100%;
-	}
-}
-
-@media (max-width: 300px) {
-	.matrices .result {
-		margin: 10px 0;
-		font-size: 1.5rem;
 	}
 }
 
