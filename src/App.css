@@ -37,3 +37,13 @@ header,
 .failure {
 	color: var(--failure);
 }
+
+::-moz-selection {
+	color: var(--white);
+	background: var(--black);
+}
+
+::selection {
+	color: var(--white);
+	background: var(--black);
+}
