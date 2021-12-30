@@ -28,7 +28,7 @@ const DeterminantsPlayArea = props => {
 		return rowsAndColumnsSelectedValue ? (
 			<>
 				<div className="matrix-input">
-					<div className="label">Input your Matrix:</div>
+					<div className="label">Input your Entries:</div>
 					<Matrix
 						matrix={matrix}
 						setMatrix={setMatrix}
